@@ -1,0 +1,16 @@
+.catcard{
+    gap: 10px;
+    padding: 20px 20px;
+    width: 300px;
+    height: 460px;
+    text-align: center;
+    justify-content: flex-start;
+    img{
+        width: 200px;
+    }
+    h3{
+        font-size: 24px;
+        color: var(--primary900);
+    }
+    p{margin: 0;}
+}

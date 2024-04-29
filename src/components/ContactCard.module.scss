@@ -1,0 +1,11 @@
+.container {
+  //   border: 1px solid black;
+  box-shadow: 0px 0px 10px var(--primary300);
+  padding: 30px 60px;
+  textarea {
+    font-family: var(--text-font);
+  }
+  input {
+    font-family: var(--text-font);
+  }
+}
