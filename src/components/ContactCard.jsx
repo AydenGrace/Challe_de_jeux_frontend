@@ -9,78 +9,67 @@ export default function ContactCard({ isTitle = false }) {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
-  console.log(errors);
+  const onSubmit = (data) => {
+    console.log(data);
+  };
 
   return (
     <div className={`card f-center flex-column ${styles.container}`}>
       {isTitle ? <h1>Contact</h1> : <h2>Contact</h2>}
-      {/* <form action="" className={`f-center flex-column gap-10`}>
-        <div className={`d-flex gap-10`}>
-          <input
-            type="text"
-            name="Name"
-            placeholder="Votre nom..."
-            className={`d-flex w-100`}
-          />
-          <input
-            type="text"
-            name="Email"
-            placeholder="Votre Email..."
-            className={`d-flex w-100`}
-          />
-        </div>
-        <input
-          type="text"
-          name="Subject"
-          placeholder="Le sujet de votre message..."
-          className={`d-flex w-100`}
-        />
-        <textarea
-          name="Content"
-          className={`d-flex w-100`}
-          placeholder="Votre message..."
-        ></textarea>
-        <div className={`d-flex w-100`}>
-          <input type="checkbox" name="RGPD" id="rgpd" required />
-          <label htmlFor="#rgpd">
-            En cochant cette case vous acceptez que vos données soient
-            collectées conformément à notre{" "}
-            <a href="#">Politique de confidentialité</a>
-          </label>
-        </div>
-      </form> */}
       <form
         onSubmit={handleSubmit(onSubmit)}
         className={`f-center flex-column gap-10`}
       >
         <div className={`d-flex gap-10`}>
-          <input type="text" placeholder="Votre nom..." {...register} />
           <input
+            className={`${styles.mw_300}`}
             type="text"
+            placeholder="Votre nom..."
+            {...register}
+            required={true}
+          />
+          <input
+            className={`${styles.mw_300}`}
+            type="email"
             placeholder="Votre Email..."
             {...register("Email", { required: true, pattern: /^\S+@\S+$/i })}
+            required={true}
           />
         </div>
         <input
           type="text"
           placeholder="Sujet de votre message..."
-          className={`d-flex w-100`}
+          className={`d-flex w-100 ${styles.mw_300}`}
           {...register}
+          required={true}
         />
 
         <textarea
           {...register("Content", {})}
           placeholder="Votre message..."
-          className={`d-flex w-100`}
+          className={`d-flex w-100 ${styles.mw_300}`}
+          required={true}
         />
-        <input
-          type="checkbox"
-          placeholder="RGPD"
-          {...register("RGPD", { required: true })}
-        />
+        <div
+          className={`d-flex w-100 gap-10 align-items-center ${styles.mw_600}`}
+        >
+          <input
+            className="d-flex"
+            value="Test"
+            type="checkbox"
+            placeholder="RGPD"
+            {...register("RGPD", { required: true })}
+            style={{ maxWidth: "50px" }}
+            required={true}
+          />
+          <p>
+            En cochant, vous acceptez que vos données soient collectées
+            conformément aux <a href="#">Politiques de confidentialités</a>.
+            <span style={{ color: "red" }}>*</span>
+          </p>
+        </div>
 
-        <input type="submit" className={`btn btn-primary`} />
+        <input type="submit" className={`btn btn-primary btn-nav`} />
       </form>
     </div>
   );

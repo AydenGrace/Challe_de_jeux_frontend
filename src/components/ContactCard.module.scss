@@ -8,4 +8,15 @@
   input {
     font-family: var(--text-font);
   }
+  p {
+    margin: 0;
+  }
+}
+
+.mw_300 {
+  min-width: 300px;
+}
+
+.mw_600 {
+  max-width: 600px;
 }
