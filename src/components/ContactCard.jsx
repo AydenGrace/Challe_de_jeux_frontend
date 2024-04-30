@@ -54,7 +54,7 @@ export default function ContactCard({ isTitle = false }) {
           className={`d-flex w-100 gap-10 align-items-center ${styles.mw_600}`}
         >
           <input
-            className="d-flex"
+            className={`d-flex ${styles.check}`}
             value="Test"
             type="checkbox"
             placeholder="RGPD"
