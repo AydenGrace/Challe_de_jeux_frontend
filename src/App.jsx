@@ -6,6 +6,8 @@ import Footer from "./components/Footer";
 import Socials from "./components/Socials";
 import { pageContext } from "./context/context";
 import Contact from "./pages/Contact/Contact";
+import ScrollToTop from "react-scroll-to-top";
+import styles from "./App.module.scss";
 
 function App() {
   const [page, setPage] = useState(0);
@@ -36,6 +38,11 @@ function App() {
       <Header handlePage={handlePage} />
       <div className="d-flex w-100 flex-column mh-100">{SwitchPage(page)}</div>
       <Socials />
+      <ScrollToTop
+        className={`${styles.up}`}
+        smooth
+        component={<i className={`fa-solid fa-angles-up fa-2xl`}></i>}
+      />
       <Footer handlePage={handlePage} />
     </>
   );
