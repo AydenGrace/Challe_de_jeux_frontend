@@ -27,6 +27,7 @@ export default function Residents({ togglePage }) {
         if (response.ok) {
           const cats = await response.json();
           setAllCats(cats);
+          console.log(cats);
         }
       } catch (e) {
         console.log(e);
