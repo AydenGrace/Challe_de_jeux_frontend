@@ -64,12 +64,10 @@ export default function ContactCard({ isTitle = false }) {
           className={`d-flex w-100 ${styles.mw_300}`}
           required={true}
         />
-        <div
-          className={`d-flex w-100 gap-10 align-items-center ${styles.mw_600}`}
-        >
+        <div className={`d-flex w-100 ${styles.mw_600}`}>
           <label htmlFor="RGPD">
             <input
-              className={`d-flex ${styles.check}`}
+              className={`${styles.check}`}
               value="Test"
               type="checkbox"
               id="RGPD"
