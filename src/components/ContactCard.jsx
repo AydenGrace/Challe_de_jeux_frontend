@@ -2,6 +2,9 @@
 import React from "react";
 import styles from "./ContactCard.module.scss";
 import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
+import Button from "./Buttons";
 
 export default function ContactCard({ isTitle = false }) {
   const {
@@ -12,6 +15,17 @@ export default function ContactCard({ isTitle = false }) {
   const onSubmit = (data) => {
     console.log(data);
   };
+  const schema = yup.object({
+    name: yup.string().required("Champs requis"),
+    email: yup
+      .string()
+      .email()
+      .required("Champs requis")
+      .matches(/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/g, "Email invalide"),
+    subject: yup.string().required("Champs requis"),
+    content: yup.string().required("Champs requis"),
+    rgpd: yup.boolean().required("Champs requis"),
+  });
 
   return (
     <div className={`card f-center flex-column ${styles.container}`}>
@@ -25,14 +39,14 @@ export default function ContactCard({ isTitle = false }) {
             className={`${styles.mw_300}`}
             type="text"
             placeholder="Votre nom..."
-            {...register}
+            {...register("name")}
             required={true}
           />
           <input
             className={`${styles.mw_300}`}
             type="email"
             placeholder="Votre Email..."
-            {...register("Email", { required: true, pattern: /^\S+@\S+$/i })}
+            {...register("email")}
             required={true}
           />
         </div>
@@ -58,7 +72,7 @@ export default function ContactCard({ isTitle = false }) {
             value="Test"
             type="checkbox"
             placeholder="RGPD"
-            {...register("RGPD", { required: true })}
+            {...register("rgpd")}
             style={{ maxWidth: "50px" }}
             required={true}
           />
@@ -69,24 +83,8 @@ export default function ContactCard({ isTitle = false }) {
           </p>
         </div>
 
-        <input type="submit" className={`btn btn-primary btn-nav`} />
+        <Button message="Envoyer" />
       </form>
     </div>
   );
 }
-
-//  Code généré par React-Hook-Form
-//   const { register, handleSubmit, formState: { errors } } = useForm();
-//   const onSubmit = data => console.log(data);
-//   console.log(errors);
-
-//   return (
-//     <form onSubmit={handleSubmit(onSubmit)}>
-//       <input type="text" placeholder="Name" {...register} />
-//       <input type="text" placeholder="Email" {...register("Email", {required: true, pattern: /^\S+@\S+$/i})} />
-//       <input type="text" placeholder="Subject" {...register} />
-//       <textarea {...register("Content", {})} />
-//       <input type="checkbox" placeholder="Validation" {...register("Validation", {required: true})} />
-//       <input type="submit" />
-//     </form>
-//   );
