@@ -67,20 +67,20 @@ export default function ContactCard({ isTitle = false }) {
         <div
           className={`d-flex w-100 gap-10 align-items-center ${styles.mw_600}`}
         >
-          <input
-            className={`d-flex ${styles.check}`}
-            value="Test"
-            type="checkbox"
-            placeholder="RGPD"
-            {...register("rgpd")}
-            style={{ maxWidth: "50px" }}
-            required={true}
-          />
-          <p>
+          <label htmlFor="RGPD">
+            <input
+              className={`d-flex ${styles.check}`}
+              value="Test"
+              type="checkbox"
+              id="RGPD"
+              {...register("rgpd")}
+              style={{ maxWidth: "50px" }}
+              required={true}
+            />
             En cochant, vous acceptez que vos données soient collectées
             conformément aux <a href="#">Politiques de confidentialités</a>.
             <span style={{ color: "red" }}>*</span>
-          </p>
+          </label>
         </div>
 
         <Button message="Envoyer" />
