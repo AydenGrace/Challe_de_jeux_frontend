@@ -64,8 +64,12 @@
   height: 100vh;
 }
 
-.w-100{
+.w-100 {
   width: 100%;
+}
+
+.mw-300 {
+  min-width: 300px;
 }
 .container {
   max-width: 1200px;
