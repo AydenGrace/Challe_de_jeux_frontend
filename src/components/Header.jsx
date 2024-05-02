@@ -2,7 +2,10 @@
 import Button from "./Buttons";
 import styles from "./Header.module.scss";
 
-export default function Header({ handlePage = () => {} }) {
+export default function Header({
+  handlePage = () => {},
+  connectPopupDisplay = () => {},
+}) {
   return (
     <header className={`d-flex justify-content-sb align-items-center`}>
       <div className="d-flex g-20 flex-all-cont">
@@ -59,9 +62,7 @@ export default function Header({ handlePage = () => {} }) {
 
       <Button
         message="Connexion/Inscription"
-        handleClick={() => {
-          handlePage(5);
-        }}
+        handleClick={() => connectPopupDisplay(true)}
       />
     </header>
   );

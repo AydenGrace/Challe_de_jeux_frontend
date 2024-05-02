@@ -8,9 +8,11 @@ import { pageContext } from "./context/context";
 import Contact from "./pages/Contact/Contact";
 import ScrollToTop from "react-scroll-to-top";
 import styles from "./App.module.scss";
+import Connect from "./pages/Popups/Connect/Connect";
 
 function App() {
   const [page, setPage] = useState(0);
+  const [connectDisplay, setConnectdisplay] = useState(false);
 
   function SwitchPage(Page) {
     switch (Page) {
@@ -35,9 +37,10 @@ function App() {
   }
   return (
     <>
-      <Header handlePage={handlePage} />
+      <Header handlePage={handlePage} connectPopupDisplay={setConnectdisplay} />
       <div className="d-flex w-100 flex-column mh-100">{SwitchPage(page)}</div>
       <Socials />
+      {connectDisplay && <Connect setDisplay={setConnectdisplay} />}
       <ScrollToTop
         className={`${styles.up}`}
         smooth

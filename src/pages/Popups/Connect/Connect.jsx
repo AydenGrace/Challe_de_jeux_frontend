@@ -1,9 +1,21 @@
-import styles from "./COnnect.module.scss";
+/* eslint-disable no-unused-vars */
+import { useState } from "react";
+import styles from "./Connect.module.scss";
 
-export default function Connect() {
+export default function Connect({ setDisplay }) {
   return (
     <div
-      className={`d-flex flex-column justify-content-center align-items-center ${styles.container}`}
-    ></div>
+      className={`f-center flex-column ${styles.container}`}
+      onClick={() => setDisplay(false)}
+    >
+      <div
+        className="f-center card p-20"
+        onClick={(e) => {
+          e.stopPropagation();
+        }}
+      >
+        <h2>Connexion / Inscription</h2>
+      </div>
+    </div>
   );
 }
