@@ -7,14 +7,6 @@ import * as yup from "yup";
 import Button from "./Buttons";
 
 export default function ContactCard({ isTitle = false }) {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
-  const onSubmit = (data) => {
-    console.log(data);
-  };
   const schema = yup.object({
     name: yup.string().required("Champs requis"),
     email: yup
@@ -26,6 +18,26 @@ export default function ContactCard({ isTitle = false }) {
     content: yup.string().required("Champs requis"),
     rgpd: yup.boolean().required("Champs requis"),
   });
+  const defaultValues = {
+    name: "",
+    email: "",
+    subject: "",
+    content: "",
+    rgpd: false,
+  };
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    defaultValues,
+    mode: "onSubmit",
+    resolver: yupResolver(schema),
+  });
+
+  const onSubmit = (data) => {
+    console.log(data);
+  };
 
   return (
     <div className={`card f-center flex-column ${styles.container}`}>
