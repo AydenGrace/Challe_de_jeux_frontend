@@ -51,7 +51,7 @@ export default function ContactCard({ isTitle = false }) {
       });
       if (response.ok) {
         setFeedback(response.status);
-        if (feedback === 200) reset(defaultValues);
+        if (response.status === 200) reset(defaultValues);
       }
     } catch (error) {
       console.error(error);

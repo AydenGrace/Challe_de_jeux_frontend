@@ -6,6 +6,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import Button from "../../../components/Buttons";
 import styles from "./Register.module.scss";
+import { url } from "../../../url";
 
 export default function Register() {
   const SignInSchema = yup.object({
@@ -47,8 +48,23 @@ export default function Register() {
     resolver: yupResolver(SignInSchema),
   });
 
-  function submit(values) {
-    reset(signinValues);
+  async function submit(values) {
+    try {
+      const response = await fetch(`${url}/api/users/register`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+      if (response.ok) {
+        const newUser = await response.json();
+        console.log(newUser);
+        reset(signinValues);
+      }
+    } catch (error) {
+      console.error(error);
+    }
   }
 
   return (
@@ -121,11 +137,11 @@ export default function Register() {
         )}
       </div>
       <div className={`d-flex w-100 mb-10`}>
-        <label htmlFor="RGPD">
+        <label htmlFor="RegisterRGPD">
           <input
             className={`${styles.check}`}
             type="checkbox"
-            id="RGPD"
+            id="RegisterRGPD"
             {...register("rgpd")}
             style={{ maxWidth: "50px" }}
             required={true}
