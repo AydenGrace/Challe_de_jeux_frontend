@@ -62,7 +62,7 @@ export default function Register() {
       </div>
       <div className="d-flex flex-column mb-20">
         <label htmlFor="email">
-          Nom d'utilisateur <span style={{ color: "red" }}>*</span>
+          Nom d'utilisateur <span className="c-r">*</span>
         </label>
         <input
           {...register("username")}
@@ -72,10 +72,11 @@ export default function Register() {
           className={`d-flex w-100 mw-300`}
           required
         />
+        {errors.username && <p className="c-r">{errors.username.message}</p>}
       </div>
       <div className="d-flex flex-column mb-20">
         <label htmlFor="email">
-          E-mail <span style={{ color: "red" }}>*</span>
+          E-mail <span className="c-r">*</span>
         </label>
         <input
           {...register("email")}
@@ -85,11 +86,12 @@ export default function Register() {
           className={`d-flex w-100 mw-300`}
           required
         />
+        {errors.email && <p className="c-r">{errors.email.message}</p>}
       </div>
 
       <div className="d-flex flex-column mb-20">
         <label htmlFor="password">
-          Mot de passe <span style={{ color: "red" }}>*</span>
+          Mot de passe <span className="c-r">*</span>
         </label>
         <input
           {...register("password")}
@@ -99,26 +101,29 @@ export default function Register() {
           className={`d-flex w-100 mw-300`}
           required
         />
+        {errors.password && <p className="c-r">{errors.password.message}</p>}
       </div>
 
       <div className="d-flex flex-column mb-20">
         <label htmlFor="password">
-          Confirmez votre mot de passe <span style={{ color: "red" }}>*</span>
+          Confirmez votre mot de passe <span className="c-r">*</span>
         </label>
         <input
-          {...register("password")}
+          {...register("confirm_password")}
           type="password"
           id="confirm_password"
           placeholder="Mot de passe"
           className={`d-flex w-100 mw-300`}
           required
         />
+        {errors.confirm_password && (
+          <p className="c-r">{errors.confirm_password.message}</p>
+        )}
       </div>
-      <div className={`d-flex w-100 ${styles.mw} mb-10`}>
+      <div className={`d-flex w-100 mb-10`}>
         <label htmlFor="RGPD">
           <input
             className={`${styles.check}`}
-            value="Test"
             type="checkbox"
             id="RGPD"
             {...register("rgpd")}
@@ -127,8 +132,9 @@ export default function Register() {
           />
           En cochant, vous acceptez que vos données soient collectées
           conformément aux <a href="#">Politiques de confidentialités</a>.
-          <span style={{ color: "red" }}>*</span>
+          <span className="c-r">*</span>
         </label>
+        {errors.rgpd && <p className="c-r">{errors.rgpd.message}</p>}
       </div>
       <div className="f-center flex-column">
         <Button message="Inscription" />
