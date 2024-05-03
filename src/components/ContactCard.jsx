@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import Button from "./Buttons";
+import { url } from "./../url";
 
 export default function ContactCard({ isTitle = false }) {
   const schema = yup.object({
@@ -28,22 +29,39 @@ export default function ContactCard({ isTitle = false }) {
   const {
     register,
     handleSubmit,
+    reset,
+    control,
     formState: { errors },
   } = useForm({
     defaultValues,
-    mode: "onSubmit",
+    mode: "onChange",
     resolver: yupResolver(schema),
   });
 
-  async function Submit(values) {
+  async function submit(values) {
     console.log(values);
+    try {
+      const response = await fetch(`${url}/contact/send`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+      if (response.ok) {
+        const newUser = await response.json();
+        reset(defaultValues);
+      }
+    } catch (error) {
+      console.error(error);
+    }
   }
 
   return (
     <div className={`card f-center flex-column ${styles.container}`}>
       {isTitle ? <h1>Contact</h1> : <h2>Contact</h2>}
       <form
-        onSubmit={handleSubmit(Submit)}
+        onSubmit={handleSubmit(submit)}
         className={`f-center flex-column gap-10`}
       >
         <div className={`d-flex gap-10`}>
@@ -62,6 +80,8 @@ export default function ContactCard({ isTitle = false }) {
             required={true}
           />
         </div>
+        {errors.name && <p className="c-r">{errors.name.message}</p>}
+        {errors.email && <p className="c-r">{errors.email.message}</p>}
         <input
           type="text"
           placeholder="Sujet de votre message..."
@@ -69,18 +89,18 @@ export default function ContactCard({ isTitle = false }) {
           {...register("subject")}
           required={true}
         />
-
+        {errors.subject && <p className="c-r">{errors.subject.message}</p>}
         <textarea
           {...register("content")}
           placeholder="Votre message..."
           className={`d-flex w-100 ${styles.mw_300}`}
           required={true}
         />
+        {errors.content && <p className="c-r">{errors.content.message}</p>}
         <div className={`d-flex w-100 ${styles.mw_600}`}>
           <label htmlFor="RGPD">
             <input
               className={`${styles.check}`}
-              value="Test"
               type="checkbox"
               id="RGPD"
               {...register("rgpd")}
@@ -91,8 +111,8 @@ export default function ContactCard({ isTitle = false }) {
             conformément aux <a href="#">Politiques de confidentialités</a>.
             <span style={{ color: "red" }}>*</span>
           </label>
+          {errors.rgpd && <p className="c-r">{errors.rgpd.message}</p>}
         </div>
-
         <Button message="Envoyer" />
       </form>
     </div>
