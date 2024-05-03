@@ -41,7 +41,7 @@ export default function ContactCard({ isTitle = false }) {
   async function submit(values) {
     console.log(values);
     try {
-      const response = await fetch(`${url}/contact/send`, {
+      const response = await fetch(`${url}/api/contact/send`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
