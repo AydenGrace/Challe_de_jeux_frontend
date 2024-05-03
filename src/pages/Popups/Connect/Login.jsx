@@ -43,7 +43,7 @@ export default function Login() {
         <h2>Connexion</h2>
       </div>
       <div className="d-flex flex-column mb-20">
-        <label htmlFor="email">E-mail</label>
+        <label htmlFor="login_email">E-mail</label>
         <input
           {...register("email")}
           type="email"
@@ -55,7 +55,7 @@ export default function Login() {
       </div>
 
       <div className="d-flex flex-column mb-20">
-        <label htmlFor="password">Mot de passe</label>
+        <label htmlFor="login_password">Mot de passe</label>
         <input
           {...register("password")}
           type="password"
