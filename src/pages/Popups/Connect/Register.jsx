@@ -60,13 +60,13 @@ export default function Register() {
       });
       if (response.ok) {
         const responseFeedback = await response.json();
-        console.log(response);
-        response.status === 200
+        console.log(responseFeedback);
+        responseFeedback.status === 200
           ? setFeedback({
               status: response.status,
               message: "Nouveau compté créé",
             })
-          : response.status === 201
+          : responseFeedback.status === 201
           ? setFeedback({
               status: response.status,
               message: "Email déjà utilisé",
