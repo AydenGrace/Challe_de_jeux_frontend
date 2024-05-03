@@ -76,6 +76,7 @@ export default function ContactCard({ isTitle = false }) {
             placeholder="Votre nom..."
             {...register("name")}
             required={true}
+            onChange={handleResetFeedback}
           />
           <input
             className={`${styles.mw_300}`}
@@ -83,6 +84,7 @@ export default function ContactCard({ isTitle = false }) {
             placeholder="Votre Email..."
             {...register("email")}
             required={true}
+            onChange={handleResetFeedback}
           />
         </div>
         {errors.name && <p className="c-r">{errors.name.message}</p>}
@@ -93,6 +95,7 @@ export default function ContactCard({ isTitle = false }) {
           className={`d-flex w-100 ${styles.mw_300}`}
           {...register("subject")}
           required={true}
+          onChange={handleResetFeedback}
         />
         {errors.subject && <p className="c-r">{errors.subject.message}</p>}
         <textarea
@@ -100,6 +103,7 @@ export default function ContactCard({ isTitle = false }) {
           placeholder="Votre message..."
           className={`d-flex w-100 ${styles.mw_300}`}
           required={true}
+          onChange={handleResetFeedback}
         />
         {errors.content && <p className="c-r">{errors.content.message}</p>}
         <div className={`d-flex w-100 ${styles.mw_600}`}>
