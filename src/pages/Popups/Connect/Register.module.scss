@@ -21,6 +21,16 @@
   // animation: flip-out-hor-top 0.45s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 
+.check {
+  accent-color: var(--primary700);
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.mw {
+  max-width: 350px;
+}
+
 .form {
   a {
     font-size: 0.9rem;
