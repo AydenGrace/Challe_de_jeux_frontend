@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useState } from "react";
 import styles from "./ContactCard.module.scss";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -8,6 +8,7 @@ import Button from "./Buttons";
 import { url } from "./../url";
 
 export default function ContactCard({ isTitle = false }) {
+  const [feedback, setFeedback] = useState();
   const schema = yup.object({
     name: yup.string().required("Champs requis"),
     email: yup
@@ -49,12 +50,16 @@ export default function ContactCard({ isTitle = false }) {
         body: JSON.stringify(values),
       });
       if (response.ok) {
-        console.log(response.status);
-        reset(defaultValues);
+        setFeedback(response.status);
+        if (feedback === 200) reset(defaultValues);
       }
     } catch (error) {
       console.error(error);
     }
+  }
+
+  function handleResetFeedback() {
+    setFeedback(null);
   }
 
   return (
@@ -111,9 +116,18 @@ export default function ContactCard({ isTitle = false }) {
             conformément aux <a href="#">Politiques de confidentialités</a>.
             <span style={{ color: "red" }}>*</span>
           </label>
-          {errors.rgpd && <p className="c-r">{errors.rgpd.message}</p>}
         </div>
+        {errors.rgpd && <p className="c-r">{errors.rgpd.message}</p>}
         <Button message="Envoyer" />
+        {feedback ? (
+          feedback === 200 ? (
+            <p className={`c-g ${styles.feedback}`}>
+              Votre message a bien été envoyé
+            </p>
+          ) : (
+            <p className={`c-r ${styles.feedback}`}>Une erreur est survenue.</p>
+          )
+        ) : null}
       </form>
     </div>
   );
