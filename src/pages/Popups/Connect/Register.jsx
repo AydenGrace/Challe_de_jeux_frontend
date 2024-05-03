@@ -63,12 +63,12 @@ export default function Register() {
         console.log(responseFeedback);
         responseFeedback.status === 200
           ? setFeedback({
-              status: response.status,
+              status: responseFeedback.status,
               message: "Nouveau compté créé",
             })
           : responseFeedback.status === 300
           ? setFeedback({
-              status: response.status,
+              status: responseFeedback.status,
               message: "Email déjà utilisé",
             })
           : setFeedback({
