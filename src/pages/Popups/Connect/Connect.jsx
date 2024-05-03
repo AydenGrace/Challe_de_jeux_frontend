@@ -12,26 +12,26 @@ export default function Connect({ setDisplay }) {
     "Je souhaite créer un compte"
   );
 
-  const SignInSchema = yup.object({
-    username: yup.string().required("Required"),
-    email: yup
-      .string()
-      .email()
-      .required("Required")
-      .matches(/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/g, "Mail not valid"),
-    password: yup
-      .string()
-      .required("Required")
-      .matches(
-        /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$#!%*?&])[A-Za-z\d@$#!%*?&]{12,}$/,
-        "You must use 1 capital letter, 1 lower letter, 1 number, 1 special character and have at least 12 characters."
-      ),
-    confirm_password: yup
-      .string()
-      .required("Required")
-      .oneOf([yup.ref("password"), ""], "Not the same"),
-    rgpd: yup.boolean().oneOf([true], "You must accepted all conditions"),
-  });
+  // const SignInSchema = yup.object({
+  //   username: yup.string().required("Required"),
+  //   email: yup
+  //     .string()
+  //     .email()
+  //     .required("Required")
+  //     .matches(/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/g, "Email invalide"),
+  //   password: yup
+  //     .string()
+  //     .required("Champs requis")
+  //     .matches(
+  //       /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$#!%*?&])[A-Za-z\d@$#!%*?&]{12,}$/,
+  //       "Votre mot de passe doit contenir au moins :\n1 lettre capitale\n1 lettre minuscule\n1 chiffre\n1 caractère spécial (&@$#!%*?&)"
+  //     ),
+  //   confirm_password: yup
+  //     .string()
+  //     .required("Champs requis")
+  //     .oneOf([yup.ref("password"), ""], "Le mot de passe doit être identique"),
+  //   rgpd: yup.boolean().oneOf([true], "Vous devez accepter les conditions"),
+  // });
 
   const LoginSchema = yup.object({
     email: yup.string().email().required("Champs requis"),
@@ -39,17 +39,18 @@ export default function Connect({ setDisplay }) {
   });
 
   const loginValues = {
-    username: "",
     email: "",
-    confirm_password: "",
     password: "",
-    rgpd: false,
   };
 
-  const signinValues = {
-    email: "",
-    password: "",
-  };
+  // const signinValues = {
+  // username: "",
+  // email: "",
+  // confirm_password: "",
+  // password: "",
+  // rgpd: false,
+
+  // };
 
   const {
     register,
