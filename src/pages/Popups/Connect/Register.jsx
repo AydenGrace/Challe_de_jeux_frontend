@@ -60,6 +60,7 @@ export default function Register() {
       });
       if (response.ok) {
         const responseFeedback = await response.json();
+        console.log(response);
         response.status === 200
           ? setFeedback({
               status: response.status,
