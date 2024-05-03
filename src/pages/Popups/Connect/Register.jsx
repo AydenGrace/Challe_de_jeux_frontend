@@ -9,7 +9,7 @@ import styles from "./Register.module.scss";
 import { url } from "../../../url";
 
 export default function Register() {
-  const [feedback, setFeedback] = useState();
+  const [feedback, setFeedback] = useState(null);
   const SignInSchema = yup.object({
     username: yup.string().required("Required"),
     email: yup
@@ -167,11 +167,13 @@ export default function Register() {
       </div>
       <div className="f-center flex-column">
         <Button message="Inscription" />
-        {feedback.status === 200 ? (
-          <p className={`c-g`}>{feedback.message}</p>
-        ) : (
-          <p className={`c-r`}>{feedback.message}</p>
-        )}
+        {feedback ? (
+          feedback.status === 200 ? (
+            <p className={`c-g`}>{feedback.message}</p>
+          ) : (
+            <p className={`c-r`}>{feedback.message}</p>
+          )
+        ) : null}
       </div>
     </form>
   );
