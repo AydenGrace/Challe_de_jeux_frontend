@@ -49,7 +49,7 @@ export default function ContactCard({ isTitle = false }) {
         body: JSON.stringify(values),
       });
       if (response.ok) {
-        const newUser = await response.json();
+        console.log(response.status);
         reset(defaultValues);
       }
     } catch (error) {
