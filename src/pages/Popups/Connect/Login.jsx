@@ -5,9 +5,10 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import Button from "../../../components/Buttons";
 import styles from "./Login.module.scss";
+import { url } from "./../../../url";
 
 export default function Login() {
-  const [loginError, setLoginError] = useState("");
+  const [feedback, setFeedback] = useState(null);
 
   const LoginSchema = yup.object({
     email: yup.string().email().required("Champs requis"),
@@ -29,8 +30,36 @@ export default function Login() {
     resolver: yupResolver(LoginSchema),
   });
 
-  function submit(values) {
-    reset(loginValues);
+  async function submit(values) {
+    try {
+      const response = await fetch(`${url}/api/users/login`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+      if (response.ok) {
+        const responseFeedback = await response.json();
+        console.log(responseFeedback);
+        responseFeedback.status === 200
+          ? setFeedback({
+              status: responseFeedback.status,
+              message: `Bienvenue ${responseFeedback.user.username}`,
+            })
+          : responseFeedback.status === 300
+          ? setFeedback({
+              status: responseFeedback.status,
+              message: responseFeedback.message,
+            })
+          : setFeedback({
+              status: response.status,
+              message: responseFeedback.message,
+            });
+      }
+    } catch (error) {
+      console.error(error);
+    }
   }
 
   return (
@@ -71,7 +100,13 @@ export default function Login() {
 
       <div className="f-center flex-column">
         <Button message="Connexion" />
-        {loginError && <p className="text-error">{loginError}</p>}
+        {feedback ? (
+          feedback.status === 200 ? (
+            <p className={`c-g`}>{feedback.message}</p>
+          ) : (
+            <p className={`c-r`}>{feedback.message}</p>
+          )
+        ) : null}
       </div>
     </form>
   );
