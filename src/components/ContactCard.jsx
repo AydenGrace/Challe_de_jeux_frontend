@@ -35,15 +35,15 @@ export default function ContactCard({ isTitle = false }) {
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = (data) => {
-    console.log(data);
-  };
+  async function Submit(values) {
+    console.log(values);
+  }
 
   return (
     <div className={`card f-center flex-column ${styles.container}`}>
       {isTitle ? <h1>Contact</h1> : <h2>Contact</h2>}
       <form
-        onSubmit={handleSubmit(onSubmit)}
+        onSubmit={handleSubmit(Submit)}
         className={`f-center flex-column gap-10`}
       >
         <div className={`d-flex gap-10`}>
@@ -66,12 +66,12 @@ export default function ContactCard({ isTitle = false }) {
           type="text"
           placeholder="Sujet de votre message..."
           className={`d-flex w-100 ${styles.mw_300}`}
-          {...register}
+          {...register("subject")}
           required={true}
         />
 
         <textarea
-          {...register("Content", {})}
+          {...register("content")}
           placeholder="Votre message..."
           className={`d-flex w-100 ${styles.mw_300}`}
           required={true}
