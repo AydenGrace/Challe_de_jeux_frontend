@@ -9,6 +9,7 @@ import styles from "./Register.module.scss";
 import { url } from "../../../url";
 
 export default function Register() {
+  const [feedback, setFeedback] = useState();
   const SignInSchema = yup.object({
     username: yup.string().required("Required"),
     email: yup
@@ -58,9 +59,21 @@ export default function Register() {
         body: JSON.stringify(values),
       });
       if (response.ok) {
-        const newUser = await response.json();
-        console.log(newUser);
-        reset(signinValues);
+        const responseFeedback = await response.json();
+        response.status === 200
+          ? setFeedback({
+              status: response.status,
+              message: "Nouveau compté créé",
+            })
+          : response.status === 201
+          ? setFeedback({
+              status: response.status,
+              message: "Email déjà utilisé",
+            })
+          : setFeedback({
+              status: response.status,
+              message: "Une erreur est survenue",
+            });
       }
     } catch (error) {
       console.error(error);
@@ -77,7 +90,7 @@ export default function Register() {
         <h2>Inscription</h2>
       </div>
       <div className="d-flex flex-column mb-20">
-        <label htmlFor="email">
+        <label htmlFor="username">
           Nom d'utilisateur <span className="c-r">*</span>
         </label>
         <input
@@ -121,7 +134,7 @@ export default function Register() {
       </div>
 
       <div className="d-flex flex-column mb-20">
-        <label htmlFor="password">
+        <label htmlFor="confirm_password">
           Confirmez votre mot de passe <span className="c-r">*</span>
         </label>
         <input
@@ -154,6 +167,11 @@ export default function Register() {
       </div>
       <div className="f-center flex-column">
         <Button message="Inscription" />
+        {feedback.status === 200 ? (
+          <p className={`c-g`}>{feedback.message}</p>
+        ) : (
+          <p className={`c-r`}>{feedback.message}</p>
+        )}
       </div>
     </form>
   );
