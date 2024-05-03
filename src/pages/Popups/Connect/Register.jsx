@@ -66,7 +66,7 @@ export default function Register() {
               status: response.status,
               message: "Nouveau compté créé",
             })
-          : responseFeedback.status === 201
+          : responseFeedback.status === 300
           ? setFeedback({
               status: response.status,
               message: "Email déjà utilisé",
