@@ -7,6 +7,7 @@ import * as yup from "yup";
 import Button from "../../../components/Buttons";
 import styles from "./Register.module.scss";
 import { url } from "../../../url";
+import { Link } from "react-router-dom";
 
 export default function Register() {
   const [feedback, setFeedback] = useState(null);
@@ -161,7 +162,8 @@ export default function Register() {
             required={true}
           />
           En cochant, vous acceptez que vos données soient collectées
-          conformément aux <a href="#">Politiques de confidentialités</a>.
+          conformément aux <span> </span>{" "}
+          <Link to={"/rgpd"}>Politiques de confidentialités</Link>.
           <span className="c-r">*</span>
         </label>
         {errors.rgpd && <p className="c-r">{errors.rgpd.message}</p>}

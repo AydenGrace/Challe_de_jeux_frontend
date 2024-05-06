@@ -6,6 +6,7 @@ import * as yup from "yup";
 import Button from "../../../components/Buttons";
 import styles from "./Login.module.scss";
 import { url } from "./../../../url";
+import { Link } from "react-router-dom";
 
 export default function Login() {
   const [feedback, setFeedback] = useState(null);
@@ -31,6 +32,7 @@ export default function Login() {
   });
 
   async function submit(values) {
+    console.log(values);
     try {
       const response = await fetch(`${url}/api/users/login`, {
         method: "POST",
@@ -56,6 +58,8 @@ export default function Login() {
               status: response.status,
               message: responseFeedback.message,
             });
+
+        console.log(responseFeedback.message);
       }
     } catch (error) {
       console.error(error);
@@ -94,7 +98,7 @@ export default function Login() {
           required
         />
         <div className={`${styles.forgot}`}>
-          <a href="#">Mot de passe oublié</a>
+          <Link to={"/forgot_Password"}>Mot de passe oublié</Link>
         </div>
       </div>
 
