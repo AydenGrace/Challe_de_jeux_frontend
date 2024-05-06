@@ -93,13 +93,13 @@ export default function Footer({ handlePage = () => {} }) {
           <div
             className={`d-flex p-10 w-100 justify-content-center g-10 ${styles.socials_footer}`}
           >
-            <a onClick={() => handlePage(-1)}>
+            <a href="https://www.facebook.com/?locale=fr_FR">
               <i className={`fa-brands fa-facebook-f`}></i>
             </a>
-            <a onClick={() => handlePage(-1)}>
+            <a href="https://www.instagram.com/">
               <i className={`fa-brands fa-instagram`}></i>
             </a>
-            <a onClick={() => handlePage(-1)}>
+            <a href="https://www.tiktok.com/fr/">
               <i className={`fa-brands fa-tiktok`}></i>
             </a>
           </div>
