@@ -17,6 +17,7 @@ export default function Informations() {
         title={"Des rencontres félines en toute simplicité !"}
         img={"chat_1-min.webp"}
         isReversed={false}
+        url="/concept"
       />
       <Section
         btn_text={"Découvrez notre carte"}
@@ -26,6 +27,7 @@ export default function Informations() {
         title={"Des gourmandises locales"}
         img={"patisserie-min.webp"}
         isReversed={true}
+        url="/menu"
       />
       <Section
         btn_text={"Rencontrez les !"}
@@ -35,6 +37,7 @@ export default function Informations() {
         title={"Nos Partenaires"}
         img={"chat_2-min.webp"}
         isReversed={false}
+        url="/partners"
       />
     </section>
   );

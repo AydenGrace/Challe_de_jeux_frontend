@@ -9,6 +9,7 @@ import Contact from "./pages/Contact/Contact";
 import ScrollToTop from "react-scroll-to-top";
 import styles from "./App.module.scss";
 import Connect from "./pages/Popups/Connect/Connect";
+import { Outlet } from "react-router-dom";
 
 function App() {
   const [page, setPage] = useState(0);
@@ -38,7 +39,10 @@ function App() {
   return (
     <>
       <Header handlePage={handlePage} connectPopupDisplay={setConnectdisplay} />
-      <div className="d-flex w-100 flex-column mh-100">{SwitchPage(page)}</div>
+
+      <div className="d-flex w-100 flex-column mh-100">
+        <Outlet />
+      </div>
       <Socials />
       {connectDisplay && <Connect setDisplay={setConnectdisplay} />}
       <ScrollToTop

@@ -6,6 +6,7 @@ import Catcard from "./components/Catcard";
 import Slider from "react-slick";
 import Button from "./../../../../components/Buttons";
 import { url } from "../../../../url";
+import { Link } from "react-router-dom";
 
 export default function Residents({ togglePage }) {
   const settings = {
@@ -49,11 +50,9 @@ export default function Residents({ togglePage }) {
           ))}
         </Slider>
       </div>
-      <Button
-        message="Rencontrez les !"
-        isDark={true}
-        handleClick={() => togglePage(3)}
-      />
+      <Link to={"/cats"} className={`btn-nav btn-primary`}>
+        Rencontrez les !
+      </Link>
     </section>
   );
 }

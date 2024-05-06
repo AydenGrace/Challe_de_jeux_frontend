@@ -13,6 +13,10 @@
   background-color: var(--primary600);
   color: white;
   border: 2px solid var(--primary600);
+  &:hover {
+    color: var(--primary600);
+    background-color: transparent;
+  }
 }
 
 .btn-reverse-primary {
@@ -29,22 +33,31 @@
   font-size: 16px;
   font-weight: 800;
   font-family: var(--font-family);
-
-  &:hover {
-    opacity: 0.8;
-  }
+  text-decoration: none;
+  // &:hover {
+  //   opacity: 0.8;
+  // }
 }
 
 .btn-nav-primary {
   background-color: var(--primary900);
   color: white;
   border: 2px solid var(--primary900);
+  &:hover {
+    color: var(--primary900);
+    background-color: transparent;
+  }
 }
 
 .btn-nav-reverse-primary {
   border: 2px solid transparent;
   color: var(--primary900);
   background-color: transparent;
+  &:hover {
+    background-color: var(--primary900);
+    color: white;
+    border: 2px solid var(--primary900);
+  }
 }
 
 .card {
@@ -66,4 +79,9 @@
 
 .c-p600 {
   color: var(--primary600);
+}
+
+.active {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
 }
