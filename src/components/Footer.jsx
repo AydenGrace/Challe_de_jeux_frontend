@@ -93,14 +93,14 @@ export default function Footer({ handlePage = () => {} }) {
           <div
             className={`d-flex p-10 w-100 justify-content-center g-10 ${styles.socials_footer}`}
           >
-            <a href="https://www.facebook.com/?locale=fr_FR">
-              <i className={`fa-brands fa-facebook-f`}></i>
+            <a href="https://www.facebook.com/?locale=fr_FR" target="_blank">
+              <i className={`fa-brands fa-facebook-f c-p`}></i>
             </a>
-            <a href="https://www.instagram.com/">
-              <i className={`fa-brands fa-instagram`}></i>
+            <a href="https://www.instagram.com/" target="_blank">
+              <i className={`fa-brands fa-instagram c-p`}></i>
             </a>
-            <a href="https://www.tiktok.com/fr/">
-              <i className={`fa-brands fa-tiktok`}></i>
+            <a href="https://www.tiktok.com/fr/" target="_blank">
+              <i className={`fa-brands fa-tiktok c-p`}></i>
             </a>
           </div>
         </div>
