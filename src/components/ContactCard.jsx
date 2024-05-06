@@ -6,6 +6,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import Button from "./Buttons";
 import { url } from "./../url";
+import { Link } from "react-router-dom";
 
 export default function ContactCard({ isTitle = false }) {
   const [feedback, setFeedback] = useState();
@@ -117,8 +118,11 @@ export default function ContactCard({ isTitle = false }) {
               required={true}
             />
             En cochant, vous acceptez que vos données soient collectées
-            conformément aux <a href="#">Politiques de confidentialités</a>.
-            <span style={{ color: "red" }}>*</span>
+            conformément aux <span> </span>
+            <Link className="c-p" to={"rgpd"}>
+              Politiques de confidentialités
+            </Link>
+            .<span style={{ color: "red" }}>*</span>
           </label>
         </div>
         {errors.rgpd && <p className="c-r">{errors.rgpd.message}</p>}
