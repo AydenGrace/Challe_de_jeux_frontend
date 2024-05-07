@@ -29,7 +29,7 @@ function App() {
         smooth
         component={<i className={`fa-solid fa-angles-up fa-2xl`}></i>}
       />
-      <Footer handlePage={handlePage} />
+      <Footer />
       <ScrollRestoration />
     </>
   );
