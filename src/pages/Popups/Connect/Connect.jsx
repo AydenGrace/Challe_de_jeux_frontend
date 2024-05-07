@@ -62,9 +62,7 @@ export default function Connect({ setDisplay }) {
         }}
       >
         {isLogin ? <Login /> : <Register />}
-        <a href="#" onClick={handleRegisterOrLogin}>
-          {aRegisterText}
-        </a>
+        <a onClick={handleRegisterOrLogin}>{aRegisterText}</a>
       </div>
     </div>
   );
