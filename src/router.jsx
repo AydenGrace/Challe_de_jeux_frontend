@@ -3,6 +3,7 @@ import App from "./App";
 import Homepage from "./pages/Homepage/Homepage";
 import Contact from "./pages/Contact/Contact";
 import ErrorPage from "./pages/ErrorPage/ErrorPage";
+import { catsLoader } from "./loaders/catsLoader";
 
 export const router = createBrowserRouter([
   {
@@ -12,6 +13,7 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
+        loader: catsLoader,
         element: <Homepage />,
       },
       {

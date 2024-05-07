@@ -4,14 +4,11 @@ import Informations from "./components/informations/Informations";
 import Landing from "./components/landing/Landing";
 import Residents from "./components/residents/Residents";
 
-export default function Homepage({ handlePage }) {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+export default function Homepage() {
   return (
     <>
       <Landing />
-      <Residents togglePage={handlePage} />
+      <Residents />
       <Informations />
       <Contact />
     </>

@@ -6,9 +6,9 @@ import Catcard from "./components/Catcard";
 import Slider from "react-slick";
 import Button from "./../../../../components/Buttons";
 import { url } from "../../../../url";
-import { Link } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
-export default function Residents({ togglePage }) {
+export default function Residents() {
   const settings = {
     className: "slider variable-width",
     lazyLoad: true,
@@ -19,23 +19,23 @@ export default function Residents({ togglePage }) {
     slidesToShow: 3,
     variableWidth: true,
   };
-  const [allCats, setAllCats] = useState([]);
+  const [allCats, setAllCats] = useState(useLoaderData());
 
-  useEffect(() => {
-    async function getCats() {
-      try {
-        const response = await fetch(`${url}/api/cats`);
-        if (response.ok) {
-          const cats = await response.json();
-          setAllCats(cats);
-          console.log(cats);
-        }
-      } catch (e) {
-        console.log(e);
-      }
-    }
-    getCats();
-  }, []);
+  // useEffect(() => {
+  //   async function getCats() {
+  //     try {
+  //       const response = await fetch(`${url}/api/cats`);
+  //       if (response.ok) {
+  //         const cats = await response.json();
+  //         setAllCats(cats);
+  //         console.log(cats);
+  //       }
+  //     } catch (e) {
+  //       console.log(e);
+  //     }
+  //   }
+  //   getCats();
+  // }, []);
 
   return (
     <section
