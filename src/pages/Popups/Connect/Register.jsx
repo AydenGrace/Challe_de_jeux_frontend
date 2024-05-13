@@ -79,6 +79,10 @@ export default function Register() {
               status: response.status,
               message: "Une erreur est survenue",
             });
+
+        if (feedback.status === 200) {
+          setDisplay(false);
+        }
       }
     } catch (error) {
       console.error(error);

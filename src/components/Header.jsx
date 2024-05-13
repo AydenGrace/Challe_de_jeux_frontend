@@ -6,6 +6,7 @@ import styles from "./Header.module.scss";
 export default function Header({
   handlePage = () => {},
   connectPopupDisplay = () => {},
+  user,
 }) {
   return (
     <header className={`d-flex justify-content-sb align-items-center`}>
@@ -40,53 +41,17 @@ export default function Header({
           >
             Contact
           </NavLink>
-          {/* <Button
-            message="Accueil"
-            reverseColor={true}
-            handleClick={() => {
-              handlePage(0);
-            }}
-            isDark={true}
-          />
-          <Button
-            message="Concept"
-            reverseColor={true}
-            handleClick={() => {
-              handlePage(1);
-            }}
-            isDark={true}
-          />
-          <Button
-            message="Nos Salles"
-            reverseColor={true}
-            handleClick={() => {
-              handlePage(2);
-            }}
-            isDark={true}
-          />
-          <Button
-            message="Nos Résidents"
-            reverseColor={true}
-            handleClick={() => {
-              handlePage(3);
-            }}
-            isDark={true}
-          />
-          <Button
-            message="Contact"
-            reverseColor={true}
-            handleClick={() => {
-              handlePage(4);
-            }}
-            isDark={true}
-          /> */}
         </nav>
       </div>
 
-      <Button
-        message="Connexion/Inscription"
-        handleClick={() => connectPopupDisplay(true)}
-      />
+      {user ? (
+        <Button message="Mon Compte" handleClick={() => {}} />
+      ) : (
+        <Button
+          message="Connexion/Inscription"
+          handleClick={() => connectPopupDisplay(true)}
+        />
+      )}
     </header>
   );
 }

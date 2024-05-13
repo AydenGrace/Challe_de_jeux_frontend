@@ -13,9 +13,10 @@ import { Outlet, ScrollRestoration } from "react-router-dom";
 
 function App() {
   const [connectDisplay, setConnectdisplay] = useState(false);
+  const [user, setUser] = useState(null);
   return (
     <>
-      <Header connectPopupDisplay={setConnectdisplay} />
+      <Header connectPopupDisplay={setConnectdisplay} user={user} />
 
       <div className="d-flex w-100 flex-column mh-100">
         <Suspense>
@@ -23,7 +24,9 @@ function App() {
         </Suspense>
       </div>
       <Socials />
-      {connectDisplay && <Connect setDisplay={setConnectdisplay} />}
+      {connectDisplay && (
+        <Connect setDisplay={setConnectdisplay} setUser={setUser} />
+      )}
       <ScrollToTop
         className={`${styles.up}`}
         smooth

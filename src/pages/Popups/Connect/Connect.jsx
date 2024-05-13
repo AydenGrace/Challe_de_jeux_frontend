@@ -8,7 +8,7 @@ import Button from "../../../components/Buttons";
 import Login from "./Login";
 import Register from "./Register";
 
-export default function Connect({ setDisplay }) {
+export default function Connect({ setDisplay, setUser }) {
   const [loginError, setLoginError] = useState("");
   const [aRegisterText, setARegisterText] = useState(
     "Je souhaite créer un compte"
@@ -20,35 +20,6 @@ export default function Connect({ setDisplay }) {
     if (isLogin) setARegisterText("Je possède déjà un compte");
     else setARegisterText("Je souhaite créer un compte");
   }
-  // const SignInSchema = yup.object({
-  //   username: yup.string().required("Required"),
-  //   email: yup
-  //     .string()
-  //     .email()
-  //     .required("Required")
-  //     .matches(/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/g, "Email invalide"),
-  //   password: yup
-  //     .string()
-  //     .required("Champs requis")
-  //     .matches(
-  //       /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$#!%*?&])[A-Za-z\d@$#!%*?&]{12,}$/,
-  //       "Votre mot de passe doit contenir au moins :\n1 lettre capitale\n1 lettre minuscule\n1 chiffre\n1 caractère spécial (&@$#!%*?&)"
-  //     ),
-  //   confirm_password: yup
-  //     .string()
-  //     .required("Champs requis")
-  //     .oneOf([yup.ref("password"), ""], "Le mot de passe doit être identique"),
-  //   rgpd: yup.boolean().oneOf([true], "Vous devez accepter les conditions"),
-  // });
-
-  // const signinValues = {
-  // username: "",
-  // email: "",
-  // confirm_password: "",
-  // password: "",
-  // rgpd: false,
-
-  // };
 
   return (
     <div
@@ -61,7 +32,11 @@ export default function Connect({ setDisplay }) {
           e.stopPropagation();
         }}
       >
-        {isLogin ? <Login /> : <Register />}
+        {isLogin ? (
+          <Login setDisplay={setDisplay} setUser={setUser} />
+        ) : (
+          <Register setDisplay={setDisplay} />
+        )}
         <a onClick={handleRegisterOrLogin}>{aRegisterText}</a>
       </div>
     </div>

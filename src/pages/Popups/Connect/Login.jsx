@@ -8,7 +8,7 @@ import styles from "./Login.module.scss";
 import { url } from "./../../../url";
 import { Link } from "react-router-dom";
 
-export default function Login() {
+export default function Login({ setDisplay, setUser }) {
   const [feedback, setFeedback] = useState(null);
   const [seePwd, setSeePwd] = useState(false);
 
@@ -61,6 +61,10 @@ export default function Login() {
             });
 
         console.log(responseFeedback.message);
+        if (feedback.status === 200) {
+          setUser(responseFeedback.user);
+          setDisplay(false);
+        }
       }
     } catch (error) {
       console.error(error);
