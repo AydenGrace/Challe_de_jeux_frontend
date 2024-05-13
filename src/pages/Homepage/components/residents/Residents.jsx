@@ -21,22 +21,6 @@ export default function Residents() {
   };
   const [allCats, setAllCats] = useState(useLoaderData());
 
-  // useEffect(() => {
-  //   async function getCats() {
-  //     try {
-  //       const response = await fetch(`${url}/api/cats`);
-  //       if (response.ok) {
-  //         const cats = await response.json();
-  //         setAllCats(cats);
-  //         console.log(cats);
-  //       }
-  //     } catch (e) {
-  //       console.log(e);
-  //     }
-  //   }
-  //   getCats();
-  // }, []);
-
   return (
     <section
       id="Residents"

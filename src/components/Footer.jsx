@@ -9,7 +9,7 @@ export default function Footer({ handlePage = () => {} }) {
         <div className={`${styles.footer_div}`}>
           <NavLink to={"/"}>
             <img
-              src="./img/CdJ_Logo-min.webp"
+              src="https://firebasestorage.googleapis.com/v0/b/challe-de-jeux.appspot.com/o/logos%2FCdJ_Logo-min.webp?alt=media&token=bb361bca-ce79-46a9-bc09-aa5fad312656"
               alt="La Challe de Jeux"
               className={`${styles.logo}`}
             />
@@ -19,10 +19,16 @@ export default function Footer({ handlePage = () => {} }) {
             className={`d-flex w-100 justify-content-center align-items-center gap-20 mb-20`}
           >
             <a href="https://www.la-spa.fr/" target="_blank">
-              <img src="./img/Spa-min.webp" alt="Spa partner" />
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/challe-de-jeux.appspot.com/o/logos%2FSpa-min.webp?alt=media&token=3db48526-06b5-4eb0-8eaf-6e5d3d0288c5"
+                alt="Spa partner"
+              />
             </a>
             <a href="https://www.zooplus.fr/" target="_blank">
-              <img src="./img/Zooplus-min.webp" alt="Zooplus partner" />
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/challe-de-jeux.appspot.com/o/logos%2FZooplus-min.webp?alt=media&token=1f891174-aff4-4b37-b10b-6b4b5289268d"
+                alt="Zooplus partner"
+              />
             </a>
           </div>
           <div

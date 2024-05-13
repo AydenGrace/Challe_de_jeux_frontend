@@ -21,7 +21,7 @@ export default function Header({
       <div className="d-flex g-20">
         <Link to={"/"}>
           <img
-            src="./img/CdJ_Logo-min.webp"
+            src="https://firebasestorage.googleapis.com/v0/b/challe-de-jeux.appspot.com/o/logos%2FCdJ_Logo-min.webp?alt=media&token=bb361bca-ce79-46a9-bc09-aa5fad312656"
             alt="La Challe de Jeux"
             className={`${styles.logo}`}
           />
