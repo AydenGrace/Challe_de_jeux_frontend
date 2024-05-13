@@ -45,25 +45,27 @@ export default function Login({ setDisplay, setUser }) {
       if (response.ok) {
         const responseFeedback = await response.json();
         console.log(responseFeedback);
-        responseFeedback.status === 200
-          ? setFeedback({
+        switch (responseFeedback.status) {
+          case 200:
+            setFeedback({
               status: responseFeedback.status,
               message: `Bienvenue ${responseFeedback.user.username}`,
-            })
-          : responseFeedback.status === 300
-          ? setFeedback({
+            });
+            setUser(responseFeedback.user);
+            setDisplay(false);
+            break;
+          case 300:
+            setFeedback({
               status: responseFeedback.status,
               message: responseFeedback.message,
-            })
-          : setFeedback({
+            });
+            break;
+          default:
+            setFeedback({
               status: response.status,
               message: responseFeedback.message,
             });
-
-        console.log(responseFeedback.message);
-        if (feedback.status === 200) {
-          setUser(responseFeedback.user);
-          setDisplay(false);
+            break;
         }
       }
     } catch (error) {
