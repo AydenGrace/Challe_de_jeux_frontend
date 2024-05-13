@@ -13,10 +13,14 @@ import { Outlet, ScrollRestoration } from "react-router-dom";
 
 function App() {
   const [connectDisplay, setConnectdisplay] = useState(false);
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState({ username: "Ayden" });
   return (
     <>
-      <Header connectPopupDisplay={setConnectdisplay} user={user} />
+      <Header
+        connectPopupDisplay={setConnectdisplay}
+        user={user}
+        setUser={setUser}
+      />
 
       <div className="d-flex w-100 flex-column mh-100">
         <Suspense>

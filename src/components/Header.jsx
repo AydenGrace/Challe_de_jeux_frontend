@@ -2,12 +2,19 @@
 import { Link, NavLink } from "react-router-dom";
 import Button from "./Buttons";
 import styles from "./Header.module.scss";
+import { useState } from "react";
 
 export default function Header({
   handlePage = () => {},
   connectPopupDisplay = () => {},
   user,
+  setUser,
 }) {
+  const [dropdown, setDropdown] = useState(false);
+
+  function Disconnect() {
+    setUser(null);
+  }
   return (
     <header className={`d-flex justify-content-sb align-items-center`}>
       <div className="d-flex g-20">
@@ -45,12 +52,38 @@ export default function Header({
       </div>
 
       {user ? (
-        <Button message="Mon Compte" handleClick={() => {}} />
+        <Button
+          message="Mon Compte"
+          handleClick={() => {
+            setDropdown(!dropdown);
+          }}
+        />
       ) : (
         <Button
           message="Connexion/Inscription"
           handleClick={() => connectPopupDisplay(true)}
         />
+      )}
+      {dropdown && (
+        <ul
+          className={`d-flex align-items-end flex-column card ${styles.dropdown}`}
+        >
+          <NavLink className={`btn-nav-reverse-primary btn-nav`} to={"/profil"}>
+            Mon profil
+          </NavLink>
+          <NavLink
+            className={`btn-nav-reverse-primary btn-nav`}
+            to={"/history"}
+          >
+            Mes réservations
+          </NavLink>
+          <button
+            className={`btn-nav-reverse-primary btn-nav c-r`}
+            onClick={Disconnect}
+          >
+            Déconnexion
+          </button>
+        </ul>
       )}
     </header>
   );
