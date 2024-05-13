@@ -13,6 +13,7 @@ export default function Header({
   const [dropdown, setDropdown] = useState(false);
 
   function Disconnect() {
+    setDropdown(false);
     setUser(null);
   }
   return (
