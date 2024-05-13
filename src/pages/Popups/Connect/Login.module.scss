@@ -44,11 +44,16 @@ a {
     }
   }
 }
+
 .forgot {
   width: 100%;
   display: flex;
   justify-content: flex-end;
   font-size: 0.9rem;
+}
+
+.pointer {
+  cursor: pointer;
 }
 
 @-webkit-keyframes bounce-in-fwd {

@@ -11,6 +11,9 @@ import { Link } from "react-router-dom";
 
 export default function Register() {
   const [feedback, setFeedback] = useState(null);
+  const [seePwd, setSeePwd] = useState(false);
+  const [seeConfPwd, setSeeConfPwd] = useState(false);
+
   const SignInSchema = yup.object({
     username: yup.string().required("Required"),
     email: yup
@@ -82,6 +85,24 @@ export default function Register() {
     }
   }
 
+  function handleSeePassword() {
+    setSeePwd(!seePwd);
+    if (seePwd) {
+      document.getElementById("password").type = "password";
+    } else {
+      document.getElementById("password").type = "text";
+    }
+  }
+
+  function handleSeeConfPassword() {
+    setSeeConfPwd(!seeConfPwd);
+    if (seeConfPwd) {
+      document.getElementById("confirm_password").type = "password";
+    } else {
+      document.getElementById("confirm_password").type = "text";
+    }
+  }
+
   return (
     <form
       onSubmit={handleSubmit(submit)}
@@ -124,14 +145,29 @@ export default function Register() {
         <label htmlFor="password">
           Mot de passe <span className="c-r">*</span>
         </label>
-        <input
-          {...register("password")}
-          type="password"
-          id="password"
-          placeholder="Mot de passe"
-          className={`d-flex w-100 mw-300`}
-          required
-        />
+        <div className="f-center mw-300">
+          <input
+            {...register("password")}
+            type="password"
+            id="password"
+            placeholder="Mot de passe"
+            className={`d-flex w-100`}
+            required
+          />
+          {seePwd ? (
+            <i
+              className={`fa-solid fa-eye-slash c-p ${styles.pointer} p-5`}
+              id="mdp_not_toggle"
+              onClick={handleSeePassword}
+            ></i>
+          ) : (
+            <i
+              className={`fa-solid fa-eye c-p ${styles.pointer} p-5`}
+              id="mdp_toggle"
+              onClick={handleSeePassword}
+            ></i>
+          )}
+        </div>
         {errors.password && <p className="c-r">{errors.password.message}</p>}
       </div>
 
@@ -139,14 +175,29 @@ export default function Register() {
         <label htmlFor="confirm_password">
           Confirmez votre mot de passe <span className="c-r">*</span>
         </label>
-        <input
-          {...register("confirm_password")}
-          type="password"
-          id="confirm_password"
-          placeholder="Mot de passe"
-          className={`d-flex w-100 mw-300`}
-          required
-        />
+        <div className="f-center mw-300">
+          <input
+            {...register("confirm_password")}
+            type="password"
+            id="confirm_password"
+            placeholder="Mot de passe"
+            className={`d-flex w-100 `}
+            required
+          />
+          {seeConfPwd ? (
+            <i
+              className={`fa-solid fa-eye-slash c-p ${styles.pointer} p-5`}
+              id="mdp_not_toggle"
+              onClick={handleSeeConfPassword}
+            ></i>
+          ) : (
+            <i
+              className={`fa-solid fa-eye c-p ${styles.pointer} p-5`}
+              id="mdp_toggle"
+              onClick={handleSeeConfPassword}
+            ></i>
+          )}
+        </div>
         {errors.confirm_password && (
           <p className="c-r">{errors.confirm_password.message}</p>
         )}

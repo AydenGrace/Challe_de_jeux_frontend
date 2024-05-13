@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 
 export default function Login() {
   const [feedback, setFeedback] = useState(null);
+  const [seePwd, setSeePwd] = useState(false);
 
   const LoginSchema = yup.object({
     email: yup.string().email().required("Champs requis"),
@@ -66,6 +67,15 @@ export default function Login() {
     }
   }
 
+  function handleSeePassword() {
+    setSeePwd(!seePwd);
+    if (seePwd) {
+      document.getElementById("login_password").type = "password";
+    } else {
+      document.getElementById("login_password").type = "text";
+    }
+  }
+
   return (
     <form
       onSubmit={handleSubmit(submit)}
@@ -89,14 +99,30 @@ export default function Login() {
 
       <div className="d-flex flex-column mb-20">
         <label htmlFor="login_password">Mot de passe</label>
-        <input
-          {...register("password")}
-          type="password"
-          id="login_password"
-          placeholder="Mot de passe"
-          className={`d-flex w-100 mw-300`}
-          required
-        />
+        <div className="f-center">
+          <input
+            {...register("password")}
+            type="password"
+            id="login_password"
+            placeholder="Mot de passe"
+            className={`d-flex w-100 mw-300`}
+            required
+          />
+          {seePwd ? (
+            <i
+              className={`fa-solid fa-eye-slash c-p ${styles.pointer} p-5`}
+              id="mdp_not_toggle"
+              onClick={handleSeePassword}
+            ></i>
+          ) : (
+            <i
+              className={`fa-solid fa-eye c-p ${styles.pointer} p-5`}
+              id="mdp_toggle"
+              onClick={handleSeePassword}
+            ></i>
+          )}
+        </div>
+
         <div className={`${styles.forgot}`}>
           <Link to={"/forgot_Password"}>Mot de passe oublié</Link>
         </div>
