@@ -4,6 +4,7 @@ import Homepage from "./pages/Homepage/Homepage";
 import Contact from "./pages/Contact/Contact";
 import ErrorPage from "./pages/ErrorPage/ErrorPage";
 import { catsLoader } from "./loaders/catsLoader";
+import ForgotPassword from "./pages/Forgot_Password/ForgotPassword";
 
 export const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ export const router = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />,
+      },
+      {
+        path: "/forgot_password",
+        element: <ForgotPassword />,
       },
     ],
   },
