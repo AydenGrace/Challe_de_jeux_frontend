@@ -13,7 +13,7 @@ import { Outlet, ScrollRestoration } from "react-router-dom";
 
 function App() {
   const [connectDisplay, setConnectdisplay] = useState(false);
-  const [user, setUser] = useState({ username: "Ayden" });
+  const [user, setUser] = useState(null);
   return (
     <>
       <Header
