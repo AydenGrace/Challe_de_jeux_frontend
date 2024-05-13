@@ -10,7 +10,7 @@ export default function Header({
 }) {
   return (
     <header className={`d-flex justify-content-sb align-items-center`}>
-      <div className="d-flex g-20 flex-all-cont">
+      <div className="d-flex g-20">
         <Link to={"/"}>
           <img
             src="./img/CdJ_Logo-min.webp"
