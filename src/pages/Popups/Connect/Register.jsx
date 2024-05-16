@@ -65,20 +65,24 @@ export default function Register() {
       if (response.ok) {
         const responseFeedback = await response.json();
         console.log(responseFeedback);
-        responseFeedback.status === 200
-          ? setFeedback({
-              status: responseFeedback.status,
-              message: "Nouveau compté créé",
-            })
-          : responseFeedback.status === 300
-          ? setFeedback({
-              status: responseFeedback.status,
-              message: "Email déjà utilisé",
-            })
-          : setFeedback({
-              status: response.status,
-              message: "Une erreur est survenue",
-            });
+        // responseFeedback.status === 200
+        //   ? setFeedback({
+        //       status: responseFeedback.status,
+        //       message: "Nouveau compté créé",
+        //     })
+        //   : responseFeedback.status === 300
+        //   ? setFeedback({
+        //       status: responseFeedback.status,
+        //       message: "Email déjà utilisé",
+        //     })
+        //   : setFeedback({
+        //       status: response.status,
+        //       message: "Une erreur est survenue",
+        //     });
+        setFeedback({
+          status: responseFeedback.status,
+          message: responseFeedback.message,
+        });
 
         if (feedback.status === 200) {
           setDisplay(false);

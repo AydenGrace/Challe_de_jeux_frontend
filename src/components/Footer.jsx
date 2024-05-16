@@ -9,7 +9,7 @@ export default function Footer({ handlePage = () => {} }) {
         <div className={`${styles.footer_div}`}>
           <NavLink to={"/"}>
             <img
-              src="https://firebasestorage.googleapis.com/v0/b/challe-de-jeux.appspot.com/o/logos%2FCdJ_Logo-min.webp?alt=media&token=bb361bca-ce79-46a9-bc09-aa5fad312656"
+              src="https://firebasestorage.googleapis.com/v0/b/challe-de-jeux.appspot.com/o/logos%2FChalle_de_jeux_logo_horizontal_sombre.webp?alt=media&token=07f8eae2-4f8e-49b4-855c-c6452a90e0b7"
               alt="La Challe de Jeux"
               className={`${styles.logo}`}
             />
