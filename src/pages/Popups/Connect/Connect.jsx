@@ -24,10 +24,11 @@ export default function Connect({ setDisplay, setUser }) {
   return (
     <div
       className={`f-center flex-column ${styles.container}`}
-      onClick={() => setDisplay(false)}
+      onMouseDown={() => setDisplay(false)}
     >
       <div
         className={`f-center card flex-column ${styles.card}`}
+        onMouseDown={(e) => e.stopPropagation()}
         onClick={(e) => {
           e.stopPropagation();
         }}
