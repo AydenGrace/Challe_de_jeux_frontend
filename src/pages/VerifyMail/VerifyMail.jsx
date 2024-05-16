@@ -20,7 +20,7 @@ export default function VerifyMail() {
 
   async function Verify() {
     try {
-      const decodedPayload = token.replace(/\,/g, ".");
+      const decodedPayload = token.replaceAll(/\,/g, ".");
       console.log("Token = " + decodedPayload);
       const response = await fetch(
         `${url}/api/users/verifyMail/${decodedPayload}`
@@ -33,8 +33,8 @@ export default function VerifyMail() {
       setTimer(10);
       if (responseFeedback.status === 200) {
         Interval = setInterval(() => {
-          setTimer(timer - 1);
-          if (timer === 0) {
+          setTimer(timer--);
+          if (timer <= 0) {
             clearInterval(Interval);
             this.props.history.push("/");
           }
