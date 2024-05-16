@@ -79,6 +79,7 @@ export default function Login({ setDisplay, setUser }) {
   return (
     <form
       onSubmit={handleSubmit(submit)}
+      onMouseDown={(e) => e.stopPropagation()}
       onClick={(e) => e.stopPropagation()}
       className={`d-flex flex-column ${styles.form} mb-10`}
     >
@@ -123,8 +124,12 @@ export default function Login({ setDisplay, setUser }) {
           )}
         </div>
 
-        <div className={`${styles.forgot}`} onClick={() => setDisplay(false)}>
-          <Link to={"/forgot_Password"} target={"_blank"}>
+        <div className={`${styles.forgot}`}>
+          <Link
+            to={"/forgot_Password"}
+            target={"_blank"}
+            onClick={() => setDisplay(false)}
+          >
             Mot de passe oublié
           </Link>
         </div>
