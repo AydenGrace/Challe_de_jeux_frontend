@@ -20,7 +20,10 @@ export default function VerifyMail() {
 
   async function Verify() {
     try {
-      const response = await fetch(`${url}/api/users/verifyMail/${token}`);
+      const decodedPayload = decodeURIComponent(token);
+      const response = await fetch(
+        `${url}/api/users/verifyMail/${decodedPayload}`
+      );
       const responseFeedback = await response.json();
       setFeedback({
         status: responseFeedback.status,
