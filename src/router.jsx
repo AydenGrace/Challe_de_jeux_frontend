@@ -6,6 +6,7 @@ import ErrorPage from "./pages/ErrorPage/ErrorPage";
 import { catsLoader } from "./loaders/catsLoader";
 import ForgotPassword from "./pages/Forgot_Password/ForgotPassword";
 import VerifyMail from "./pages/VerifyMail/VerifyMail";
+import Change_Password from "./pages/Change_Password/Change_Password";
 
 export const router = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ export const router = createBrowserRouter([
       {
         path: "/verify_mail/:token",
         element: <VerifyMail />,
+      },
+      {
+        path: "/change_password",
+        element: <Change_Password />,
       },
     ],
   },
