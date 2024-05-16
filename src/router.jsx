@@ -32,7 +32,7 @@ export const router = createBrowserRouter([
         element: <VerifyMail />,
       },
       {
-        path: "/change_password",
+        path: "/change_password/:token",
         element: <Change_Password />,
       },
     ],
