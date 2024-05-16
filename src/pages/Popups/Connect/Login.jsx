@@ -54,15 +54,9 @@ export default function Login({ setDisplay, setUser }) {
             setUser(responseFeedback.user);
             setDisplay(false);
             break;
-          case 300:
-            setFeedback({
-              status: responseFeedback.status,
-              message: responseFeedback.message,
-            });
-            break;
           default:
             setFeedback({
-              status: response.status,
+              status: responseFeedback.status,
               message: responseFeedback.message,
             });
             break;
