@@ -7,7 +7,7 @@ import { url } from "../../url";
 export default function VerifyMail() {
   const [loading, setLoading] = useState(false);
   const [feedback, setFeedback] = useState(null);
-  const [timer, setTimer] = useState(0);
+  const [timer, setTimer] = useState();
   let Interval;
 
   const { token } = useParams();
@@ -61,7 +61,7 @@ export default function VerifyMail() {
             </p>
           )
         ) : null}
-        <Link to={"/"} className="btn-nav btn-nav-primary">
+        <Link to={"/"} className="btn-nav btn-nav-primary mt-10">
           Accueil
         </Link>
       </div>
