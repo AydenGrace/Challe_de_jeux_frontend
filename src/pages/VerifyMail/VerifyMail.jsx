@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import styles from "./VerifyMail.module.scss";
 import Button from "../../components/Buttons";
-import { Link, useParams } from "react-router-dom/dist";
+import { Link, redirect, useParams } from "react-router-dom/dist";
 import { url } from "../../url";
 
 export default function VerifyMail() {
   const [loading, setLoading] = useState(false);
   const [feedback, setFeedback] = useState(null);
-  const [timer, setTimer] = useState();
+  const [timer, setTimer] = useState(10);
   let Interval;
 
   const { token } = useParams();
@@ -30,14 +30,14 @@ export default function VerifyMail() {
         status: responseFeedback.status,
         message: responseFeedback.message,
       });
-      let time = 10;
+      let time = 9;
       if (responseFeedback.status === 200) {
         Interval = setInterval(() => {
           setTimer(time);
           time--;
           if (time <= 0) {
             clearInterval(Interval);
-            this.props.history.push("/");
+            redirect("/");
           }
         }, 1000);
       }
