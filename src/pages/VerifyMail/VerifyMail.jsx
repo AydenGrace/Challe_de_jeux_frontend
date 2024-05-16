@@ -30,13 +30,12 @@ export default function VerifyMail() {
         status: responseFeedback.status,
         message: responseFeedback.message,
       });
-      setTimer(10);
+      let time = 10;
       if (responseFeedback.status === 200) {
         Interval = setInterval(() => {
-          console.log(timer - 1);
-          const time = timer - 1;
           setTimer(time);
-          if (timer <= 0) {
+          time--;
+          if (time <= 0) {
             clearInterval(Interval);
             this.props.history.push("/");
           }
