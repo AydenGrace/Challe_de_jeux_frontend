@@ -52,7 +52,7 @@ export default function ForgotPassword() {
   }
 
   return (
-    <section id="Contact" className={`f-center h-100 ${styles.page}`}>
+    <section id="ForgotPassword" className={`f-center h-100 ${styles.page}`}>
       <div className={`card f-center flex-column ${styles.container}`}>
         <h1>Mot de passe oublié ?</h1>
         <p>
