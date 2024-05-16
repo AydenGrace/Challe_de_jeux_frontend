@@ -107,7 +107,7 @@ export default function Login({ setDisplay, setUser }) {
             placeholder="Mot de passe"
             className={`d-flex w-100 mw-300`}
             required
-          />
+          ></input>
           {seePwd ? (
             <i
               className={`fa-solid fa-eye-slash c-p ${styles.pointer} p-5`}
