@@ -124,7 +124,9 @@ export default function Login({ setDisplay, setUser }) {
         </div>
 
         <div className={`${styles.forgot}`} onClick={() => setDisplay(false)}>
-          <Link to={"/forgot_Password"}>Mot de passe oublié</Link>
+          <Link to={"/forgot_Password"} target={"_blank"}>
+            Mot de passe oublié
+          </Link>
         </div>
       </div>
 

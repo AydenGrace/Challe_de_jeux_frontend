@@ -222,8 +222,10 @@ export default function Register() {
           />
           En cochant, vous acceptez que vos données soient collectées
           conformément aux <span> </span>{" "}
-          <Link to={"/rgpd"}>Politiques de confidentialités</Link>.
-          <span className="c-r">*</span>
+          <Link to={"/rgpd"} target={"_blank"}>
+            Politiques de confidentialités
+          </Link>
+          .<span className="c-r">*</span>
         </label>
         {errors.rgpd && <p className="c-r">{errors.rgpd.message}</p>}
       </div>
