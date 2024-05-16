@@ -33,7 +33,7 @@ export default function VerifyMail() {
       setTimer(10);
       if (responseFeedback.status === 200) {
         Interval = setInterval(() => {
-          setTimer(timer--);
+          setTimer(timer - 1);
           if (timer <= 0) {
             clearInterval(Interval);
             this.props.history.push("/");
