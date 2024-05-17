@@ -80,17 +80,13 @@ export default function Change_Password() {
         },
         body: JSON.stringify(values),
       });
-      if (response.ok) {
-        const responseFeedback = await response.json();
-        console.log(responseFeedback);
-        setFeedback({
-          status: responseFeedback.status,
-          message: responseFeedback.message,
-        });
 
-        if (feedback.status === 200) {
-          redirect("/");
-        }
+      const responseFeedback = await response.json();
+      console.log(responseFeedback);
+      setFeedback(responseFeedback);
+
+      if (responseFeedback.status === 200) {
+        redirect("/");
       }
     } catch (error) {
       console.error(error);
