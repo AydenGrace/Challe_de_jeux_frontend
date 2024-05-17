@@ -42,10 +42,7 @@ export default function ForgotPassword() {
         },
         body: JSON.stringify(values),
       });
-      if (response.ok) {
-        setFeedback(response.status);
-        if (response.status === 200) reset(defaultValues);
-      }
+      setFeedback(response.JSON());
     } catch (error) {
       console.error(error);
     }
@@ -70,7 +67,7 @@ export default function ForgotPassword() {
           />
           <Button message="Envoyer" />
         </form>
-        {feedback && <p>{feedback}</p>}
+        {feedback && <p>{feedback.message}</p>}
       </div>
     </section>
   );
