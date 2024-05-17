@@ -42,7 +42,7 @@ export default function ForgotPassword() {
         },
         body: JSON.stringify(values),
       });
-      setFeedback(response.JSON());
+      setFeedback(response.json());
     } catch (error) {
       console.error(error);
     }
