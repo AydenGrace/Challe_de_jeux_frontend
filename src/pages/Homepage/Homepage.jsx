@@ -8,7 +8,7 @@ import Loading from "../../components/Loading";
 
 export default function Homepage() {
   const { state } = useNavigation();
-  return state === "loading" ? (
+  return state !== "idle" ? (
     <Loading />
   ) : (
     <>
