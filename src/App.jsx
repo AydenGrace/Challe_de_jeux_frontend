@@ -17,30 +17,30 @@ function App() {
   const [user, setUser] = useState(null);
   return (
     <>
-      {/* <UserProvider>
+      <UserProvider>
         <Header
           connectPopupDisplay={setConnectdisplay}
           user={user}
           setUser={setUser}
-        /> */}
+        />
 
-      <div className="d-flex w-100 flex-column mh-100">
-        <Suspense>
-          <Outlet />
-        </Suspense>
-      </div>
-      <Socials />
-      {connectDisplay && (
-        <Connect setDisplay={setConnectdisplay} setUser={setUser} />
-      )}
-      <ScrollToTop
-        className={`${styles.up}`}
-        smooth
-        component={<i className={`fa-solid fa-angles-up fa-2xl`}></i>}
-      />
-      {/* <Footer />
+        <div className="d-flex w-100 flex-column mh-100">
+          <Suspense>
+            <Outlet />
+          </Suspense>
+        </div>
+        <Socials />
+        {connectDisplay && (
+          <Connect setDisplay={setConnectdisplay} setUser={setUser} />
+        )}
+        <ScrollToTop
+          className={`${styles.up}`}
+          smooth
+          component={<i className={`fa-solid fa-angles-up fa-2xl`}></i>}
+        />
+        <Footer />
         <ScrollRestoration />
-      </UserProvider> */}
+      </UserProvider>
     </>
   );
 }
