@@ -42,26 +42,26 @@ export default function Login({ setDisplay, setUser }) {
         },
         body: JSON.stringify(values),
       });
-      if (response.ok) {
-        const responseFeedback = await response.json();
-        console.log(responseFeedback);
-        switch (responseFeedback.status) {
-          case 200:
-            setFeedback({
-              status: responseFeedback.status,
-              message: `Bienvenue ${responseFeedback.user.username}`,
-            });
-            setUser(responseFeedback.user);
-            setDisplay(false);
-            break;
-          default:
-            setFeedback({
-              status: responseFeedback.status,
-              message: responseFeedback.message,
-            });
-            break;
-        }
+      // if (response.ok) {
+      const responseFeedback = await response.json();
+      console.log(responseFeedback);
+      switch (responseFeedback.status) {
+        case 200:
+          setFeedback({
+            status: responseFeedback.status,
+            message: `Bienvenue ${responseFeedback.user.username}`,
+          });
+          setUser(responseFeedback.user);
+          setDisplay(false);
+          break;
+        default:
+          setFeedback({
+            status: responseFeedback.status,
+            message: responseFeedback.message,
+          });
+          break;
       }
+      //   }
     } catch (error) {
       console.error(error);
     }
@@ -100,7 +100,7 @@ export default function Login({ setDisplay, setUser }) {
 
       <div className="d-flex flex-column mb-20">
         <label htmlFor="login_password">Mot de passe</label>
-        <div className="f-center">
+        <div className={`d-flex center ${styles.relative}`}>
           <input
             {...register("password")}
             type="password"
@@ -111,13 +111,13 @@ export default function Login({ setDisplay, setUser }) {
           ></input>
           {seePwd ? (
             <i
-              className={`fa-solid fa-eye-slash c-p ${styles.pointer} p-5`}
+              className={`fa-solid fa-eye-slash ${styles.pointer} p-5`}
               id="mdp_not_toggle"
               onClick={handleSeePassword}
             ></i>
           ) : (
             <i
-              className={`fa-solid fa-eye c-p ${styles.pointer} p-5`}
+              className={`fa-solid fa-eye ${styles.pointer} p-5`}
               id="mdp_toggle"
               onClick={handleSeePassword}
             ></i>
