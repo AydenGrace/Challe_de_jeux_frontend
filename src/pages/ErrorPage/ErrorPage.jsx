@@ -15,7 +15,7 @@ export default function ErrorPage() {
 
   return (
     <>
-      {/* <Header connectPopupDisplay={setConnectdisplay} /> */}
+      <Header connectPopupDisplay={setConnectdisplay} />
 
       <div className="f-center w-100 flex-column mh-100">
         <h1>Error {error.status}</h1>
@@ -26,12 +26,12 @@ export default function ErrorPage() {
       </div>
       <Socials />
       {connectDisplay && <Connect setDisplay={setConnectdisplay} />}
-      {/* <ScrollToTop
+      <ScrollToTop
         className={`${styles.up}`}
         smooth
         component={<i className={`fa-solid fa-angles-up fa-2xl`}></i>}
-      /> */}
-      {/* <Footer /> */}
+      />
+      <Footer />
     </>
   );
 }
