@@ -7,6 +7,8 @@ import { catsLoader } from "./loaders/catsLoader";
 import ForgotPassword from "./pages/Forgot_Password/ForgotPassword";
 import VerifyMail from "./pages/VerifyMail/VerifyMail";
 import Change_Password from "./pages/Change_Password/Change_Password";
+import AdminConnected from "./components/ProtectedRoutes/AdminConnected";
+import Dashboard from "./pages/Dashboard/Dashboard";
 
 export const router = createBrowserRouter([
   {
@@ -34,6 +36,14 @@ export const router = createBrowserRouter([
       {
         path: "/change_password/:token",
         element: <Change_Password />,
+      },
+      {
+        path: "/dashboard",
+        element: (
+          <AdminConnected>
+            <Dashboard />
+          </AdminConnected>
+        ),
       },
     ],
   },
