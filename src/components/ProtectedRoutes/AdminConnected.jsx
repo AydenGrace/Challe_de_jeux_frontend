@@ -5,5 +5,5 @@ import { UserContext } from "../../context/UserContext";
 export default function AdminConnected({ children }) {
   const { user } = useContext(UserContext);
   console.log(user);
-  return user.role.power < 0 ? children : <Navigate to="/" />;
+  return user ? children : <Navigate to="/" />;
 }
