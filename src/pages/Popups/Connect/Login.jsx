@@ -43,8 +43,11 @@ export default function Login({ setDisplay, setUser }) {
         body: JSON.stringify(values),
       });
       // if (response.ok) {
+
       const responseFeedback = await response.json();
+      console.log("Response from Login");
       console.log(responseFeedback);
+
       switch (responseFeedback.status) {
         case 200:
           setFeedback({
