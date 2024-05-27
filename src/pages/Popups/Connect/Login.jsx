@@ -57,8 +57,8 @@ export default function Login({ setDisplay }) {
             status: responseFeedback.status,
             message: `Bienvenue ${responseFeedback.user.username}`,
           });
-          localStorage.setItem("user", JSON.stringify(response));
-          setConnectedUser(response.user);
+          localStorage.setItem("user", JSON.stringify(responseFeedback));
+          setConnectedUser(responseFeedback.user);
           setDisplay(false);
           break;
         default:
