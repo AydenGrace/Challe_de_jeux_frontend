@@ -11,7 +11,7 @@ import UserProvider from "../../../Providers/UserProvider";
 import { UserContext } from "../../../context/UserContext";
 
 export default function Login({ setDisplay }) {
-  const { user } = useContext(UserContext);
+  const { setConnectedUser } = useContext(UserContext);
   const [feedback, setFeedback] = useState(null);
   const [seePwd, setSeePwd] = useState(false);
 
@@ -57,7 +57,7 @@ export default function Login({ setDisplay }) {
             status: responseFeedback.status,
             message: `Bienvenue ${responseFeedback.user.username}`,
           });
-          localStorage.setItem("user", JSON.stringify(response));
+          localStorage.setItem("user", JSON.stringify(response.user));
           setConnectedUser(response.user);
           setDisplay(false);
           break;
