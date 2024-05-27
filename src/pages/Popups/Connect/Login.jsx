@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -7,8 +7,11 @@ import Button from "../../../components/Buttons";
 import styles from "./Login.module.scss";
 import { url } from "./../../../url";
 import { Link } from "react-router-dom";
+import UserProvider from "../../../Providers/UserProvider";
+import { UserContext } from "../../../context/UserContext";
 
-export default function Login({ setDisplay, setUser }) {
+export default function Login({ setDisplay }) {
+  const { user } = useContext(UserContext);
   const [feedback, setFeedback] = useState(null);
   const [seePwd, setSeePwd] = useState(false);
 
@@ -54,7 +57,8 @@ export default function Login({ setDisplay, setUser }) {
             status: responseFeedback.status,
             message: `Bienvenue ${responseFeedback.user.username}`,
           });
-          setUser(responseFeedback.user);
+          localStorage.setItem("user", JSON.stringify(response));
+          setConnectedUser(response.user);
           setDisplay(false);
           break;
         default:

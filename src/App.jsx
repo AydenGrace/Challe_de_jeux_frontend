@@ -10,34 +10,37 @@ import ScrollToTop from "react-scroll-to-top";
 import styles from "./App.module.scss";
 import Connect from "./pages/Popups/Connect/Connect";
 import { Outlet, ScrollRestoration } from "react-router-dom";
+import UserProvider from "./Providers/UserProvider";
 
 function App() {
   const [connectDisplay, setConnectdisplay] = useState(false);
   const [user, setUser] = useState(null);
   return (
     <>
-      <Header
-        connectPopupDisplay={setConnectdisplay}
-        user={user}
-        setUser={setUser}
-      />
+      <UserProvider>
+        <Header
+          connectPopupDisplay={setConnectdisplay}
+          user={user}
+          setUser={setUser}
+        />
 
-      <div className="d-flex w-100 flex-column mh-100">
-        <Suspense>
-          <Outlet />
-        </Suspense>
-      </div>
-      <Socials />
-      {connectDisplay && (
-        <Connect setDisplay={setConnectdisplay} setUser={setUser} />
-      )}
-      <ScrollToTop
-        className={`${styles.up}`}
-        smooth
-        component={<i className={`fa-solid fa-angles-up fa-2xl`}></i>}
-      />
-      <Footer />
-      <ScrollRestoration />
+        <div className="d-flex w-100 flex-column mh-100">
+          <Suspense>
+            <Outlet />
+          </Suspense>
+        </div>
+        <Socials />
+        {connectDisplay && (
+          <Connect setDisplay={setConnectdisplay} setUser={setUser} />
+        )}
+        <ScrollToTop
+          className={`${styles.up}`}
+          smooth
+          component={<i className={`fa-solid fa-angles-up fa-2xl`}></i>}
+        />
+        <Footer />
+        <ScrollRestoration />
+      </UserProvider>
     </>
   );
 }
