@@ -2,19 +2,22 @@
 import { Link, NavLink } from "react-router-dom";
 import Button from "./Buttons";
 import styles from "./Header.module.scss";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { UserContext } from "../context/UserContext";
 
 export default function Header({
   handlePage = () => {},
   connectPopupDisplay = () => {},
-  user,
-  setUser,
+  // user,
+  // setUser,
 }) {
   const [dropdown, setDropdown] = useState(false);
+  const { user, logoutConnectedUser } = useContext(UserContext);
 
   function Disconnect() {
     setDropdown(false);
-    setUser(null);
+    logoutConnectedUser();
+    // setUser(null);
   }
   return (
     <header className={`d-flex justify-content-sb align-items-center`}>
