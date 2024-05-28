@@ -8,7 +8,7 @@ import Button from "../../../components/Buttons";
 import Login from "./Login";
 import Register from "./Register";
 
-export default function Connect({ setDisplay, setUser }) {
+export default function Connect({ setDisplay }) {
   const [loginError, setLoginError] = useState("");
   const [aRegisterText, setARegisterText] = useState(
     "Je souhaite créer un compte"
@@ -34,7 +34,7 @@ export default function Connect({ setDisplay, setUser }) {
         }}
       >
         {isLogin ? (
-          <Login setDisplay={setDisplay} setUser={setUser} />
+          <Login setDisplay={setDisplay} />
         ) : (
           <Register setDisplay={setDisplay} />
         )}
