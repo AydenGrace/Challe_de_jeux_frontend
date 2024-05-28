@@ -72,7 +72,10 @@ export default function Header({
         <ul
           className={`d-flex align-items-end flex-column card ${styles.dropdown}`}
         >
-          <NavLink className={`btn-nav-reverse-primary btn-nav`} to={"/profil"}>
+          <NavLink
+            className={`btn-nav-reverse-primary btn-nav`}
+            to={"/profile"}
+          >
             Mon profil
           </NavLink>
           <NavLink
