@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { UserContext } from "../context/UserContext";
 
 export default function UserProvider({ children }) {
-  const [user, setUser] = useState(undefined);
+  const [user, setUser] = useState();
 
   useEffect(() => {
     getLocalUser();
