@@ -4,6 +4,7 @@ import { UserContext } from "../../context/UserContext";
 
 export default function AdminConnected({ children }) {
   const { user } = useContext(UserContext);
+  console.log("DASHBOARD");
   console.log(user);
-  return user ? children : <Navigate to="/" />;
+  return user ? { children } : <Navigate to="/" />;
 }
