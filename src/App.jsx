@@ -13,15 +13,10 @@ import UserProvider from "./Providers/UserProvider";
 
 function App() {
   const [connectDisplay, setConnectdisplay] = useState(false);
-  const [user, setUser] = useState(null);
   return (
     <>
       <UserProvider>
-        <Header
-          connectPopupDisplay={setConnectdisplay}
-          user={user}
-          setUser={setUser}
-        />
+        <Header connectPopupDisplay={setConnectdisplay} />
 
         <div className="d-flex w-100 flex-column mh-100">
           {/* <Suspense> */}
@@ -29,9 +24,7 @@ function App() {
           {/* </Suspense> */}
         </div>
         <Socials />
-        {connectDisplay && (
-          <Connect setDisplay={setConnectdisplay} setUser={setUser} />
-        )}
+        {connectDisplay && <Connect setDisplay={setConnectdisplay} />}
         <ScrollToTop
           className={`${styles.up}`}
           smooth
