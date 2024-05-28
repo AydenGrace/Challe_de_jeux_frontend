@@ -10,6 +10,8 @@ import { UserContext } from "../../context/UserContext";
 export default function Homepage() {
   const { state } = useNavigation();
   const { user } = useContext(UserContext);
+  console.log("HOMEPAGE");
+  console.log(user);
   return state !== "idle" ? (
     <Loading />
   ) : (
