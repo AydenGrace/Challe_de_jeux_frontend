@@ -84,6 +84,14 @@ export default function Header({
           >
             Mes réservations
           </NavLink>
+          {user.role.power < 0 ? (
+            <NavLink
+              className={`btn-nav-reverse-primary btn-nav`}
+              to={"/dashboard"}
+            >
+              Panel administratif
+            </NavLink>
+          ) : null}
           <button
             className={`btn-nav-reverse-primary btn-nav c-r`}
             onClick={Disconnect}
