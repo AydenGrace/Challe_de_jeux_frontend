@@ -153,7 +153,7 @@ export default function Register() {
         <label htmlFor="password">
           Mot de passe <span className="c-r">*</span>
         </label>
-        <div className="f-center mw-300">
+        <div className={`f-center mw-300 ${styles.relative}`}>
           <input
             {...register("password")}
             type="password"
@@ -183,7 +183,7 @@ export default function Register() {
         <label htmlFor="confirm_password">
           Confirmez votre mot de passe <span className="c-r">*</span>
         </label>
-        <div className="f-center mw-300">
+        <div className={`f-center mw-300 ${styles.relative}`}>
           <input
             {...register("confirm_password")}
             type="password"

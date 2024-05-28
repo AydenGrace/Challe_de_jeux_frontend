@@ -107,7 +107,7 @@ export default function Login({ setDisplay }) {
 
       <div className="d-flex flex-column mb-20">
         <label htmlFor="login_password">Mot de passe</label>
-        <div className={`d-flex center ${styles.relative}`}>
+        <div className={`f-center ${styles.relative}`}>
           <input
             {...register("password")}
             type="password"
@@ -118,13 +118,13 @@ export default function Login({ setDisplay }) {
           ></input>
           {seePwd ? (
             <i
-              className={`fa-solid fa-eye-slash ${styles.pointer} p-5`}
+              className={`fa-solid fa-eye-slash c-p ${styles.pointer} p-5`}
               id="mdp_not_toggle"
               onClick={handleSeePassword}
             ></i>
           ) : (
             <i
-              className={`fa-solid fa-eye ${styles.pointer} p-5`}
+              className={`fa-solid fa-eye c-p ${styles.pointer} p-5`}
               id="mdp_toggle"
               onClick={handleSeePassword}
             ></i>
