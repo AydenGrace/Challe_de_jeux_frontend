@@ -9,7 +9,7 @@ import VerifyMail from "./pages/VerifyMail/VerifyMail";
 import Change_Password from "./pages/Change_Password/Change_Password";
 import AdminConnected from "./components/ProtectedRoutes/AdminConnected";
 import Dashboard from "./pages/Dashboard/Dashboard";
-import UserConnected from "./components/ProtectedRoutes/USerConnected";
+import UserConnected from "./components/ProtectedRoutes/UserConnected";
 import Profile from "./pages/Profile/Profile";
 
 export const router = createBrowserRouter([
