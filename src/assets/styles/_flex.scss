@@ -1,3 +1,5 @@
+@use "./mixins" as mixin;
+
 .d-flex {
   display: flex;
 }
@@ -6,8 +8,30 @@
   flex-direction: row;
 }
 
+.flex-row-r {
+  flex-direction: row-reverse;
+}
+
 .flex-column {
   flex-direction: column;
+}
+
+.flex-column-r {
+  flex-direction: column-reverse;
+}
+
+.flex-row-m {
+  flex-direction: row;
+  @include mixin.md-lt {
+    flex-direction: column-reverse;
+  }
+}
+
+.flex-row-r-m {
+  flex-direction: row-reverse;
+  @include mixin.md-lt {
+    flex-direction: column-reverse;
+  }
 }
 
 .flex-fill {

@@ -2,9 +2,12 @@ import styles from "./Landing.module.scss";
 
 export default function Landing() {
   return (
-    <section id="Landing" className={`d-flex flex-column h-100 ${styles.Landing} p-20`}>
+    <section
+      id="Landing"
+      className={`d-flex flex-column h-100 ${styles.Landing} p-20`}
+    >
       <div
-        className={`d-flex flex-all-cont align-items-end justify-content-center`}
+        className={`d-flex flex-all-cont align-items-end justify-content-center ${styles.upDiv}`}
       >
         <p>Bienvenue à</p>
       </div>

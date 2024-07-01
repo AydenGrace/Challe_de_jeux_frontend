@@ -70,7 +70,7 @@ export default function ContactCard({ isTitle = false }) {
         onSubmit={handleSubmit(submit)}
         className={`f-center flex-column gap-10`}
       >
-        <div className={`d-flex gap-10`}>
+        <div className={`d-flex gap-10 flex-row-m`}>
           <input
             className={`${styles.mw_300}`}
             type="text"

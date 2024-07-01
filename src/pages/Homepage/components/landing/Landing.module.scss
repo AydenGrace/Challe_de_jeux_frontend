@@ -1,3 +1,5 @@
+@use "../../../../assets/styles/mixins" as mixin;
+
 .Landing {
   background-color: white;
   background-image: url("https://firebasestorage.googleapis.com/v0/b/challe-de-jeux.appspot.com/o/backgrounds%2FCdJ_Landing_BG-min.webp?alt=media&token=8ff7bae1-b314-493a-954c-2570ddf36ea3");
@@ -10,12 +12,19 @@
     font-family: "Caveat Brush";
     text-align: center;
     margin: 5px;
+    @include mixin.md-lt {
+      font-size: 2rem;
+    }
   }
   h1 {
     color: var(--primary900);
     font-size: 140px;
     font-family: "Caveat Brush";
     text-align: center;
+    @include mixin.md-lt {
+      font-size: 5rem;
+      line-height: 4.5rem;
+    }
   }
 }
 
@@ -30,5 +39,14 @@
   transition: all 0.5s ease-in-out;
   &:hover {
     transform: translateY(-10px);
+  }
+  @include mixin.md-lt {
+    padding: 15px;
+  }
+}
+
+.upDiv {
+  @include mixin.md-lt {
+    max-height: 25vh;
   }
 }

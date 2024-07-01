@@ -19,9 +19,7 @@ function App() {
         <Header connectPopupDisplay={setConnectdisplay} />
 
         <div className="d-flex w-100 flex-column mh-100">
-          {/* <Suspense> */}
           <Outlet />
-          {/* </Suspense> */}
         </div>
         <Socials />
         {connectDisplay && <Connect setDisplay={setConnectdisplay} />}
