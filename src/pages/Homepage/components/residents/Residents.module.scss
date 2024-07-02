@@ -1,18 +1,17 @@
-.Residents{
-    background: var(--primary100);
-    padding: 80px 10px;
-    padding-bottom: 0px;
-    h2{
-        font-family: var(--font-title);
-        color: var(--primary900);
-        font-size: 36px;
-        margin-bottom: 20px;
-    }
-    .slider{
-        width: 90%;
-        margin-bottom: 50px;
-    }
-    
+.Residents {
+  background: var(--primary100);
+  padding: 80px 40px;
+  padding-bottom: 0px;
+  h2 {
+    font-family: var(--font-title);
+    color: var(--primary900);
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  .slider {
+    width: 100%;
+    margin-bottom: 50px;
+  }
 }
 // .dots{
 //     width: "5px";

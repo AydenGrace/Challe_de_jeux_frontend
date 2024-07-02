@@ -7,6 +7,7 @@ import Slider from "react-slick";
 import Button from "./../../../../components/Buttons";
 import { url } from "../../../../url";
 import { Link, useLoaderData } from "react-router-dom";
+import GenericSlider from "../../../../components/Slider/GenericSlider";
 
 export default function Residents() {
   const settings = {
@@ -27,6 +28,11 @@ export default function Residents() {
       className={`w-100 d-flex flex-column ${styles.Residents} align-items-center`}
     >
       <h2>Nos Résidents</h2>
+      {/* <GenericSlider>
+        {allCats.map((cat, i) => (
+          <Catcard key={`Cat_${i}`} cat={cat} />
+        ))}
+      </GenericSlider> */}
       <div className={`${styles.slider}`}>
         <Slider {...settings}>
           {allCats.map((cat, i) => (
