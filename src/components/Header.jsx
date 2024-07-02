@@ -12,7 +12,7 @@ export default function Header({
   // setUser,
 }) {
   const [dropdown, setDropdown] = useState(false);
-  const [burgerCheck, setBurgerCheck] = useState(false);
+  const [burgerCheck, setBurgerCheck] = useState(true);
   const [lineOneCheck, setLineOneCheck] = useState("");
   const [lineTwoCheck, setLineTwoCheck] = useState("");
   const [lineThreeCheck, setLineThreeCheck] = useState("");
