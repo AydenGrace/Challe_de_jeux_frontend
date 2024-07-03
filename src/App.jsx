@@ -30,6 +30,17 @@ function App() {
         />
         <Footer />
         <ScrollRestoration />
+        <CookieConsent
+          location="bottom"
+          buttonText="Accepter"
+
+          cookieName="Challe_de_jeux_Cookie"
+          style={{ background: "#e5dbc3" }}
+          buttonStyle={{ background_color: "#5d4431" ,color: "#fff", fontSize: "1rem" }}
+          expires={150}
+        >
+          Ce site internet utilise des cookies conformément à sa <a href="/privacy">Politique de confidentialité</a>.
+        </CookieConsent>
       </UserProvider>
     </>
   );
