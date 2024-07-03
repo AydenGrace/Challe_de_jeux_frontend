@@ -51,6 +51,14 @@ export default function Privacy() {
             <p>Pour les résidents de l’État de Californie, cette politique de confidentialité vise à se conformer à la <i>California Consumer Privacy Act</i> (CCPA). S’il y a des incohérences entre ce document et la CCPA, la législation de l’État s’appliquera. Si nous constatons des incohérences, nous modifierons notre politique pour nous conformer à la loi pertinente.</p>
         </section>
 
+        <section className={`d-flex flex-column justify-content-start ${styles.section}`}>
+            <h2>Consentement</h2>
+            <p>Les utilisateurs conviennent qu’en utilisant notre site, ils consentent à :</p>
+            <ul>
+                <li>Les conditions énoncées dans la présente politique de confidentialité et</li>
+                <li>La collecte, l’utilisation et la conservation des données énumérées dans la présente politique.</li>
+            </ul>
+        </section>
     </div>
   )
 }
