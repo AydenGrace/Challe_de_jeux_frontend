@@ -120,6 +120,18 @@ export default function Cgv() {
                         <li>Dans un délai de 40 jour calendaire pour les clients professionnels.</li>
                     <p>Après en avoir informé le réclamant, LA CHALLE DE JEUX peut, le cas échéant, effectuer une enquête approfondie lorsqu’elle l’estime nécessaire. Les délais de traitement précités sont alors suspendus.</p>
                 </li>
+                <li>
+                    <p><strong>Recours</strong></p>
+                    <li>
+                        <p>Instances de recours internes</p>
+                        <p>Tout réclamant qui souhaite un réexamen de son dossier à l’issue de sa réclamation initiale peut former un recours, dans les mêmes conditions que la réclamation initiale ou par l’intermédiaire d’une association de consommateurs.</p>
+                    </li>
+                    <li>
+                        <p>Saisine du Médiateur</p>
+                        <p>Enfin, le réclamant a la possibilité, si la réponse de LA CHALLE DE JEUX ne le satisfait pas ou s’il n’a pas reçu de réponse deux mois après le dépôt de sa réclamation, de saisir le Médiateur du Tourisme, qui est compétent pour tout litige concernant l’ensemble des services couverts par les présentes conditions générales de vente. La procédure de médiation est gratuite.</p>
+                        <p>Le Médiateur peut être saisi par les particuliers ou les professionnels soit directement soit par un intermédiaire (association de consommateurs, avocat, élu, autre médiateur…).</p>
+                    </li>
+                </li>
             </ul>
         </section>
     </div>
