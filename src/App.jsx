@@ -35,7 +35,6 @@ function App() {
           location="bottom"
           buttonText="Accepter"
           declineButtonText="Refuser"
-          hideOnAccept={true}
           cookieName="Challe_de_jeux_Cookie"
           style={{ background: "#e5dbc3", color:'#000' }}
           buttonStyle={{ backgroundColor: "#5d4431" ,color: "#fff", fontSize: "1rem" }}
