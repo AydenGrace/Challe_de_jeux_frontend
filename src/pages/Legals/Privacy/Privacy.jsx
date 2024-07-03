@@ -126,7 +126,48 @@ export default function Privacy() {
             <p>Le RGPD précise que les personnes de moins de 15 ans sont considérées comme des mineurs aux fins de la collecte de données. Les mineurs doivent avoir le consentement d’un représentant l’gal pour que leurs données soient recueillies, traitées et utilisées.</p>
         </section>
 
+        <section className={`d-flex flex-column justify-content-start ${styles.section}`}>
+            <h2>Vos droits en tant qu’utilisateur</h2>
+            <p>En vertu du RGPD, les utilisateurs ont les droits suivants en tant que personnes concernées :</p>
+            <ul>
+                <li>Droit d’accès</li>
+                <li>Droit de rectification</li>
+                <li>Droit à l’effacement</li>
+                <li>Droit de restreindre le traitement</li>
+                <li>Droit à la portabilité des données</li>
+                <li>Droit d’objection</li>
+            </ul>
+            <p>Vous trouverez de plus amples informations sur ces droits au chapitre 3 (art 12-23) du RGPD.</p>
+        </section>
 
+        <section className={`d-flex flex-column justify-content-start ${styles.section}`}>
+            <h2>Comment modifier, supprimer ou contester les données recueillies</h2>
+            <p>Si vous souhaitez que vos renseignements soient supprimés ou modifiés d’une façon ou d’une autre, veuillez communiquer avec notre agent de protection de la vie privée ici :</p>
+            <p>Crabbé Pierre-Alexandre<br/>19 rue des Arts, 59000 lille<br/><a>confidentialite@challedejeux.fr</a></p>
+        </section>
+
+        <section className={`d-flex flex-column justify-content-start ${styles.section}`}>
+            <h2>Politique sur les cookies</h2>
+            <p>Un cookie est un petit fichier, stocké sur le disque dur d’un utilisateur par le site Web. Son but est de recueillir des données relatives aux habitudes de navigation de l‘utilisateur.</p>
+            <p>Nous utilisons les types de cookies suivants sur notre site :</p>
+            <ul>
+                <li><strong>Cookies fonctionnels</strong><br />Nous les utilisons pour mémoriser toutes les sélections que vous faites sur notre site afin qu’elles soient sauvegardées pour vos prochaines visites.</li>
+                <li><strong>Cookies analytiques</strong><br />Cela nous permet d’améliorer la conception et la fonctionnalité de notre site en recueillant des données sur le contenu auquel vous accédez et sur lequel vous vous accrochez en utilisant notre site.</li>
+            </ul>
+            <p>Vous pouvez choisir d’être averti chaque fois qu’un cookie est transmis. Vous pouvez également choisir de désactiver les cookies entièrement dans votre navigateur Internet, mais cela peut diminuer la qualité de votre expérience d’utilisation.</p>
+        </section>
+
+        <section className={`d-flex flex-column justify-content-start ${styles.section}`}>
+            <h2>Modifications</h2>
+            <p>Cette politique de confidentialité peut être modifiée à l’occasion afin de maintenir la conformité avec la loi et de tenir compte de tout changement à notre processus de collecte de données. Nous recommandons à nos utilisateurs de vérifier notre politique de temps à autre pour s’assurer qu’ils soient informés de toute mise à jour. Au besoin, nous pouvons informer les utilisateurs par courriel des changements apportés à cette politique.</p>
+        </section>
+
+        <section className={`d-flex flex-column justify-content-start ${styles.section}`}>
+            <h2>Contact</h2>
+            <p>Si vous avez des questions à nous poser, n’hésitez pas à communiquer avec nous en utilisant ce qui suit :</p>
+            <p>06 44 80 21 65 <br /> contact@challedejeux.fr <br />19 rue des Arts, 59000 Lille</p>
+            <p><strong>Date d’entrée en vigueur : </strong>le 05 juin 2024</p>
+        </section>
     </div>
   )
 }
