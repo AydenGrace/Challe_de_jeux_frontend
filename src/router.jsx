@@ -13,6 +13,7 @@ import UserConnected from "./components/ProtectedRoutes/UserConnected";
 import Profile from "./pages/Profile/Profile";
 import Privacy from "./pages/Legals/Privacy/Privacy";
 import Cgv from "./pages/Legals/CGV/Cgv";
+import Mentions from "./pages/Legals/Mentions/Mentions";
 
 export const router = createBrowserRouter([
   {
@@ -64,6 +65,10 @@ export const router = createBrowserRouter([
       {
         path: "/cgv",
         element: <Cgv />,
+      },
+      {
+        path: "/legals",
+        element: <Mentions />,
       },
     ],
   },

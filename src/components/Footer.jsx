@@ -72,8 +72,6 @@ export default function Footer({ handlePage = () => {} }) {
             <NavLink to={"/privacy"}>Politique de confidentialité</NavLink>
             <NavLink to={"/legals"}>Mentions légales</NavLink>
             <NavLink to={"/cgv"}>Condition générales de vente</NavLink>
-            <NavLink to={"/cgr"}>Conditions générales de remboursement</NavLink>
-            <NavLink to={"/plan"}>Plan du site</NavLink>
           </nav>
         </div>
         <div className={`${styles.footer_div}`}>
