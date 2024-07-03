@@ -14,6 +14,19 @@ export default function Privacy() {
             <p><strong>Catégorie de site web :</strong> E-Commerce</p>
         </section>
 
+        <section className={`d-flex flex-column justify-content-start ${styles.section}`}>
+            <h2>Le but de cette politique de confidentialité</h2>
+            <p>Le but de cette politique de confidentialité est d’informer les utilisateurs de notre site des données personnelles que nous recueillerons ainsi que les informations suivantes, le cas échéant :</p>
+            <ul>
+                <li>Les données personnelles que nous recueillerons</li>
+                <li>L’utilisation des données recueillies</li>
+                <li>Qui a accès aux données recueillies</li>
+                <li>Les droits des utilisateurs du site</li>
+                <li>La politique de cookies du site</li>
+            </ul>
+            <p>Cette politique de confidentialité fonctionne parallèlement aux conditions générales d’utilisation de notre site.</p>
+        </section>
+
     </div>
   )
 }
