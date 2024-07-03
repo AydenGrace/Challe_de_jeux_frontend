@@ -12,6 +12,7 @@ import Dashboard from "./pages/Dashboard/Dashboard";
 import UserConnected from "./components/ProtectedRoutes/UserConnected";
 import Profile from "./pages/Profile/Profile";
 import Privacy from "./pages/Legals/Privacy/Privacy";
+import Cgv from "./pages/Legals/CGV/Cgv";
 
 export const router = createBrowserRouter([
   {
@@ -59,6 +60,10 @@ export const router = createBrowserRouter([
       {
         path: "/privacy",
         element: <Privacy />,
+      },
+      {
+        path: "/cgv",
+        element: <Cgv />,
       },
     ],
   },
