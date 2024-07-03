@@ -11,6 +11,7 @@ import AdminConnected from "./components/ProtectedRoutes/AdminConnected";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import UserConnected from "./components/ProtectedRoutes/UserConnected";
 import Profile from "./pages/Profile/Profile";
+import Privacy from "./pages/Legals/Privacy/Privacy";
 
 export const router = createBrowserRouter([
   {
@@ -54,6 +55,10 @@ export const router = createBrowserRouter([
             <Profile />
           </UserConnected>
         ),
+      },
+      {
+        path: "/privacy",
+        element: <Privacy />,
       },
     ],
   },

@@ -69,7 +69,7 @@ export default function Footer({ handlePage = () => {} }) {
             <p>19 rue des Arts, 59000 Lille, France</p>
           </div>
           <nav>
-            <NavLink to={"/rgpd"}>Politique de confidentialité</NavLink>
+            <NavLink to={"/privacy"}>Politique de confidentialité</NavLink>
             <NavLink to={"/legals"}>Mentions légales</NavLink>
             <NavLink to={"/cgv"}>Condition générales de vente</NavLink>
             <NavLink to={"/cgr"}>Conditions générales de remboursement</NavLink>

@@ -18,9 +18,9 @@ function App() {
       <UserProvider>
         <Header connectPopupDisplay={setConnectdisplay} />
 
-        <div className="d-flex w-100 flex-column mh-100">
+        <main className="d-flex w-100 flex-column mh-100">
           <Outlet />
-        </div>
+        </main>
         <Socials />
         {connectDisplay && <Connect setDisplay={setConnectdisplay} />}
         <ScrollToTop
