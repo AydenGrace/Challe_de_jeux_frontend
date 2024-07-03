@@ -3,10 +3,10 @@ import styles from './Privacy.module.scss'
 
 export default function Privacy() {
   return (
-    <div className={`d-flex flex-column`}>
+    <div className={`d-flex flex-column ${styles.page}`}>
         <div className={`${styles.headerSeparator}`}></div>
         <h1>Politique de confidentialité</h1>
-        <section className='d-flex flex-column justify-content-start'>
+        <section className={`d-flex flex-column justify-content-start ${styles.section}`}>
             <h2>Identité du site Web</h2>
             <p><strong>Nom :</strong> La Challe de Jeux</p>
             <p><strong>Adresse :</strong> 19 rue des Arts, 59000 Lille, France</p>
