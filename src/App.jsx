@@ -33,7 +33,9 @@ function App() {
         <CookieConsent
           location="bottom"
           buttonText="Accepter"
-
+          declineButtonText="Refuser"
+          visible="show"
+          hideOnAccept={true}
           cookieName="Challe_de_jeux_Cookie"
           style={{ background: "#e5dbc3" }}
           buttonStyle={{ background_color: "#5d4431" ,color: "#fff", fontSize: "1rem" }}
