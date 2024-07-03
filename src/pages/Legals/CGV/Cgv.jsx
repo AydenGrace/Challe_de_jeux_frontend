@@ -70,6 +70,58 @@ export default function Cgv() {
             <p>La Garantie Annulation a un prix fixe. Elle peut être contractée uniquement au moment de l’achat (en ligne ou sur site).</p>
             <p>Le remboursement peut se faire uniquement sur la carte bancaire utilisée lors de l’achat.</p>
         </section>
+
+        <section className={`d-flex flex-column justify-content-start ${styles.section}`}>
+            <h2>ARTICLE 6 – DONNÉES PERSONNELLES</h2>
+            <p>L’ACHETEUR est responsable de l’exactitude des informations saisies sur le formulaire de réservation en ligne sur le SITE INTERNET.</p>
+            <p>L’ACHETEUR accepte de recevoir de la part de LA CHALLE DE JEUX des informations et offres commerciales sur son adresse email ou sur son téléphone mobile en cliquant sur la case d’autorisation du SITE INTERNET.</p>
+            <p>L’ACHETEUR et/ou l’UTILISATEUR qui saisit ses coordonnées téléphoniques sur le SITE INTERNET de LA CHALLE DE JEUX acceptent d’ores et déjà d’être contacté par LA CHALLE DE JEUX et ce par téléphone ou SMS.</p>
+            <p>L’ACHETEUR renseignant les coordonnées des autres joueurs / UTILISATEURS (noms et prénoms, numéros de téléphone, adresses électroniques) autorise LA CHALLE DE JEUX à envoyer des informations et offres commerciales à ces derniers.</p>
+            <p>LA CHALLE DE JEUX s’engage à ne pas transmettre les données personnelles de ses UTILISATEURS à une société extérieure au groupe LA CHALLE DE JEUX, hors requête d’une autorité habilitée par la loi et dans le cadre des dispositions légales en vigueur.</p>
+        </section>
+
+        <section className={`d-flex flex-column justify-content-start ${styles.section}`}>
+            <h2>ARTICLE 7 – SÉCURITÉ</h2>
+            <p>L’UTILISATEUR s’engage à respecter toutes les mesures de sécurité qui lui sont données, qu’elles soient contractuelles, affichées sur site ou données oralement par le personnel de LA CHALLE DE JEUX.</p>
+            <p>Il est formellement et strictement interdit de fumer à l’intérieur du site.</p>
+            <p>Chaque UTILISATEUR s’engage à prendre connaissance et respecter les consignes de sécurité et protection incendie, de même que les issues de secours. Celles-ci sont clairement identifiées dans le local de LA CHALLE DE JEUX. Il est à ce titre formellement interdit de gêner les issues de secours, lesquelles doivent rester dégagées en toute circonstance. L’UTILISATEUR pourra utiliser les issues de secours si et seulement si la situation exige l’évacuation du local (incendie par exemple). Tout abus et/ou ouverture intempestive de ces issues par un ou plusieurs UTILISATEUR(S) entraînera la refacturation des coûts occasionnés par cet abus.</p>
+            <p>L’UTILISATEUR est au fait qu’il est absolument interdit d’apporter dans les locaux et dans la SALLE des objets considérés comme (1) des dangers physiques (explosif, inflammable, comburant, gaz sous pression ou liquéfié, corrosif), (2) dangereux pour la santé (toxique, corrosif pour la peau, irritant/sensibilisant, cancérogène/tératogène) et (3) dangereux pour le milieu aquatique.</p>
+        </section>
+
+        <section className={`d-flex flex-column justify-content-start ${styles.section}`}>
+            <h2>ARTICLE 8 – PHOTOS ET CAMÉRAS</h2>
+            <p>Des photos de chaque équipe d’UTILISATEURS pourront être prises avant ou après la session de jeu. Ces photos pourront être utilisées par LA CHALLE DE JEUX afin d’alimenter son SITE INTERNET ou son écosystème digital (Exemples sans restriction, Facebook, Twitter, Instagram etc.).</p>
+            <p>LA CHALLE DE JEUX ne pourra être tenu responsable de l’utilisation qui sera faite des photos par les UTILISATEURS et / ou l’ACHETEUR.</p>
+            <p>Chaque SALLE comporte un dispositif de vidéosurveillance et d’écoute permettant au personnel de LA CHALLE DE JEUX de suivre la session de jeu et d’aiguiller les UTILISATEURS si besoin. Ce dispositif contribue uniquement au jeu et n’enregistre en rien les SESSIONS de jeu des UTILISATEURS.</p>
+        </section>
+
+        <section className={`d-flex flex-column justify-content-start ${styles.section}`}>
+            <h2>ARTICLE 9 – TRIBUNAUX COMPÉTENTS</h2>
+            <p>Les présentes conditions générales et tout contrat conclu incorporant ces termes et conditions sont régis par le droit français et tous les litiges sont soumis à la compétence exclusive des tribunaux français. </p>
+            <ul>
+                <li><p><strong>Procédures de réclamation</strong></p>
+                    <p>La procédure de traitement des réclamations est gratuite. Toute personne peut elle-même ou par l’intermédiaire d’une association de consommateurs, formuler une réclamation de plusieurs manières :</p>
+                    <li>Par courriel en écrivant au centre LA CHALLE DE JEUX concerné (contact@challedejeux.fr par exemple si la demande s’adresse au centre LA CHALLE DE JEUX Lille)</li>
+                    <li>Par téléphone en appelant le centre LA CHALLE DE JEUX concerné (pour Lille, en composant le +33 6 44 80 21 65 pour les particuliers (service gratuit + prix appel))</li>
+                    <li>Par écrit à l’adresse suivante du centre LA CHALLE DE JEUX concerné (La Challe de Jeux, 19 rue des Arts, 59000 Lille)</li>
+                    <li>Auprès de l’accueil dans votre centre LA CHALLE DE JEUX</li>
+                    <p>Les courriels, numéros de téléphone, adresses postales se trouvent dans la section “Une Question ?  Un Besoin ?” du site internet.</p>
+                </li>
+                <li><p><strong>Procédures de réclamation</strong></p>
+                <p>Les réclamations sont admises dans un délai d’un an à compter de la date du premier paiement de la prestation.</p>
+                <p>Toute indemnisation suppose que le réclamant apporte la preuve, par tous moyens à sa disposition, de la date de paiement ainsi que de la preuve de réservation de la session.</p>
+                <p>Des justificatifs permettant d’attester de la réalité du préjudice pourront être demandés (notes, factures etc.).</p>
+                </li>
+                <li>
+                    <p><strong>Délais de traitement</strong></p>
+                    <p>Le dépôt d’une réclamation donne lieu à la délivrance d’un accusé de réception qui fait foi de la date de réclamation.</p>
+                    <p>LA CHALLE DE JEUX s’engage à apporter une réponse à la réclamation :</p>
+                        <li>Dans un délai de 30 jour calendaire pour les particuliers ;</li>
+                        <li>Dans un délai de 40 jour calendaire pour les clients professionnels.</li>
+                    <p>Après en avoir informé le réclamant, LA CHALLE DE JEUX peut, le cas échéant, effectuer une enquête approfondie lorsqu’elle l’estime nécessaire. Les délais de traitement précités sont alors suspendus.</p>
+                </li>
+            </ul>
+        </section>
     </div>
   )
 }
