@@ -39,7 +39,8 @@ function App() {
           cookieName="Challe_de_jeux_Cookie"
           style={{ background: "#f3eee1", color:'#000' }}
           buttonClasses="btn btn-primary"
-          declineButtonClasses='btn btn-reverse-primary'
+          buttonStyle={{color:"#fff",backgroundColor:"#a97d4d"}}
+          declineButtonStyle={{color:"#fff",backgroundColor:"#312219"}}
           expires={150}
         >
           Ce site internet utilise des cookies conformément à sa <a href="/privacy">Politique de confidentialité</a>.
