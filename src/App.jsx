@@ -10,6 +10,7 @@ import styles from "./App.module.scss";
 import Connect from "./pages/Popups/Connect/Connect";
 import { Outlet, ScrollRestoration } from "react-router-dom";
 import UserProvider from "./Providers/UserProvider";
+import CookieConsent from "react-cookie-consent";
 
 function App() {
   const [connectDisplay, setConnectdisplay] = useState(false);
