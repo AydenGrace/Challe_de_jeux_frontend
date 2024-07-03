@@ -32,6 +32,7 @@ function App() {
         <Footer />
         <ScrollRestoration />
         <CookieConsent
+          enableDeclineButton
           location="bottom"
           buttonText="Accepter"
           declineButtonText="Refuser"
