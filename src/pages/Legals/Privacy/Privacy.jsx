@@ -59,6 +59,74 @@ export default function Privacy() {
                 <li>La collecte, l’utilisation et la conservation des données énumérées dans la présente politique.</li>
             </ul>
         </section>
+
+        <section className={`d-flex flex-column justify-content-start ${styles.section}`}>
+            <h2>Données personnelles que nous collectons</h2>
+            <p><strong>Données collectées automatiquement</strong></p>
+            <p>Nous ne collectons aucune donnée automatiquement sur notre site.</p>
+            <p><strong>Données recueillies de façon non automatique</strong></p>
+            <p>Nous pouvons également collecter les données suivantes lorsque vous effectuez certaines fonctions sur notre site :</p>
+            <ul>
+                <li>Email</li>
+                <li>Informations de paiement</li>
+                <li>Données de remplissage automatique</li>
+            </ul>
+            <p>Ces données peuvent être recueillies au moyen de méthodes suivantes :</p>
+            <ul>
+                <li>Enregistrement d’un compte</li>
+                <li>Achat en ligne</li>
+            </ul>
+            <p>Veuillez noter que nous ne collectons que les données qui nous aident à atteindre l’objectif énoncé dans cette politique de confidentialité. Nous ne recueillerons pas les données supplémentaires sans vous en informer au préalable.</p>
+        </section>
+
+        <section className={`d-flex flex-column justify-content-start ${styles.section}`}>
+            <h2>Comment nous utilisons les données personnelles</h2>
+            <p>Les données personnelles recueillies sur notre site seront utilisées uniquement aux fins précisées dans la présente politique ou indiquées sur les pages pertinentes de notre site. Nous n’utiliserons pas vos données au-delà de ce que nous divulguerons.</p>
+            <p>Les données que nous recueillons lorsque l’utilisateur exécute certaines fonctions peuvent être utilisées aux fins suivantes :</p>
+            <ul>
+                <li>Communication</li>
+                <li>Paiement en ligne</li>
+                <li>Support technique</li>
+            </ul>
+        </section>
+
+        <section className={`d-flex flex-column justify-content-start ${styles.section}`}>
+            <h2>Avec qui nous partageons les données personnelles</h2>
+            <p><strong>Employés</strong></p>
+            <p>Nous pouvons divulguer à tout membre de notre organisation les données utilisateur dont il a raisonnablement besoin pour réaliser les objectifs énoncés dans la présente politique.</p>
+            <p><strong>Tierces parties</strong></p>
+            <p>Nous pouvons partager les données utilisateur avec les tiers suivants : Aucun</p>
+            <p>Nous pouvons partager les données utilisateur avec des tiers aux fins suivantes : Aucune</p>
+            <p>Les tiers ne seront pas en mesure d’accéder aux données des utilisateurs au-delà de ce qui est raisonnablement nécessaire pour atteindre l’objectif donné.</p>
+            <p><strong>Autre divulgations</strong></p>
+            <p>Nous nous engageons à ne pas vendre ou partager vos données avec des tiers, sauf dans les cas suivants :</p>
+            <ul>
+                <li>Si la loi l’exige</li>
+                <li>Si elle est requise pour toute procédure judiciaire</li>
+                <li>Pour prouver ou protéger nos droits légaux</li>
+                <li>A des acheteurs ou des acheteurs potentiels de cette société dans le cas où nous cherchons à la vendre</li>
+            </ul>
+            <p>Si vous suivez des hyperliens de notre site vers un autre site, veuillez noter que nous ne sommes pas responsables et n’avons pas de contrôle sur leurs politiques et pratiques de confidentialité.</p>
+        </section>
+
+        <section className={`d-flex flex-column justify-content-start ${styles.section}`}>
+            <h2>Combien de temps nous stockons les données personnelles</h2>
+            <p>Nous ne conservons pas les données des utilisateurs au-delà de ce qui est nécessaire pour atteindre les fins pour lesquelles elles sont recueillies.</p>
+        </section>
+
+        <section className={`d-flex flex-column justify-content-start ${styles.section}`}>
+            <h2>Comment nous protégeons vos données personnelles</h2>
+            <p>Afin d’assurer la protection de vos données, nous utilisons le protocole de sécurité de la couche transport pour transmettre des renseignements personnels dans notre système.</p>
+            <p>Toutes les données stockées dans notre système sont bien sécurisées et ne sont accessibles qu’à nos employés. Nos employés sont liés par des accords de confidentialité stricts et une violation de cet accord entraînerait le licenciement de l’employé.</p>
+            <p>Alors que nous prenons toutes les précautions raisonnables pour nous assurer que nos données d’utilisateur sont sécurisées et que les utilisateurs sont protégés, il reste toujours du risque de préjudice. L’Internet en sa totalité peut être, parfois, peu sûr et donc nous sommes incapables de garantir la sécurité des données des utilisateurs au-delà de ce qui est raisonnablement pratique.</p>
+        </section>
+
+        <section className={`d-flex flex-column justify-content-start ${styles.section}`}>
+            <h2>Mineurs</h2>
+            <p>Le RGPD précise que les personnes de moins de 15 ans sont considérées comme des mineurs aux fins de la collecte de données. Les mineurs doivent avoir le consentement d’un représentant l’gal pour que leurs données soient recueillies, traitées et utilisées.</p>
+        </section>
+
+
     </div>
   )
 }
