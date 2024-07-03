@@ -34,12 +34,11 @@ function App() {
         <CookieConsent
           location="bottom"
           buttonText="Accepter"
-          declineCookieValue={true}
           declineButtonText="Refuser"
           cookieName="Challe_de_jeux_Cookie"
           style={{ background: "#e5dbc3", color:'#000' }}
-          buttonStyle={{ backgroundColor: "#5d4431" ,color: "#fff", fontSize: "1rem" }}
-          declineButtonStyle={{ backgroundColor: "#5d4431" ,color: "#fff", fontSize: "1rem" }}
+          buttonClasses='btn btn-primary'
+          declineButtonClasses='btn btn-reverse-primary'
           expires={150}
         >
           Ce site internet utilise des cookies conformément à sa <a href="/privacy">Politique de confidentialité</a>.
