@@ -81,7 +81,20 @@
   color: var(--primary600);
 }
 
+.c-p800 {
+  color: var(--primary800);
+}
+
+.c-p900 {
+  color: var(--primary900);
+}
+
 .active {
   text-decoration: underline;
   text-decoration-thickness: 3px;
+}
+
+.headersep {
+  width: 100%;
+  height: 77px;
 }

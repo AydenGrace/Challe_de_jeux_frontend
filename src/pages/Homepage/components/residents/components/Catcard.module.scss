@@ -6,6 +6,12 @@
   text-align: center;
   justify-content: flex-start;
   cursor: pointer;
+  text-decoration: none;
+  color: black;
+  &:visited {
+    text-decoration: none;
+    color: black;
+  }
   img {
     width: 200px;
   }

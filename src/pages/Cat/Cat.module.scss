@@ -1,0 +1,97 @@
+.infoColumn {
+  margin: 0 20px;
+  p {
+    color: var(--primary800);
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+.InfoBtn {
+  padding: 10px 15px;
+  background-color: var(--primary800);
+  border: 4px solid var(--primary800);
+  border-radius: 10px;
+  margin-bottom: 10px;
+
+  p {
+    color: white;
+    font-size: 0.9rem;
+  }
+}
+
+.LeftCol {
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
+}
+
+.LeftColumnArea {
+  align-items: flex-start;
+  padding: 30px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.RightColumn {
+  width: 50%;
+}
+
+.infos {
+  background-color: var(--primary200);
+  min-height: 100px;
+}
+
+.backArea {
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 10px;
+  text-decoration: none;
+  color: black;
+  gap: 10px;
+  width: fit-content;
+  &:visited {
+    text-decoration: none;
+    color: black;
+  }
+  &:hover {
+    i {
+      color: var(--primary700);
+    }
+  }
+}
+
+.catName {
+  margin-left: 50px;
+}
+
+.pad {
+  padding-left: 50px;
+  gap: 10px;
+  p {
+    margin: 0;
+  }
+  margin-bottom: 10px;
+}
+
+.adopt {
+  align-items: flex-start;
+  padding: 10px 30px;
+  width: 100%;
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/challe-de-jeux.appspot.com/o/backgrounds%2FInfo_bg-min.webp?alt=media&token=0a9b7419-2d77-4dd5-9ee0-a841d0071834");
+  background-size: cover;
+  background-position: center;
+  p {
+    margin: 0;
+  }
+  ul {
+    margin-top: 10px;
+    li {
+      margin-left: 30px;
+      list-style: circle;
+    }
+  }
+}
