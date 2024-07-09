@@ -35,7 +35,7 @@ export default function ErrorPage() {
           smooth
           component={<i className={`fa-solid fa-angles-up fa-2xl`}></i>}
         />
-        <Footer />
+        {/* <Footer /> */}
       </UserProvider>
     </>
   );

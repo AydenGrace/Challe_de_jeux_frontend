@@ -5,7 +5,7 @@ import Catcard from "../Homepage/components/residents/components/Catcard";
 
 export default function Residents() {
   const [allCats, setAllCats] = useState(useLoaderData());
-  console.log(allCats);
+  // console.log(allCats);
 
   return (
     <div className={`w-100 d-flex flex-column mh-100 ${styles.page}`}>

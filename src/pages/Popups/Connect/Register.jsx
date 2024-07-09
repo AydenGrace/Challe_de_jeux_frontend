@@ -64,7 +64,7 @@ export default function Register() {
       });
       if (response.ok) {
         const responseFeedback = await response.json();
-        console.log(responseFeedback);
+        // console.log(responseFeedback);
         // responseFeedback.status === 200
         //   ? setFeedback({
         //       status: responseFeedback.status,

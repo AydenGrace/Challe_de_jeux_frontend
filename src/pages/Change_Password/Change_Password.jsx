@@ -82,7 +82,7 @@ export default function Change_Password() {
       });
 
       const responseFeedback = await response.json();
-      console.log(responseFeedback);
+      // console.log(responseFeedback);
       setFeedback(responseFeedback);
 
       if (responseFeedback.status === 200) {

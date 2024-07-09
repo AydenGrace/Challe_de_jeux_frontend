@@ -21,7 +21,7 @@ export default function VerifyMail() {
   async function Verify() {
     try {
       const decodedPayload = token.replaceAll(/\,/g, ".");
-      console.log("Token = " + decodedPayload);
+      // console.log("Token = " + decodedPayload);
       const response = await fetch(
         `${url}/api/users/verifyMail/${decodedPayload}`
       );

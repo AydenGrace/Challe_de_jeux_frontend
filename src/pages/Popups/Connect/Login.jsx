@@ -36,7 +36,7 @@ export default function Login({ setDisplay }) {
   });
 
   async function submit(values) {
-    console.log(values);
+    // console.log(values);
     try {
       const response = await fetch(`${url}/api/users/login`, {
         method: "POST",
@@ -48,8 +48,8 @@ export default function Login({ setDisplay }) {
       // if (response.ok) {
 
       const responseFeedback = await response.json();
-      console.log("Response from Login");
-      console.log(responseFeedback);
+      // console.log("Response from Login");
+      // console.log(responseFeedback);
 
       switch (responseFeedback.status) {
         case 200:

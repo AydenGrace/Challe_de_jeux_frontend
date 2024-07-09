@@ -41,7 +41,7 @@ export default function ContactCard({ isTitle = false }) {
   });
 
   async function submit(values) {
-    console.log(values);
+    // console.log(values);
     try {
       const response = await fetch(`${url}/api/contact/send`, {
         method: "POST",

@@ -4,7 +4,7 @@ import { UserContext } from "../../context/UserContext";
 
 export default function UserConnected({ children }) {
   const { user } = useContext(UserContext);
-  console.log("DASHBOARD");
-  console.log(user);
+  // console.log("DASHBOARD");
+  // console.log(user);
   return user ? children : <Navigate to="/" />;
 }

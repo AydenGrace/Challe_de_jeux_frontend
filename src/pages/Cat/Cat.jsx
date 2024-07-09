@@ -11,7 +11,7 @@ export default function Cat() {
   useEffect(() => {
     const getCatInformations = async () => {
       const temp = await getCatById(id);
-      console.log(temp);
+      // console.log(temp);
       setCat(temp);
     };
     getCatInformations();
