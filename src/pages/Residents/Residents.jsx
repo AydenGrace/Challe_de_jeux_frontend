@@ -13,7 +13,7 @@ export default function Residents() {
       <h1>Nos Résidents</h1>
       <div className="w-100 f-center flex-wrap h-100p flex-fill">
         {allCats.map((item, idx) => (
-          <Catcard key={idx} cat={item} />
+          <Catcard key={idx} cat={item} hover={true} />
         ))}
       </div>
     </div>
