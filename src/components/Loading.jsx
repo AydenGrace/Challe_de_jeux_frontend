@@ -3,13 +3,15 @@ import styles from "./Loading.module.scss";
 
 export default function Loading() {
   return (
-    <div className={`${styles.spinner - container}`}>
-      <div className={`${styles.spinner}`}>
+    <div className="mh-100 f-center">
+      <div className={`${styles.spinner_container}`}>
         <div className={`${styles.spinner}`}>
           <div className={`${styles.spinner}`}>
             <div className={`${styles.spinner}`}>
               <div className={`${styles.spinner}`}>
-                <div className={`${styles.spinner}`}></div>
+                <div className={`${styles.spinner}`}>
+                  <div className={`${styles.spinner}`}></div>
+                </div>
               </div>
             </div>
           </div>
