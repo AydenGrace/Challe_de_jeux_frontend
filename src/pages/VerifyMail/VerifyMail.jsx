@@ -1,10 +1,17 @@
 import React, { useEffect, useState } from "react";
 import styles from "./VerifyMail.module.scss";
 import Button from "../../components/Buttons";
-import { Link, redirect, useParams } from "react-router-dom/dist";
+import {
+  Link,
+  redirect,
+  useNavigation,
+  useParams,
+} from "react-router-dom/dist";
 import { url } from "../../url";
+import Loading from "../../components/Loading";
 
 export default function VerifyMail() {
+  const { state } = useNavigation();
   const [loading, setLoading] = useState(false);
   const [feedback, setFeedback] = useState(null);
   const [timer, setTimer] = useState(10);
@@ -46,7 +53,9 @@ export default function VerifyMail() {
     }
   }
 
-  return (
+  return state !== "idle" ? (
+    <Loading />
+  ) : (
     <section id="VerifyMail" className={`f-center h-100 ${styles.page}`}>
       <div className={`card f-center flex-column ${styles.container}`}>
         <h1>Vérification de votre inscription.</h1>

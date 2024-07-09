@@ -54,27 +54,38 @@ export default function Header({
       <div className={`${styles.Destop_Nav}`}>
         <div className="d-flex g-20">
           <nav className={`d-flex align-items-center`}>
-            <NavLink to={"/"} className={`btn-nav-reverse-primary btn-nav`}>
+            <NavLink
+              to={"/"}
+              className={`btn-nav-reverse-primary btn-nav`}
+              onClick={handleBurgerCheck}
+            >
               Accueil
             </NavLink>
             <NavLink
               to={"/concept"}
               className={`btn-nav-reverse-primary btn-nav`}
+              onClick={handleBurgerCheck}
             >
               Concept
             </NavLink>
             <NavLink
               to={"/rooms"}
               className={`btn-nav-reverse-primary btn-nav`}
+              onClick={handleBurgerCheck}
             >
               Nos Salles
             </NavLink>
-            <NavLink to={"/cats"} className={`btn-nav-reverse-primary btn-nav`}>
+            <NavLink
+              to={"/cats"}
+              className={`btn-nav-reverse-primary btn-nav`}
+              onClick={handleBurgerCheck}
+            >
               Nos Résidents
             </NavLink>
             <NavLink
               to={"/contact"}
               className={`btn-nav-reverse-primary btn-nav`}
+              onClick={handleBurgerCheck}
             >
               Contact
             </NavLink>

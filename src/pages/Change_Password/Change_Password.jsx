@@ -4,11 +4,13 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { url } from "./../../url";
-import { Link } from "react-router-dom";
+import { Link, useNavigation } from "react-router-dom";
 import Button from "../../components/Buttons";
 import { redirect, useParams } from "react-router-dom/dist";
+import Loading from "../../components/Loading";
 
 export default function Change_Password() {
+  const { state } = useNavigation();
   const { token } = useParams();
   const [feedback, setFeedback] = useState(null);
   const [seePwd, setSeePwd] = useState(false);
@@ -93,7 +95,9 @@ export default function Change_Password() {
     }
   }
 
-  return (
+  return state !== "idle" ? (
+    <Loading />
+  ) : (
     <section id="ChangePassword" className={`f-center h-100 ${styles.page}`}>
       <div className={`card f-center flex-column ${styles.container}`}>
         <h1>Modification de votre mot de passe</h1>

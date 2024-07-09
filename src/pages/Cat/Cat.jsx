@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Button from "../../components/Buttons";
 import styles from "./Cat.module.scss";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigation, useParams } from "react-router-dom";
 import { getCatById } from "../../apis/cats";
+import Loading from "../../components/Loading";
 
 export default function Cat() {
+  const { state } = useNavigation();
   const { id } = useParams();
   const [cat, setCat] = useState(null);
 
@@ -20,7 +22,9 @@ export default function Cat() {
   const handleback = () => {
     history.back();
   };
-  return (
+  return state !== "idle" ? (
+    <Loading />
+  ) : (
     <>
       <div className="headersep"></div>
       {cat ? (
