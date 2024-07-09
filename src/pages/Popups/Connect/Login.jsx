@@ -9,6 +9,7 @@ import { url } from "./../../../url";
 import { Link } from "react-router-dom";
 import UserProvider from "../../../Providers/UserProvider";
 import { UserContext } from "../../../context/UserContext";
+import toast from "react-hot-toast";
 
 export default function Login({ setDisplay }) {
   const { setConnectedUser } = useContext(UserContext);
@@ -60,6 +61,8 @@ export default function Login({ setDisplay }) {
           localStorage.setItem("user", JSON.stringify(responseFeedback));
           setConnectedUser(responseFeedback.user);
           setDisplay(false);
+          toast.success(`Bienvenue ${responseFeedback.user.username}!`);
+
           break;
         default:
           setFeedback({

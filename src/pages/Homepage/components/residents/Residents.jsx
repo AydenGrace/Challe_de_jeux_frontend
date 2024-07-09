@@ -8,7 +8,6 @@ import Button from "./../../../../components/Buttons";
 import { url } from "../../../../url";
 import { Link, useLoaderData } from "react-router-dom";
 import GenericSlider from "../../../../components/Slider/GenericSlider";
-import { Carousel } from "react-responsive-carousel";
 
 export default function Residents() {
   const settings = {

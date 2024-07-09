@@ -11,6 +11,7 @@ import Connect from "./pages/Popups/Connect/Connect";
 import { Outlet, ScrollRestoration } from "react-router-dom";
 import UserProvider from "./Providers/UserProvider";
 import CookieConsent from "react-cookie-consent";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   const [connectDisplay, setConnectdisplay] = useState(false);
@@ -59,6 +60,7 @@ function App() {
           <a href="/privacy">Politique de confidentialité</a>.
         </CookieConsent>
       </UserProvider>
+      <Toaster position="nottom-right" reverseOrder={false} />
     </>
   );
 }
