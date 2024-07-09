@@ -10,8 +10,10 @@ export default function Catcard({ cat }) {
       className={`d-flex card flex-column align-items-center m-20 ${styles.catcard}`}
     >
       <img src={`${cat.img}`} alt={cat.name} className={``} />
-      <h3>{cat.name}</h3>
-      <p>{cat.overview}</p>
+      <div className="h-100p flex-fill">
+        <h3>{cat.name}</h3>
+        <p>{cat.overview}</p>
+      </div>
     </Link>
   );
 }

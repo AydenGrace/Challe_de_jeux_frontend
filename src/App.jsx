@@ -39,17 +39,18 @@ function App() {
           declineButtonText="Refuser"
           cookieName="Challe_de_jeux_Cookie"
           style={{ background: "#f3eee1", color: "#000" }}
-          buttonClasses="btn btn-primary"
+          buttonClasses="btn-nav btn-primary"
           buttonStyle={{
             color: "#fff",
             backgroundColor: "#a97d4d",
-            borderRadius: "20px",
+            borderRadius: "10px",
             fontSize: "1rem",
           }}
+          declineButtonClasses="btn-nav btn-primary"
           declineButtonStyle={{
             color: "#fff",
             backgroundColor: "#312219",
-            borderRadius: "20px",
+            borderRadius: "10px",
             fontSize: "1rem",
           }}
           expires={150}

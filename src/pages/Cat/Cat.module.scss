@@ -1,3 +1,5 @@
+@use "../../assets/styles/mixins" as mixin;
+
 .infoColumn {
   margin: 0 20px;
   p {
@@ -34,15 +36,25 @@
   padding: 30px;
   flex-wrap: wrap;
   justify-content: flex-start;
+  @include mixin.md-lt {
+    justify-content: center;
+  }
 }
 
 .RightColumn {
   width: 50%;
+  @include mixin.md-lt {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 .infos {
   background-color: var(--primary200);
   min-height: 100px;
+  @include mixin.md-lt {
+    flex-direction: column-reverse;
+  }
 }
 
 .backArea {
@@ -75,6 +87,17 @@
     margin: 0;
   }
   margin-bottom: 10px;
+  @include mixin.md-lt {
+    justify-content: center;
+    padding-left: 0;
+  }
+}
+
+.dates {
+  @include mixin.md-lt {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 .adopt {
@@ -94,4 +117,10 @@
       list-style: circle;
     }
   }
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

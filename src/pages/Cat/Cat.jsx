@@ -103,7 +103,7 @@ export default function Cat() {
                 ) : null}
               </div>
 
-              <div className={`d-flex w-100`}>
+              <div className={`d-flex w-100 ${styles.dates}`}>
                 <div
                   className={`d-flex w-100 justify-content-start align-items-center ${styles.pad} c-p900`}
                 >
@@ -178,7 +178,7 @@ export default function Cat() {
                 </p>
               </li>
             </ul>
-            <div className="w-100 p-10">
+            <div className={`w-100 p-10 ${styles.btn}`}>
               <Link to={"/contact"}>
                 <Button message="Nous contacter" />
               </Link>

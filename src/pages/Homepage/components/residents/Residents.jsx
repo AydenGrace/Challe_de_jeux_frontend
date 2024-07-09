@@ -8,17 +8,28 @@ import Button from "./../../../../components/Buttons";
 import { url } from "../../../../url";
 import { Link, useLoaderData } from "react-router-dom";
 import GenericSlider from "../../../../components/Slider/GenericSlider";
+import { Carousel } from "react-responsive-carousel";
 
 export default function Residents() {
   const settings = {
-    className: "slider variable-width",
-    lazyLoad: true,
+    // className: "slider variable-width",
+    // lazyLoad: true,
     dots: true,
     infinite: true,
     speed: 500,
     centerMode: true,
-    slidesToShow: 3,
+    slidesToShow: 2,
     variableWidth: true,
+    responsive: [
+      {
+        breakpoint: 1080,
+        settings: {
+          slidesToShow: 1,
+          centerMode: false,
+          variableWidth: false,
+        },
+      },
+    ],
   };
   const [allCats, setAllCats] = useState(useLoaderData());
 
@@ -28,13 +39,9 @@ export default function Residents() {
       className={`w-100 d-flex flex-column ${styles.Residents} align-items-center`}
     >
       <h2>Nos Résidents</h2>
-      {/* <GenericSlider>
-        {allCats.map((cat, i) => (
-          <Catcard key={`Cat_${i}`} cat={cat} />
-        ))}
-      </GenericSlider> */}
+
       <div className={`${styles.slider}`}>
-        <Slider {...settings}>
+        <Slider {...settings} className={`${styles.sliderContent}`}>
           {allCats.map((cat, i) => (
             <Catcard key={`Cat_${i}`} cat={cat} />
           ))}

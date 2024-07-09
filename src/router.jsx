@@ -15,6 +15,7 @@ import Privacy from "./pages/Legals/Privacy/Privacy";
 import Cgv from "./pages/Legals/CGV/Cgv";
 import Mentions from "./pages/Legals/Mentions/Mentions";
 import Cat from "./pages/Cat/Cat";
+import Residents from "./pages/Residents/Residents";
 
 export const router = createBrowserRouter([
   {
@@ -26,6 +27,11 @@ export const router = createBrowserRouter([
         index: true,
         loader: catsLoader,
         element: <Homepage />,
+      },
+      {
+        path: "/cats",
+        loader: catsLoader,
+        element: <Residents />,
       },
       {
         path: "/contact",

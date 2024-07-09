@@ -1,3 +1,5 @@
+@use "../../../../../assets/styles/mixins" as mixin;
+
 .catcard {
   gap: 10px;
   padding: 20px 20px;
@@ -8,12 +10,17 @@
   cursor: pointer;
   text-decoration: none;
   color: black;
+  overflow: hidden;
   &:visited {
     text-decoration: none;
     color: black;
   }
   img {
-    width: 200px;
+    max-width: 200px;
+    max-height: 200px;
+    @include mixin.md-lt {
+      max-width: 75%;
+    }
   }
   h3 {
     font-size: 24px;
