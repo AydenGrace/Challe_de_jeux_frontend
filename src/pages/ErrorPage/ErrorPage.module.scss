@@ -1,3 +1,5 @@
+@use "../../assets/styles/mixins" as mixin;
+
 h1 {
   color: var(--primary900);
   font-size: 60px;
@@ -10,4 +12,21 @@ h2 {
   font-size: 40px;
   font-family: "Caveat Brush";
   text-align: center;
+}
+
+.page {
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/challe-de-jeux.appspot.com/o/backgrounds%2Fvecteezy_living-room-with-cute-cat-lying-on-pillow-on-sofa_13280601.webp?alt=media&token=7bb75174-6337-4127-87a5-022f79113085");
+  background-position: right;
+  background-size: cover;
+  @include mixin.md-lt {
+    background-position: center;
+  }
+}
+
+.errorCard {
+  padding: 20px 100px;
+  text-align: center;
+  @include mixin.md-lt {
+    padding: 20px 50px;
+  }
 }

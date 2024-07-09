@@ -19,12 +19,14 @@ export default function ErrorPage() {
       <UserProvider>
         <Header connectPopupDisplay={setConnectdisplay} />
 
-        <div className="f-center w-100 flex-column mh-100">
-          <h1>Error {error.status}</h1>
-          <h2 className="mb-20">Cat {error.statusText}</h2>
-          <NavLink className={`btn-nav btn-nav-primary`} to={"/"}>
-            Revenir à l'accueil
-          </NavLink>
+        <div className={`f-center w-100 flex-column mh-100 ${styles.page}`}>
+          <div className={`d-flex card flex-column ${styles.errorCard}`}>
+            <h1>Erreur 404</h1>
+            <h2 className="mb-20">Chat perdu !</h2>
+            <NavLink className={`btn-nav btn-nav-primary`} to={"/"}>
+              Revenir à l'accueil
+            </NavLink>
+          </div>
         </div>
         <Socials />
         {connectDisplay && <Connect setDisplay={setConnectdisplay} />}

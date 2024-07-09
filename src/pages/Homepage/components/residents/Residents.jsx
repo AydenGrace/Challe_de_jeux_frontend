@@ -43,7 +43,7 @@ export default function Residents() {
       <div className={`${styles.slider}`}>
         <Slider {...settings} className={`${styles.sliderContent}`}>
           {allCats.map((cat, i) => (
-            <Catcard key={`Cat_${i}`} cat={cat} />
+            <Catcard key={`Cat_${i}`} cat={cat} hover={false} />
           ))}
         </Slider>
       </div>

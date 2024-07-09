@@ -21,7 +21,6 @@ export const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    errorElement: <ErrorPage />,
     children: [
       {
         index: true,
@@ -80,6 +79,10 @@ export const router = createBrowserRouter([
       {
         path: "/legals",
         element: <Mentions />,
+      },
+      {
+        path: "*",
+        element: <ErrorPage />,
       },
     ],
   },
