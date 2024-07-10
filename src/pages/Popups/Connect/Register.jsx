@@ -8,6 +8,7 @@ import Button from "../../../components/Buttons";
 import styles from "./Register.module.scss";
 import { url } from "../../../url";
 import { Link } from "react-router-dom";
+import toast from "react-hot-toast";
 
 export default function Register() {
   const [feedback, setFeedback] = useState(null);
@@ -85,7 +86,10 @@ export default function Register() {
         });
 
         if (feedback.status === 200) {
+          toast.success(`vérifiez votre boite mail !`);
           setDisplay(false);
+        } else {
+          toast.error(`${responseFeedback.message} !`);
         }
       }
     } catch (error) {

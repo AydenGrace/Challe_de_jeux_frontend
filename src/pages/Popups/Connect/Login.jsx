@@ -69,6 +69,7 @@ export default function Login({ setDisplay }) {
             status: responseFeedback.status,
             message: responseFeedback.message,
           });
+          toast.error(`${responseFeedback.message} !`);
           break;
       }
       //   }

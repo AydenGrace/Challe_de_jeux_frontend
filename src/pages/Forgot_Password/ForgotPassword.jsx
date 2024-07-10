@@ -7,6 +7,7 @@ import * as yup from "yup";
 import { url } from "./../../url";
 import { Link } from "react-router-dom";
 import Loading from "../../components/Loading";
+import toast from "react-hot-toast";
 
 export default function ForgotPassword() {
   const [feedback, setFeedback] = useState();
