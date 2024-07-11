@@ -17,6 +17,8 @@ import Mentions from "./pages/Legals/Mentions/Mentions";
 import Cat from "./pages/Cat/Cat";
 import Residents from "./pages/Residents/Residents";
 import { homepageLoader } from "./loaders/homepageLoader";
+import Rooms from "./pages/Rooms/Rooms";
+import { roomsLoader } from "./loaders/roomsLoader";
 
 export const router = createBrowserRouter([
   {
@@ -32,6 +34,11 @@ export const router = createBrowserRouter([
         path: "/cats",
         loader: catsLoader,
         element: <Residents />,
+      },
+      {
+        path: "/rooms",
+        loader: roomsLoader,
+        element: <Rooms />,
       },
       {
         path: "/contact",

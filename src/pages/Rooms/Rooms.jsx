@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import styles from "./Residents.module.scss";
+import styles from "./Rooms.module.scss";
 import { useLoaderData, useNavigation } from "react-router-dom";
-import Catcard from "../../components/CatCard/Catcard";
+import Roomcard from "../../components/RoomCard/Roomcard";
 import Loading from "../../components/Loader/V2/Loading";
 
-export default function Residents() {
+export default function Rooms() {
   const { state } = useNavigation();
-  const [allCats, setAllCats] = useState(useLoaderData());
+  const [allRooms, setAllRooms] = useState(useLoaderData());
   // console.log(allCats);
 
   return state !== "idle" ? (
@@ -16,10 +16,10 @@ export default function Residents() {
   ) : (
     <section className={`w-100 d-flex flex-column mh-100 ${styles.page}`}>
       <div className="headersep"></div>
-      <h1>Nos Résidents</h1>
+      <h1>Nos Salles d'escape game</h1>
       <div className="w-100 f-center flex-wrap h-100p flex-fill">
-        {allCats.map((item, idx) => (
-          <Catcard key={idx} cat={item} hover={true} />
+        {allRooms.map((item, idx) => (
+          <Roomcard key={idx} room={item} />
         ))}
       </div>
     </section>

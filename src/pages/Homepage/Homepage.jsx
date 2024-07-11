@@ -4,9 +4,9 @@ import Informations from "./components/informations/Informations";
 import Landing from "./components/landing/Landing";
 import Residents from "./components/residents/Residents";
 import { useNavigation } from "react-router-dom";
-import Loading from "../../components/Loader/V2/Loading";
 import { UserContext } from "../../context/UserContext";
 import Rooms from "./components/rooms/Rooms";
+import Loading from "../../components/Loader/V2/Loading";
 
 export default function Homepage() {
   const { state } = useNavigation();
