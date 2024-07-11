@@ -8,7 +8,7 @@ import {
   useParams,
 } from "react-router-dom/dist";
 import { url } from "../../url";
-import Loading from "../../components/Loading";
+import Loading from "../../components/Loader/V2/Loading";
 
 export default function VerifyMail() {
   const { state } = useNavigation();
@@ -54,7 +54,9 @@ export default function VerifyMail() {
   }
 
   return state !== "idle" ? (
-    <Loading />
+    <div className=" f-center mh-100">
+      <Loading />
+    </div>
   ) : (
     <section id="VerifyMail" className={`f-center h-100 ${styles.page}`}>
       <div className={`card f-center flex-column ${styles.container}`}>

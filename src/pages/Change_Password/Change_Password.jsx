@@ -7,7 +7,7 @@ import { url } from "./../../url";
 import { Link, useNavigation } from "react-router-dom";
 import Button from "../../components/Buttons";
 import { redirect, useParams } from "react-router-dom/dist";
-import Loading from "../../components/Loading";
+import Loading from "../../components/Loader/V2/Loading";
 
 export default function Change_Password() {
   const { state } = useNavigation();
@@ -96,7 +96,9 @@ export default function Change_Password() {
   }
 
   return state !== "idle" ? (
-    <Loading />
+    <div className=" f-center mh-100">
+      <Loading />
+    </div>
   ) : (
     <section id="ChangePassword" className={`f-center h-100 ${styles.page}`}>
       <div className={`card f-center flex-column ${styles.container}`}>

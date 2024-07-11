@@ -144,6 +144,7 @@ export default function Header({
           <div className={`${styles.container} ${styles.nav_container}`}>
             <input
               type="checkbox"
+              id="burger"
               className={`${styles.checkbox}`}
               onClick={handleBurgerCheck}
             />

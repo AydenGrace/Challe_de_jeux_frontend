@@ -3,7 +3,7 @@ import Button from "../../components/Buttons";
 import styles from "./Cat.module.scss";
 import { Link, useNavigation, useParams } from "react-router-dom";
 import { getCatById } from "../../apis/cats";
-import Loading from "../../components/Loading";
+import Loading from "../../components/Loader/V2/Loading";
 
 export default function Cat() {
   const { state } = useNavigation();
@@ -23,7 +23,9 @@ export default function Cat() {
     history.back();
   };
   return state !== "idle" ? (
-    <Loading />
+    <div className=" f-center mh-100">
+      <Loading />
+    </div>
   ) : (
     <>
       <div className="headersep"></div>

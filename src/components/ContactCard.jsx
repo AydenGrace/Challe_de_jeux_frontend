@@ -72,6 +72,8 @@ export default function ContactCard({ isTitle = false }) {
       >
         <div className={`d-flex gap-10 flex-row-m`}>
           <input
+            autoComplete="name"
+            id="name"
             className={`${styles.mw_300}`}
             type="text"
             placeholder="Votre nom..."
@@ -80,6 +82,8 @@ export default function ContactCard({ isTitle = false }) {
             onChange={handleResetFeedback}
           />
           <input
+            autoComplete="email"
+            id="email"
             className={`${styles.mw_300}`}
             type="email"
             placeholder="Votre Email..."
@@ -92,6 +96,8 @@ export default function ContactCard({ isTitle = false }) {
         {errors.email && <p className="c-r">{errors.email.message}</p>}
         <input
           type="text"
+          id="subject"
+          autoComplete="off"
           placeholder="Sujet de votre message..."
           className={`d-flex w-100 ${styles.mw_300}`}
           {...register("subject")}
@@ -101,6 +107,8 @@ export default function ContactCard({ isTitle = false }) {
         {errors.subject && <p className="c-r">{errors.subject.message}</p>}
         <textarea
           {...register("content")}
+          autoComplete="off"
+          id="content"
           placeholder="Votre message..."
           className={`d-flex w-100 ${styles.mw_300}`}
           required={true}

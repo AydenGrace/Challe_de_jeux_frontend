@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import styles from "./Residents.module.scss";
 import { useLoaderData, useNavigation } from "react-router-dom";
-import Catcard from "../Homepage/components/residents/components/Catcard";
-import Loading from "../../components/Loading";
+import Catcard from "../../components/CatCard/Catcard";
+import Loading from "../../components/Loader/V2/Loading";
 
 export default function Residents() {
   const { state } = useNavigation();
@@ -10,7 +10,9 @@ export default function Residents() {
   // console.log(allCats);
 
   return state !== "idle" ? (
-    <Loading />
+    <div className=" f-center mh-100">
+      <Loading />
+    </div>
   ) : (
     <div className={`w-100 d-flex flex-column mh-100 ${styles.page}`}>
       <div className="headersep"></div>

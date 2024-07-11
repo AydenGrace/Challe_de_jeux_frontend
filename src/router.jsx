@@ -16,6 +16,7 @@ import Cgv from "./pages/Legals/CGV/Cgv";
 import Mentions from "./pages/Legals/Mentions/Mentions";
 import Cat from "./pages/Cat/Cat";
 import Residents from "./pages/Residents/Residents";
+import { homepageLoader } from "./loaders/homepageLoader";
 
 export const router = createBrowserRouter([
   {
@@ -24,7 +25,7 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        loader: catsLoader,
+        loader: homepageLoader,
         element: <Homepage />,
       },
       {

@@ -6,7 +6,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { url } from "./../../url";
 import { Link } from "react-router-dom";
-import Loading from "../../components/Loading";
+import Loading from "../../components/Loader/V2/Loading";
 import toast from "react-hot-toast";
 
 export default function ForgotPassword() {
@@ -51,7 +51,9 @@ export default function ForgotPassword() {
   }
 
   return state !== "idle" ? (
-    <Loading />
+    <div className=" f-center mh-100">
+      <Loading />
+    </div>
   ) : (
     <section id="ForgotPassword" className={`f-center h-100 ${styles.page}`}>
       <div className={`card f-center flex-column ${styles.container}`}>

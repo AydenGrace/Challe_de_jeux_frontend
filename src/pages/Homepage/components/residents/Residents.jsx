@@ -1,13 +1,10 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
 import styles from "./Residents.module.scss";
-import Catcard from "./components/Catcard";
+import Catcard from "../../../../components/CatCard/Catcard";
 // import CatList from "../../../../datas/cats.json";
 import Slider from "react-slick";
-import Button from "./../../../../components/Buttons";
-import { url } from "../../../../url";
 import { Link, useLoaderData } from "react-router-dom";
-import GenericSlider from "../../../../components/Slider/GenericSlider";
 
 export default function Residents() {
   const settings = {
@@ -30,7 +27,7 @@ export default function Residents() {
       },
     ],
   };
-  const [allCats, setAllCats] = useState(useLoaderData());
+  const [allCats, setAllCats] = useState(useLoaderData().cats);
 
   return (
     <section
