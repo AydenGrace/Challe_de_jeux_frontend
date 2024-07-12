@@ -56,13 +56,16 @@ export default function Register() {
 
   async function submit(values) {
     try {
-      const response = await fetch(`${url}/api/users/register`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(values),
-      });
+      const response = await fetch(
+        `${import.meta.env.VITE_BACK_URL}/api/users/register`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(values),
+        }
+      );
       if (response.ok) {
         const responseFeedback = await response.json();
         // console.log(responseFeedback);
