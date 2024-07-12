@@ -39,13 +39,16 @@ export default function Login({ setDisplay }) {
   async function submit(values) {
     // console.log(values);
     try {
-      const response = await fetch(`${url}/api/users/login`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(values),
-      });
+      const response = await fetch(
+        `${import.meta.env.VITE_BACK_URL}/api/users/login`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(values),
+        }
+      );
       // if (response.ok) {
 
       const responseFeedback = await response.json();

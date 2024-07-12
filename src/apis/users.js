@@ -1,4 +1,3 @@
-// const BASE_URL = "https://video-vibe-v2.vercel.app" + "/api/users";
 import { url } from "./../url";
 
 export async function signup(values) {
