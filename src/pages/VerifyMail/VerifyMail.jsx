@@ -7,7 +7,6 @@ import {
   useNavigation,
   useParams,
 } from "react-router-dom/dist";
-import { url } from "../../url";
 import Loading from "../../components/Loader/V2/Loading";
 
 export default function VerifyMail() {
@@ -30,7 +29,9 @@ export default function VerifyMail() {
       const decodedPayload = token.replaceAll(/\,/g, ".");
       // console.log("Token = " + decodedPayload);
       const response = await fetch(
-        `${url}/api/users/verifyMail/${decodedPayload}`
+        `${
+          import.meta.env.VITE_BACK_URL
+        }/api/users/verifyMail/${decodedPayload}`
       );
       const responseFeedback = await response.json();
       setFeedback({

@@ -4,7 +4,6 @@ import Button from "../../components/Buttons";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import { url } from "./../../url";
 import { Link } from "react-router-dom";
 import Loading from "../../components/Loader/V2/Loading";
 import toast from "react-hot-toast";
@@ -37,13 +36,16 @@ export default function ForgotPassword() {
 
   async function Submit(values) {
     try {
-      const response = await fetch(`${url}/api/users/forgot_password`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(values),
-      });
+      const response = await fetch(
+        `${import.meta.env.VITE_BACK_URL}/api/users/forgot_password`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(values),
+        }
+      );
       setFeedback(await response.json());
     } catch (error) {
       console.error(error);

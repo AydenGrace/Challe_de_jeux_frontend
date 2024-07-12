@@ -5,7 +5,6 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import Button from "../../../components/Buttons";
 import styles from "./Login.module.scss";
-import { url } from "./../../../url";
 import { Link } from "react-router-dom";
 import UserProvider from "../../../Providers/UserProvider";
 import { UserContext } from "../../../context/UserContext";

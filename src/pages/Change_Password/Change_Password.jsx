@@ -3,7 +3,6 @@ import styles from "./Change_Password.module.scss";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import { url } from "./../../url";
 import { Link, useNavigation } from "react-router-dom";
 import Button from "../../components/Buttons";
 import { redirect, useParams } from "react-router-dom/dist";
@@ -75,13 +74,16 @@ export default function Change_Password() {
         ...values,
         token: decodeToken,
       };
-      const response = await fetch(`${url}/api/users/change_password`, {
-        method: "PATCH",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(values),
-      });
+      const response = await fetch(
+        `${import.meta.env.VITE_BACK_URL}/api/users/change_password`,
+        {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(values),
+        }
+      );
 
       const responseFeedback = await response.json();
       // console.log(responseFeedback);

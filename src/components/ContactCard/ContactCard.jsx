@@ -5,7 +5,6 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import Button from "../Buttons";
-import { url } from "../../url";
 import { Link } from "react-router-dom";
 
 export default function ContactCard({ isTitle = false }) {
@@ -43,13 +42,16 @@ export default function ContactCard({ isTitle = false }) {
   async function submit(values) {
     // console.log(values);
     try {
-      const response = await fetch(`${url}/api/contact/send`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(values),
-      });
+      const response = await fetch(
+        `${import.meta.env.VITE_BACK_URL}/api/contact/send`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(values),
+        }
+      );
       if (response.ok) {
         setFeedback(response.status);
         if (response.status === 200) reset(defaultValues);

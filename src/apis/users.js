@@ -1,5 +1,3 @@
-import { url } from "./../url";
-
 export async function signup(values) {
   try {
     const response = await fetch(
