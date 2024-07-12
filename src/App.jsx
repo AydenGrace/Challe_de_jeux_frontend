@@ -1,9 +1,9 @@
 /* eslint-disable no-unused-vars */
 import { Suspense, useState } from "react";
 import Homepage from "./pages/Homepage/Homepage";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import Socials from "./components/Socials";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+import Socials from "./components/Socials/Socials";
 import Contact from "./pages/Contact/Contact";
 import ScrollToTop from "react-scroll-to-top";
 import styles from "./App.module.scss";

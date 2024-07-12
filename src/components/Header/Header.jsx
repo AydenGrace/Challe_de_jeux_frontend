@@ -1,9 +1,9 @@
 /* eslint-disable no-unused-vars */
 import { Link, NavLink } from "react-router-dom";
-import Button from "./Buttons";
+import Button from "../Buttons";
 import styles from "./Header.module.scss";
 import { useContext, useState } from "react";
-import { UserContext } from "../context/UserContext";
+import { UserContext } from "../../context/UserContext";
 
 export default function Header({
   handlePage = () => {},

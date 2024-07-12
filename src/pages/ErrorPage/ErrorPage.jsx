@@ -1,10 +1,10 @@
 import React from "react";
 import styles from "./ErrorPage.module.scss";
-import Header from "../../components/Header";
-import Socials from "../../components/Socials";
+import Header from "../../components/Header/Header";
+import Socials from "../../components/Socials/Socials";
 import Connect from "../Popups/Connect/Connect";
 import ScrollToTop from "react-scroll-to-top";
-import Footer from "../../components/Footer";
+import Footer from "../../components/Footer/Footer";
 import { useState } from "react";
 import { NavLink, useRouteError } from "react-router-dom";
 import { useEffect } from "react";

@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import styles from "./Contact.module.scss";
-import ContactCard from "../../../../components/ContactCard";
+import ContactCard from "../../../../components/ContactCard/ContactCard";
 
 export default function Contact() {
   return (

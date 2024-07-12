@@ -4,8 +4,8 @@ import styles from "./ContactCard.module.scss";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import Button from "./Buttons";
-import { url } from "./../url";
+import Button from "../Buttons";
+import { url } from "../../url";
 import { Link } from "react-router-dom";
 
 export default function ContactCard({ isTitle = false }) {
