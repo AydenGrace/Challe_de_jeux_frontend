@@ -13,24 +13,24 @@ export default function Homepage() {
   const { state } = useNavigation();
   const { user } = useContext(UserContext);
 
-  const meta = {
-    title: "La Challe de jeux : Accueil",
-    description:
-      "Venez découvrir votre prochain lieu préféré ! Mélangeant escape game et bar à chat, venez rencontrer nos résidents poilus tout en profitant d'un cadre apaisant !",
-    canonical: "http://localhost:5173",
-    meta: {
-      charset: "utf-8",
-      name: {
-        keywords:
-          "bar,chat,escape,game,lille,bar à chats,escape game,challe de jeux",
-      },
-    },
-  };
+  // const meta = {
+  //   title: "La Challe de jeux : Accueil",
+  //   description:
+  //     "Venez découvrir votre prochain lieu préféré ! Mélangeant escape game et bar à chat, venez rencontrer nos résidents poilus tout en profitant d'un cadre apaisant !",
+  //   canonical: "http://localhost:5173",
+  //   meta: {
+  //     charset: "utf-8",
+  //     name: {
+  //       keywords:
+  //         "bar,chat,escape,game,lille,bar à chats,escape game,challe de jeux",
+  //     },
+  //   },
+  // };
 
   return state !== "idle" ? (
     <div className=" f-center mh-100">
       <Loading />
-      <DocumentMeta {...meta} />
+      {/* <DocumentMeta {...meta} /> */}
     </div>
   ) : (
     <>
@@ -39,7 +39,7 @@ export default function Homepage() {
       <Informations />
       <Rooms />
       <Contact />
-      <DocumentMeta {...meta} />
+      {/* <DocumentMeta {...meta} /> */}
     </>
   );
 }

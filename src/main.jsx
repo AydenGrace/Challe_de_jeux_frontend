@@ -7,11 +7,10 @@ import { router } from "./router.jsx";
 // import { Toaster } from "react-hot-toast";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  // <React.StrictMode>
-  <>
-    {/* <Toaster position="nottom-right" reverseOrder={false} /> */}
-    <RouterProvider router={router} />
-  </>
-
-  // {/* </React.StrictMode> */}
+  <React.StrictMode>
+    <>
+      {/* <Toaster position="nottom-right" reverseOrder={false} /> */}
+      <RouterProvider router={router} />
+    </>
+  </React.StrictMode>
 );

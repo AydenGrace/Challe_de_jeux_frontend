@@ -37,7 +37,7 @@ export default function Section({
       </div>
       <div
         className={`${styles.img}`}
-        style={{ backgroundImage: `url(./img/${img})` }}
+        style={{ backgroundImage: `url("${img}")` }}
       ></div>
     </div>
   );

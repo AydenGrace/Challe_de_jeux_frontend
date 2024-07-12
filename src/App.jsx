@@ -39,7 +39,11 @@ function App() {
           buttonText="Accepter"
           declineButtonText="Refuser"
           cookieName="Challe_de_jeux_Cookie"
-          style={{ background: "#f3eee1", color: "#000" }}
+          style={{
+            background: "#f3eee1",
+            color: "#000",
+            borderTop: "1px solid #312219",
+          }}
           buttonClasses="btn-nav btn-primary"
           buttonStyle={{
             color: "#fff",
