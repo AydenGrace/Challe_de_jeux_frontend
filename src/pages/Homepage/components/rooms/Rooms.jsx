@@ -18,7 +18,7 @@ export default function Rooms() {
         {allRooms.map((room, idx) => (
           <Roomcard key={`Room_${idx}`} room={room} />
         ))}
-        <Roomcard />
+        {/* <Roomcard /> */}
       </div>
       <Link to={"/rooms"} className="btn-nav btn-primary mt-10">
         Découvrez toutes les salles

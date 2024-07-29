@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Slot.module.scss";
-import { useSearchParams } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 
-export default function Slot({
-  value = { _id: 1234, date: new Date(), IsAvalaible: true },
-}) {
+export default function Slot({ value }) {
   const [hourString, setHourString] = useState("");
 
   useEffect(() => {
@@ -16,12 +14,12 @@ export default function Slot({
     );
   }, []);
 
-  return value.IsAvalaible ? (
-    <div className={`${styles.Slot}`}>
+  return value.isAvalaible ? (
+    <Link className={`${styles.Slot}`} to={`/booking/${value._id}`}>
       <p>
         <strong>{hourString}</strong>
       </p>
-    </div>
+    </Link>
   ) : (
     <div className={`${styles.DisabledSlot}`}>
       <strong>{hourString}</strong>

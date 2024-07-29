@@ -19,6 +19,7 @@ import Residents from "./pages/Residents/Residents";
 import { homepageLoader } from "./loaders/homepageLoader";
 import Rooms from "./pages/Rooms/Rooms";
 import { roomsLoader } from "./loaders/roomsLoader";
+import Booking from "./pages/Booking/Booking";
 
 export const router = createBrowserRouter([
   {
@@ -87,6 +88,10 @@ export const router = createBrowserRouter([
       {
         path: "/legals",
         element: <Mentions />,
+      },
+      {
+        path: "/booking/:session",
+        element: <Booking />,
       },
       {
         path: "*",
