@@ -16,27 +16,27 @@ export default function ErrorPage() {
 
   return (
     <>
-      <UserProvider>
-        <Header connectPopupDisplay={setConnectdisplay} />
+      {/* <UserProvider> */}
+      {/* <Header connectPopupDisplay={setConnectdisplay} /> */}
 
-        <div className={`f-center w-100 flex-column mh-100 ${styles.page}`}>
-          <div className={`d-flex card flex-column ${styles.errorCard}`}>
-            <h1>Erreur 404</h1>
-            <h2 className="mb-20">Chat perdu !</h2>
-            <NavLink className={`btn-nav btn-nav-primary`} to={"/"}>
-              Revenir à l'accueil
-            </NavLink>
-          </div>
+      <div className={`f-center w-100 flex-column mh-100 ${styles.page}`}>
+        <div className={`d-flex card flex-column ${styles.errorCard}`}>
+          <h1>Erreur 404</h1>
+          <h2 className="mb-20">Chat perdu !</h2>
+          <NavLink className={`btn-nav btn-nav-primary`} to={"/"}>
+            Revenir à l'accueil
+          </NavLink>
         </div>
-        <Socials />
-        {connectDisplay && <Connect setDisplay={setConnectdisplay} />}
-        <ScrollToTop
-          className={`${styles.up}`}
-          smooth
-          component={<i className={`fa-solid fa-angles-up fa-2xl`}></i>}
-        />
-        {/* <Footer /> */}
-      </UserProvider>
+      </div>
+      <Socials />
+      {connectDisplay && <Connect setDisplay={setConnectdisplay} />}
+      <ScrollToTop
+        className={`${styles.up}`}
+        smooth
+        component={<i className={`fa-solid fa-angles-up fa-2xl`}></i>}
+      />
+      {/* <Footer /> */}
+      {/* </UserProvider> */}
     </>
   );
 }

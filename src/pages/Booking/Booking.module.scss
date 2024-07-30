@@ -1,3 +1,5 @@
+@use "../../assets/styles/mixins" as mixin;
+
 .page {
   position: relative;
   // background-image: url("https://firebasestorage.googleapis.com/v0/b/challe-de-jeux.appspot.com/o/backgrounds%2FContact_BG.webp?alt=media&token=c3005aa5-e7e2-4d56-b423-cebb66fda67f");
@@ -12,6 +14,16 @@
     // padding: 30px 60px;
     min-width: 500px;
     overflow: hidden;
+    @include mixin.xs {
+      min-width: 300px;
+      padding: 10px;
+    }
+  }
+
+  .roomInfos {
+    @include mixin.xs {
+      flex-direction: column-reverse;
+    }
   }
   h1 {
     font-size: 40px;
@@ -53,6 +65,10 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  @include mixin.xs {
+    min-height: 150px;
+    border-radius: 10px;
+  }
 }
 
 .Resume {
@@ -60,6 +76,9 @@
   position: sticky;
   h2 {
     font-size: 42px;
+  }
+  @include mixin.xs {
+    max-width: 340px;
   }
 }
 
@@ -77,4 +96,9 @@
   margin-left: 5px;
   margin-right: 5px;
   margin-top: 0;
+}
+
+.taxes {
+  opacity: 0.5;
+  font-size: 0.8rem;
 }
