@@ -7,9 +7,11 @@ import * as yup from "yup";
 import { Link } from "react-router-dom";
 import Loading from "../../components/Loader/V2/Loading";
 import toast from "react-hot-toast";
+import useDocumentTitle from "../../components/UseDocumentTitle/UseDocumentTitle";
 
 export default function ForgotPassword() {
   const [feedback, setFeedback] = useState();
+  useDocumentTitle("Mot de passe oublié");
 
   const schema = yup.object({
     email: yup

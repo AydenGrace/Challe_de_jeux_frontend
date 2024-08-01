@@ -9,6 +9,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import Button from "../../components/Buttons";
 import { loadStripe } from "@stripe/stripe-js";
 import { makeBooking } from "../../apis/reservations";
+import useDocumentTitle from "../../components/UseDocumentTitle/UseDocumentTitle";
 
 export default function Booking() {
   const { session } = useParams();
@@ -38,6 +39,8 @@ export default function Booking() {
       .required("Champs requis"),
     Nbplayers: yup.number().max(6).min(1).required("Champs requis"),
   });
+
+  useDocumentTitle("Réservation");
 
   const BookingValues = {
     email: user ? user.email : "",

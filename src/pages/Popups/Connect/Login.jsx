@@ -9,11 +9,14 @@ import { Link } from "react-router-dom";
 import UserProvider from "../../../Providers/UserProvider";
 import { UserContext } from "../../../context/UserContext";
 import toast from "react-hot-toast";
+import useDocumentTitle from "../../../components/UseDocumentTitle/UseDocumentTitle";
 
 export default function Login({ setDisplay }) {
   const { setConnectedUser } = useContext(UserContext);
   const [feedback, setFeedback] = useState(null);
   const [seePwd, setSeePwd] = useState(false);
+
+  // useDocumentTitle("Connexion");
 
   const LoginSchema = yup.object({
     email: yup.string().email().required("Champs requis"),

@@ -7,6 +7,7 @@ import { Link, useNavigation } from "react-router-dom";
 import Button from "../../components/Buttons";
 import { redirect, useParams } from "react-router-dom/dist";
 import Loading from "../../components/Loader/V2/Loading";
+import useDocumentTitle from "../../components/UseDocumentTitle/UseDocumentTitle";
 
 export default function Change_Password() {
   const { state } = useNavigation();
@@ -15,6 +16,8 @@ export default function Change_Password() {
   const [seePwd, setSeePwd] = useState(false);
   const [seeConfPwd, setSeeConfPwd] = useState(false);
   const [decodeToken, setDecodeToken] = useState();
+
+  useDocumentTitle("Changer de mot de passe");
 
   useEffect(() => {
     setDecodeToken(token.replaceAll(/\,/g, "."));

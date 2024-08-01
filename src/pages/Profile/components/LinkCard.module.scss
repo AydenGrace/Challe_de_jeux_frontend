@@ -1,0 +1,28 @@
+.LinkCard {
+  text-decoration: none;
+  color: black;
+  min-width: 350px;
+  max-width: 350px;
+  min-height: 150px;
+  max-height: 150px;
+  padding-top: 25px;
+  gap: 25px;
+  text-align: left;
+  transition: all 0.5s ease-in-out;
+  h2 {
+    text-align: left;
+    font-size: 1.5rem;
+  }
+  p {
+    margin: 0;
+
+    font-size: 0.9rem;
+  }
+  &:hover {
+    scale: 1.05;
+  }
+}
+
+.CardText {
+  text-align: left;
+}

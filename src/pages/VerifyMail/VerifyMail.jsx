@@ -8,12 +8,14 @@ import {
   useParams,
 } from "react-router-dom/dist";
 import Loading from "../../components/Loader/V2/Loading";
+import useDocumentTitle from "../../components/UseDocumentTitle/UseDocumentTitle";
 
 export default function VerifyMail() {
   const { state } = useNavigation();
   const [loading, setLoading] = useState(false);
   const [feedback, setFeedback] = useState(null);
   const [timer, setTimer] = useState(10);
+  useDocumentTitle("Vérification de l'Email");
   let Interval;
 
   const { token } = useParams();

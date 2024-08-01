@@ -9,10 +9,12 @@ import { useState } from "react";
 import { NavLink, useRouteError } from "react-router-dom";
 import { useEffect } from "react";
 import UserProvider from "../../Providers/UserProvider";
+import useDocumentTitle from "../../components/UseDocumentTitle/UseDocumentTitle";
 
 export default function ErrorPage() {
   const error = useRouteError();
   const [connectDisplay, setConnectdisplay] = useState(false);
+  useDocumentTitle("404");
 
   return (
     <>

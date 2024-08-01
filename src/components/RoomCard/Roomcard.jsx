@@ -158,7 +158,13 @@ export default function Roomcard({ room = null }) {
         </div>
 
         <div className={`d-flex w-100 h-100p flex-fill ${styles.imgArea}`}>
-          <img src={`${thisRoom.imgs[0]}`} alt={thisRoom.name} className={``} />
+          <Link to={`/room/${thisRoom._id}`}>
+            <img
+              src={`${thisRoom.imgs[0]}`}
+              alt={thisRoom.name}
+              className={``}
+            />
+          </Link>
         </div>
 
         <div

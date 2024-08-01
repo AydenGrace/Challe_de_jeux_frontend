@@ -18,6 +18,7 @@
   img {
     max-width: 200px;
     max-height: 200px;
+
     @include mixin.md-lt {
       max-width: 75%;
     }

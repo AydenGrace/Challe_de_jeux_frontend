@@ -19,7 +19,7 @@ export default function Catcard({ cat, hover }) {
       to={`/cat/${cat._id}`}
       className={`d-flex card flex-column align-items-center m-20 ${styles.catcard} ${cardClass}`}
     >
-      <img src={`${cat.img}`} alt={cat.name} className={``} />
+      <img src={`${cat.img}`} alt={cat.name} className={`${styles.Img}`} />
       <div className="h-100p flex-fill">
         <h3>{cat.name}</h3>
         <p>{cat.overview}</p>

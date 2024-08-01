@@ -8,10 +8,13 @@ import { UserContext } from "../../context/UserContext";
 import Rooms from "./components/rooms/Rooms";
 import Loading from "../../components/Loader/V2/Loading";
 import DocumentMeta from "react-document-meta";
+import useDocumentTitle from "../../components/UseDocumentTitle/UseDocumentTitle";
 
 export default function Homepage() {
   const { state } = useNavigation();
   const { user } = useContext(UserContext);
+
+  useDocumentTitle("Accueil");
 
   // const meta = {
   //   title: "La Challe de jeux : Accueil",

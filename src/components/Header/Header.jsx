@@ -202,7 +202,14 @@ export default function Header({
               </div>
               <div className="mb-20">
                 {user ? (
-                  <Button message="Mon Compte" onClick={handleBurgerCheck} />
+                  <Link
+                    to={"/profile"}
+                    message="Mon Compte"
+                    className="btn-nav btn-primary"
+                    onClick={handleBurgerCheck}
+                  >
+                    Mon compte
+                  </Link>
                 ) : (
                   <Button
                     message="Connexion/Inscription"

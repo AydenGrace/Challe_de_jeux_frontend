@@ -3,10 +3,12 @@ import styles from "./Residents.module.scss";
 import { useLoaderData, useNavigation } from "react-router-dom";
 import Catcard from "../../components/CatCard/Catcard";
 import Loading from "../../components/Loader/V2/Loading";
+import useDocumentTitle from "../../components/UseDocumentTitle/UseDocumentTitle";
 
 export default function Residents() {
   const { state } = useNavigation();
   const [allCats, setAllCats] = useState(useLoaderData());
+  useDocumentTitle("🐈 Nos Résidents");
   // console.log(allCats);
 
   return state !== "idle" ? (
