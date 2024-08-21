@@ -1,0 +1,29 @@
+.upper {
+  border-bottom: 2px solid var(--primary);
+  cursor: pointer;
+  h2{
+    font-size: 1.5rem;
+  }
+  p{margin:0}
+}
+
+.icon {
+  transition: all 0.5s ease-in-out;
+}
+
+.lower {
+  max-height: 0px;
+  height: auto;
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
+  background-color: var(--primary50);
+  border-bottom: 1px solid var(--primary200);
+  border-left: 1px solid var(--primary200);
+  border-right: 1px solid var(--primary200);
+  p{margin: 0;}
+}
+
+.mwThree{
+  max-width: 33%;
+}

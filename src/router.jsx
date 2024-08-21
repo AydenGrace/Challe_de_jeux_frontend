@@ -20,6 +20,9 @@ import { homepageLoader } from "./loaders/homepageLoader";
 import Rooms from "./pages/Rooms/Rooms";
 import { roomsLoader } from "./loaders/roomsLoader";
 import Booking from "./pages/Booking/Booking";
+import Booking_success from "./pages/Booking/Success/Booking_success";
+import Booking_failed from "./pages/Booking/Failed/Booking_failed";
+import Booking_history from "./pages/Booking_History/Booking_history";
 
 export const router = createBrowserRouter([
   {
@@ -92,6 +95,18 @@ export const router = createBrowserRouter([
       {
         path: "/booking/:session",
         element: <Booking />,
+      },
+      {
+        path: "/booking_success/:reservation",
+        element: <Booking_success />,
+      },
+      {
+        path: "/booking_failed/:reservation",
+        element: <Booking_failed />,
+      },
+      {
+        path: "/history",
+        element: <UserConnected><Booking_history /></UserConnected>,
       },
       {
         path: "*",
