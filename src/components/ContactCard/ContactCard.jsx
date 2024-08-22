@@ -129,7 +129,7 @@ export default function ContactCard({ isTitle = false }) {
             />
             En cochant, vous acceptez que vos données soient collectées
             conformément aux <span> </span>
-            <Link className="c-p" to={"/rgpd"}>
+            <Link className="c-p" to={"/privacy"}>
               Politiques de confidentialités
             </Link>
             .<span style={{ color: "red" }}>*</span>
