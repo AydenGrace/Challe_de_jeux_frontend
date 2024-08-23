@@ -37,3 +37,23 @@ export async function getSessions(sessionId) {
     console.log(e);
   }
 }
+
+export async function getAllDaySession(date) {
+  try {
+    const response = await fetch(
+      `${import.meta.env.VITE_BACK_URL}/api/sessions/getAllofDay`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ date }),
+      }
+    );
+    if (response.ok) {
+      return await response.json();
+    }
+  } catch (e) {
+    console.log(e);
+  }
+}

@@ -39,7 +39,7 @@ export default function Profile() {
         />
         <LinkCard
           IconClasses="fa-solid fa-book-open fa-2xl c-p"
-          LinkTo="profile/history"
+          LinkTo="/profile/history"
           Title="Historique de résevration"
           SubText="Consultez l'historique des réservations effectués avec ce compte"
         />

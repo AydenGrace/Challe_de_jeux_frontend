@@ -107,3 +107,47 @@
     transform: scale(1.1);
   }
 }
+
+.bg-light-gray {
+  background-color: var(--primary300);
+}
+
+.calendar-session {
+  min-height: 25px;
+  min-width: 100px;
+  max-width: 100px;
+  text-align: center;
+  z-index: 2;
+  border: 2px dotted;
+  border-radius: 5px;
+}
+
+.calendar-session-green {
+  border-color: darkgreen;
+  color: darkgreen;
+  background-color: lightgreen;
+}
+
+.calendar-session-lock {
+  background: repeating-linear-gradient(
+    45deg,
+    darkgray,
+    darkgray 5px,
+    gray 5px,
+    gray 10px
+  );
+  color: rgb(37, 37, 37);
+  font-weight: 800;
+  border-color: rgb(37, 37, 37);
+  opacity: 0.5;
+}
+
+.absolute {
+  position: absolute;
+}
+.relative {
+  position: relative;
+}
+.pointer {
+  cursor: pointer;
+}

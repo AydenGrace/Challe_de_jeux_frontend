@@ -102,7 +102,9 @@ export default function Header({
         ) : (
           <Button
             message="Connexion/Inscription"
-            handleClick={() => connectPopupDisplay(true)}
+            handleClick={() => {
+              connectPopupDisplay(true);
+            }}
           />
         )}
         {dropdown && (
@@ -112,12 +114,18 @@ export default function Header({
             <NavLink
               className={`btn-nav-reverse-primary btn-nav`}
               to={"/profile"}
+              onClick={() => {
+                setDropdown(!dropdown);
+              }}
             >
               Mon profil
             </NavLink>
             <NavLink
               className={`btn-nav-reverse-primary btn-nav`}
-              to={"/history"}
+              to={"/profile/history"}
+              onClick={() => {
+                setDropdown(!dropdown);
+              }}
             >
               Mes réservations
             </NavLink>
@@ -125,13 +133,19 @@ export default function Header({
               <NavLink
                 className={`btn-nav-reverse-primary btn-nav`}
                 to={"/dashboard"}
+                onClick={() => {
+                  setDropdown(!dropdown);
+                }}
               >
                 Panel administratif
               </NavLink>
             ) : null}
             <button
               className={`btn-nav-reverse-primary btn-nav c-r`}
-              onClick={Disconnect}
+              onClick={() => {
+                setDropdown(!dropdown);
+                Disconnect();
+              }}
             >
               Déconnexion
             </button>

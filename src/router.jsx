@@ -23,6 +23,13 @@ import Booking from "./pages/Booking/Booking";
 import Booking_success from "./pages/Booking/Success/Booking_success";
 import Booking_failed from "./pages/Booking/Failed/Booking_failed";
 import Booking_history from "./pages/Booking_History/Booking_history";
+import Manage_Sessions from "./pages/Dashboard/subpages/Manage_Sessions/Manage_Sessions";
+import Manage_Rooms from "./pages/Dashboard/subpages/Manage_Rooms/Manage_Rooms";
+import Manage_Users from "./pages/Dashboard/subpages/Manage_Users/Manage_Users";
+import Dashboard_Main from "./pages/Dashboard/subpages/Dashboard_Main/Dashboard_Main";
+import Manage_Cats from "./pages/Dashboard/subpages/Manage_Cats/Manage_Cats";
+import Profile_Security from "./pages/Profile/subpages/Security/Profile_Security";
+import Profile_Personnal from "./pages/Profile/subpages/Personnal/Profile_Personnal";
 
 export const router = createBrowserRouter([
   {
@@ -67,6 +74,28 @@ export const router = createBrowserRouter([
             <Dashboard />
           </AdminConnected>
         ),
+        children: [
+          {
+            index: 1,
+            element: <Dashboard_Main />,
+          },
+          {
+            path: "manage_cats",
+            element: <Manage_Cats />,
+          },
+          {
+            path: "manage_sessions",
+            element: <Manage_Sessions />,
+          },
+          {
+            path: "manage_rooms",
+            element: <Manage_Rooms />,
+          },
+          {
+            path: "manage_users",
+            element: <Manage_Users />,
+          },
+        ],
       },
       {
         path: "/profile",
@@ -75,6 +104,14 @@ export const router = createBrowserRouter([
             <Profile />
           </UserConnected>
         ),
+      },
+      {
+        path: "/profile/security",
+        element: <Profile_Security />,
+      },
+      {
+        path: "/profile/personnal",
+        element: <Profile_Personnal />,
       },
       {
         path: "/privacy",
@@ -105,8 +142,12 @@ export const router = createBrowserRouter([
         element: <Booking_failed />,
       },
       {
-        path: "/history",
-        element: <UserConnected><Booking_history /></UserConnected>,
+        path: "/profile/history",
+        element: (
+          <UserConnected>
+            <Booking_history />
+          </UserConnected>
+        ),
       },
       {
         path: "*",

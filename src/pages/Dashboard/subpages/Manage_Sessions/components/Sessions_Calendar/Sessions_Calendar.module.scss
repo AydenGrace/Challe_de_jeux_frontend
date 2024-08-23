@@ -1,0 +1,41 @@
+.calendar {
+  display: grid;
+  //   border: 2px solid var(--primary900);
+  font-size: 0.7rem;
+  background-color: var(--primary200);
+}
+
+.cellule {
+  //   border: 1px solid var(--primary100);
+  min-height: 25px;
+  min-width: 100px;
+  max-width: 100px;
+  text-align: center;
+  z-index: 2;
+}
+
+.dateArea {
+  color: white;
+  background-color: var(--primary900);
+  p {
+    margin: 5px;
+  }
+  div {
+    padding: 5px;
+  }
+}
+
+.arrow {
+  cursor: pointer;
+}
+
+.arrow_disabled {
+  opacity: 0.5;
+}
+
+.line {
+  min-height: 1px;
+  border-bottom: 3px solid red;
+  z-index: 3;
+  opacity: 0.4;
+}
