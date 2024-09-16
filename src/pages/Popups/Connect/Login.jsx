@@ -67,7 +67,6 @@ export default function Login({ setDisplay }) {
           setConnectedUser(responseFeedback.user);
           setDisplay(false);
           toast.success(`Bienvenue ${responseFeedback.user.username}!`);
-
           break;
         default:
           setFeedback({

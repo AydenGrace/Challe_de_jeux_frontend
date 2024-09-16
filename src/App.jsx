@@ -64,7 +64,7 @@ function App() {
           <a href="/privacy">Politique de confidentialité</a>.
         </CookieConsent>
       </UserProvider>
-      <Toaster position="nottom-right" reverseOrder={false} />
+      <Toaster position="bottom-right" reverseOrder={false} />
     </>
   );
 }

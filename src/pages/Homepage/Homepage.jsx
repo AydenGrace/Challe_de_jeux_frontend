@@ -30,19 +30,31 @@ export default function Homepage() {
   //   },
   // };
 
-  return state !== "idle" ? (
-    <div className=" f-center mh-100">
-      <Loading />
-      {/* <DocumentMeta {...meta} /> */}
-    </div>
-  ) : (
+  return (
     <>
-      <Landing />
-      <Residents />
-      <Informations />
-      <Rooms />
-      <Contact />
-      {/* <DocumentMeta {...meta} /> */}
+      <meta
+        name="keywords"
+        content="Challe de jeux, escape game, chat, bar à chat, lille"
+      />
+      <meta
+        name="description"
+        content="Bienvenue à la Challe de jeux ! Votre rendez-vous lillois mêlant loisir et boule de poils !"
+      />
+      {state !== "idle" ? (
+        <div className=" f-center mh-100">
+          <Loading />
+          {/* <DocumentMeta {...meta} /> */}
+        </div>
+      ) : (
+        <>
+          <Landing />
+          <Residents />
+          <Informations />
+          <Rooms />
+          <Contact />
+          {/* <DocumentMeta {...meta} /> */}
+        </>
+      )}
     </>
   );
 }
