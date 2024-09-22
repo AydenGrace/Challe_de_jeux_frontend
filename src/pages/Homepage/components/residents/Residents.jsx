@@ -5,6 +5,12 @@ import Catcard from "../../../../components/CatCard/Catcard";
 // import CatList from "../../../../datas/cats.json";
 import Slider from "react-slick";
 import { Link, useLoaderData } from "react-router-dom";
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+
 
 export default function Residents() {
   const settings = {
@@ -42,6 +48,22 @@ export default function Residents() {
             <Catcard key={`Cat_${i}`} cat={cat} hover={false} />
           ))}
         </Slider>
+        <Swiper
+        slidesPerView={3}
+        spaceBetween={30}
+        loop={true}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Pagination]}
+        className="mySwiper"
+      >
+        {allCats.map((cat, i) => (
+          <SwiperSlide>
+            <Catcard key={`Cat_${i}`} cat={cat} hover={false} />
+            </SwiperSlide>
+          ))}
+      </Swiper>
       </div>
       <Link to={"/cats"} className={`btn-nav btn-primary`}>
         Rencontrez les !

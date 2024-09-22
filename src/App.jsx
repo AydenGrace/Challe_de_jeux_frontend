@@ -22,8 +22,8 @@ function App() {
 
         <main className="d-flex w-100 flex-column mh-100">
           <Outlet />
-          <Footer />
         </main>
+        <Footer />
         <Socials />
         {connectDisplay && <Connect setDisplay={setConnectdisplay} />}
         <ScrollToTop

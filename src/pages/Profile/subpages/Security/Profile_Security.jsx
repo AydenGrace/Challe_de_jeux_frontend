@@ -25,6 +25,9 @@ export default function Profile_Security() {
           <p>Retour</p>
         </a>
       </div>
+      <div className="d-flex gap-10 w-100 flex-fill">
+        
+      </div>
     </section>
   );
 }
