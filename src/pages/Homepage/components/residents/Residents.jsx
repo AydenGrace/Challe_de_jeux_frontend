@@ -6,6 +6,8 @@ import Catcard from "../../../../components/CatCard/Catcard";
 import Slider from "react-slick";
 import { Link, useLoaderData } from "react-router-dom";
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination } from 'swiper/modules';
+
 
 // Import Swiper styles
 import 'swiper/css';
@@ -49,8 +51,9 @@ export default function Residents() {
           ))}
         </Slider>
         <Swiper
-        slidesPerView={3}
+        slidesPerView={'auto'}
         spaceBetween={30}
+
         loop={true}
         pagination={{
           clickable: true,
