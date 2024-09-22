@@ -151,14 +151,3 @@
 .pointer {
   cursor: pointer;
 }
-
-.swiper-button-next,
-.swiper-button-prev {
-    background-color: white;
-    background-color: rgba(255, 255, 255, 0.5);
-    right:10px;
-    padding: 30px;
-    color: var(--primary800) !important;
-    fill: var(--primary800) !important;
-    stroke: var(--primary800) !important;
-}
