@@ -40,6 +40,7 @@ export default function Residents() {
         }}
         modules={[Navigation,Pagination]}
         className="mySwiper"
+        style={{paddingTop:'10px',paddingBottom:'30px'}}
       >
         {allCats.map((cat, i) => (
           <SwiperSlide style={{maxWidth:'300px'}}>
