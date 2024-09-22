@@ -52,8 +52,8 @@ export default function Residents() {
         </Slider> */}
         <Swiper
         slidesPerView={'auto'}
-        spaceBetween={30}
-
+          spaceBetween={30}
+          centeredSlides={true}
         loop={true}
         pagination={{
           clickable: true,
