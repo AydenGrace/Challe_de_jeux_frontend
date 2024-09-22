@@ -45,11 +45,11 @@ export default function Residents() {
       <h2>Nos Résidents</h2>
 
       <div className={`${styles.slider}`}>
-        <Slider {...settings} className={`${styles.sliderContent}`}>
+        {/* <Slider {...settings} className={`${styles.sliderContent}`}>
           {allCats.map((cat, i) => (
             <Catcard key={`Cat_${i}`} cat={cat} hover={false} />
           ))}
-        </Slider>
+        </Slider> */}
         <Swiper
         slidesPerView={'auto'}
         spaceBetween={30}
@@ -62,7 +62,7 @@ export default function Residents() {
         className="mySwiper"
       >
         {allCats.map((cat, i) => (
-          <SwiperSlide>
+          <SwiperSlide style={{maxWidth:'300px'}}>
             <Catcard key={`Cat_${i}`} cat={cat} hover={false} />
             </SwiperSlide>
           ))}
