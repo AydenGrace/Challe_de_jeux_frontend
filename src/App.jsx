@@ -47,7 +47,7 @@ function App() {
           buttonClasses="btn-nav btn-primary"
           buttonStyle={{
             color: "#fff",
-            backgroundColor: "#a97d4d",
+            backgroundColor: "#966a44",
             borderRadius: "10px",
             fontSize: "1rem",
           }}
