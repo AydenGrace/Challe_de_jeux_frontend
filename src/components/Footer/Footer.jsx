@@ -18,7 +18,7 @@ export default function Footer({ handlePage = () => {} }) {
           <div
             className={`d-flex w-100 justify-content-center align-items-center gap-20 mb-20`}
           >
-            <a href="https://www.la-spa.fr/" target="_blank">
+            <a href="https://www.la-spa.fr/"  target="_blank">
               <img
                 src="https://firebasestorage.googleapis.com/v0/b/challe-de-jeux.appspot.com/o/logos%2FSpa-min.webp?alt=media&token=3db48526-06b5-4eb0-8eaf-6e5d3d0288c5"
                 alt="Spa partner"
@@ -97,13 +97,13 @@ export default function Footer({ handlePage = () => {} }) {
           <div
             className={`d-flex p-10 w-100 justify-content-center g-10 ${styles.socials_footer}`}
           >
-            <a href="https://www.facebook.com/?locale=fr_FR" target="_blank">
+            <a href="https://www.facebook.com/?locale=fr_FR" target="_blank" aria-label="Facebook">
               <i className={`fa-brands fa-facebook-f c-p`}></i>
             </a>
-            <a href="https://www.instagram.com/" target="_blank">
+            <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
               <i className={`fa-brands fa-instagram c-p`}></i>
             </a>
-            <a href="https://www.tiktok.com/fr/" target="_blank">
+            <a href="https://www.tiktok.com/fr/" target="_blank" aria-label="Tiktok">
               <i className={`fa-brands fa-tiktok c-p`}></i>
             </a>
           </div>
