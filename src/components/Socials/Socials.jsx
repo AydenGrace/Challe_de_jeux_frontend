@@ -5,13 +5,13 @@ export default function Socials() {
   return (
     <div className={styles.container}>
       <a href="https://www.facebook.com/?locale=fr_FR" target="_blank">
-        <i className="fa-brands fa-facebook-f fa-xl"></i>
+        <i title='Facebook' className="fa-brands fa-facebook-f fa-xl"></i>
       </a>
       <a href="https://www.instagram.com/" target="_blank">
-        <i className="fa-brands fa-instagram fa-xl"></i>
+        <i title="Instagram" className="fa-brands fa-instagram fa-xl"></i>
       </a>
       <a href="https://www.tiktok.com/fr/" target="_blank">
-        <i className="fa-brands fa-tiktok fa-xl"></i>
+        <i title="Tiktok" className="fa-brands fa-tiktok fa-xl"></i>
       </a>
     </div>
   );

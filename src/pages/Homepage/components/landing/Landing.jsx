@@ -22,7 +22,7 @@ export default function Landing() {
           <p> Votre rendez-vous Lillois</p>
         </div>
         <a className={`${styles.downIcon}`} href="#Residents">
-          <i className="fa-solid fa-arrow-down fa-2xl"></i>
+          <i title="Voir les résidents" className="fa-solid fa-arrow-down fa-2xl"></i>
         </a>
       </div>
     </section>
