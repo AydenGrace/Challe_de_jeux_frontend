@@ -2,8 +2,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Residents.module.scss";
 import Catcard from "../../../../components/CatCard/Catcard";
-// import CatList from "../../../../datas/cats.json";
-import Slider from "react-slick";
 import { Link, useLoaderData } from "react-router-dom";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation,Pagination } from 'swiper/modules';
