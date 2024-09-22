@@ -10,9 +10,9 @@
 }
 
 .btn-primary {
-  background-color: var(--primary600);
+  background-color: var(--primary650);
   color: white;
-  border: 2px solid var(--primary600);
+  border: 2px solid var(--primary650);
   &:hover {
     color: var(--primary600);
     background-color: transparent;
@@ -20,8 +20,8 @@
 }
 
 .btn-reverse-primary {
-  border: 2px solid var(--primary600);
-  color: var(--primary600);
+  border: 2px solid var(--primary650);
+  color: var(--primary650);
   background-color: none;
 }
 
