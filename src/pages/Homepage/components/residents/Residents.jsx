@@ -31,6 +31,7 @@ export default function Residents() {
         slidesPerView={'auto'}
         autoHeight={true}
         navigation={true}
+        color="#5d4431"
           spaceBetween={30}
           centeredSlides={true}
         loop={true}
