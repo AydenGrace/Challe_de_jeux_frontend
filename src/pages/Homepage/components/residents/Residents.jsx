@@ -15,26 +15,6 @@ import 'swiper/css/pagination';
 
 
 export default function Residents() {
-  const settings = {
-    // className: "slider variable-width",
-    // lazyLoad: true,
-    dots: true,
-    infinite: true,
-    speed: 500,
-    centerMode: true,
-    slidesToShow: 2,
-    variableWidth: true,
-    responsive: [
-      {
-        breakpoint: 1080,
-        settings: {
-          slidesToShow: 1,
-          centerMode: false,
-          variableWidth: false,
-        },
-      },
-    ],
-  };
   const [allCats, setAllCats] = useState(useLoaderData().cats);
 
   return (
@@ -45,23 +25,26 @@ export default function Residents() {
       <h2>Nos Résidents</h2>
 
       <div className={`${styles.slider}`}>
-        {/* <Slider {...settings} className={`${styles.sliderContent}`}>
-          {allCats.map((cat, i) => (
-            <Catcard key={`Cat_${i}`} cat={cat} hover={false} />
-          ))}
-        </Slider> */}
         <Swiper
         slidesPerView={'auto'}
+        autoHeight={true}
+        navigation={true}
           spaceBetween={30}
           centeredSlides={true}
         loop={true}
         pagination={{
           clickable: true,
+          dynamicBullets: true,
         }}
         modules={[Pagination]}
         className="mySwiper"
       >
         {allCats.map((cat, i) => (
+          <SwiperSlide style={{maxWidth:'300px'}}>
+            <Catcard key={`Cat_${i}`} cat={cat} hover={false} />
+            </SwiperSlide>
+          ))}
+          {allCats.map((cat, i) => (
           <SwiperSlide style={{maxWidth:'300px'}}>
             <Catcard key={`Cat_${i}`} cat={cat} hover={false} />
             </SwiperSlide>
