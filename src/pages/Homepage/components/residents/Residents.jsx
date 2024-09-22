@@ -6,7 +6,7 @@ import Catcard from "../../../../components/CatCard/Catcard";
 import Slider from "react-slick";
 import { Link, useLoaderData } from "react-router-dom";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper/modules';
+import { Navigation,Pagination } from 'swiper/modules';
 
 
 // Import Swiper styles
@@ -36,7 +36,7 @@ export default function Residents() {
           clickable: true,
           dynamicBullets: true,
         }}
-        modules={[Pagination]}
+        modules={[Navigation,Pagination]}
         className="mySwiper"
       >
         {allCats.map((cat, i) => (
