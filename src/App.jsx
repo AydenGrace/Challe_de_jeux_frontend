@@ -61,7 +61,7 @@ function App() {
           expires={150}
         >
           Ce site internet utilise des cookies conformément à sa{" "}
-          <a href="/privacy">Politique de confidentialité</a>.
+          <a href="/privacy" className={`${styles.url}`}>Politique de confidentialité</a>.
         </CookieConsent>
       </UserProvider>
       <Toaster position="bottom-right" reverseOrder={false} />
