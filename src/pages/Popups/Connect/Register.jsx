@@ -156,9 +156,25 @@ export default function Register() {
       </div>
 
       <div className="d-flex flex-column mb-20">
-        <label htmlFor="password">
-          Mot de passe <span className="c-r">*</span>
-        </label>
+        <div className="d-flex w-100 gap-10">
+          <label htmlFor="password">
+            Mot de passe <span className="c-r">*</span>
+          </label>
+          <div className="tooltip-container">
+            <div className="tooltip">
+              <p>Votre mot de passe doit contenir au moins :</p>
+              <ul>
+                <li>12 caractères minimum</li>
+                <li>1 lettre capitale (majuscule)</li>
+                <li>1 chiffre</li>
+                <li>1 caractère spécial (#,$,@,%,...)</li>
+              </ul>
+            </div>
+            <span className="text">
+              <i className="fa-solid fa-circle-question"></i>
+            </span>
+          </div>
+        </div>
         <div className={`f-center mw-300 ${styles.relative}`}>
           <input
             {...register("password")}

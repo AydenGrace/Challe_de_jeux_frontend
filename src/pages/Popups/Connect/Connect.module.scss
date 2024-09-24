@@ -12,7 +12,8 @@
 }
 
 .card {
-  padding: 15px 60px;
+  padding: 15px 40px;
+  min-width: 350px;
   @include mixin.md_lt {
     padding: 30px 30px;
   }

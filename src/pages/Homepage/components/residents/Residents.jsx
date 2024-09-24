@@ -3,16 +3,13 @@ import React, { useEffect, useState } from "react";
 import styles from "./Residents.module.scss";
 import Catcard from "../../../../components/CatCard/Catcard";
 import { Link, useLoaderData } from "react-router-dom";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation,Pagination } from 'swiper/modules';
-
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
 
 // Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-
-
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 export default function Residents() {
   const [allCats, setAllCats] = useState(useLoaderData().cats);
@@ -26,31 +23,31 @@ export default function Residents() {
 
       <div className={`${styles.slider}`}>
         <Swiper
-        slidesPerView={'auto'}
-        autoHeight={true}
-        navigation={true}
+          slidesPerView={"auto"}
+          autoHeight={true}
+          navigation={true}
           spaceBetween={30}
           centeredSlides={true}
-        loop={true}
-        pagination={{
-          clickable: true,
-          dynamicBullets: true,
-        }}
-        modules={[Navigation,Pagination]}
-        className="mySwiper"
-        style={{paddingTop:'10px',paddingBottom:'30px'}}
-      >
-        {allCats.map((cat, i) => (
-          <SwiperSlide style={{maxWidth:'300px'}}>
-            <Catcard key={`Cat_${i}`} cat={cat} hover={false} />
+          loop={true}
+          pagination={{
+            clickable: true,
+            dynamicBullets: true,
+          }}
+          modules={[Navigation, Pagination]}
+          className="mySwiper"
+          style={{ paddingTop: "10px", paddingBottom: "30px" }}
+        >
+          {allCats.map((cat, i) => (
+            <SwiperSlide style={{ maxWidth: "300px" }}>
+              <Catcard key={`Cat_${i}`} cat={cat} hover={false} />
             </SwiperSlide>
           ))}
           {allCats.map((cat, i) => (
-          <SwiperSlide style={{maxWidth:'300px'}}>
-            <Catcard key={`Cat_${i}`} cat={cat} hover={false} />
+            <SwiperSlide style={{ maxWidth: "300px" }}>
+              <Catcard key={`Cat__bis_${i}`} cat={cat} hover={false} />
             </SwiperSlide>
           ))}
-      </Swiper>
+        </Swiper>
       </div>
       <Link to={"/cats"} className={`btn-nav btn-primary`}>
         Rencontrez les !
