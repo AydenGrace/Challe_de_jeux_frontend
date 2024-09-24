@@ -6,10 +6,8 @@ import * as yup from "yup";
 import Button from "../../../components/Buttons";
 import styles from "./Login.module.scss";
 import { Link } from "react-router-dom";
-import UserProvider from "../../../Providers/UserProvider";
 import { UserContext } from "../../../context/UserContext";
 import toast from "react-hot-toast";
-import useDocumentTitle from "../../../components/UseDocumentTitle/UseDocumentTitle";
 
 export default function Login({ setDisplay }) {
   const { setConnectedUser } = useContext(UserContext);

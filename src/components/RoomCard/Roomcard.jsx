@@ -117,10 +117,10 @@ export default function Roomcard({ room = null }) {
 
     const getSessions = async () => {
       setIsLoading(true);
-      console.log(date);
-      console.log(thisRoom);
+      // console.log(date);
+      // console.log(thisRoom);
       const sessionsFind = await getDaySessions(thisRoom._id, date);
-      console.log(sessionsFind);
+      // console.log(sessionsFind);
       setSessions(sessionsFind);
       setIsLoading(false);
     };

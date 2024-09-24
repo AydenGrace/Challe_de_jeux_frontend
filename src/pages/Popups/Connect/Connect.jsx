@@ -1,10 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { useState } from "react";
 import styles from "./Connect.module.scss";
-import { useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
-import * as yup from "yup";
-import Button from "../../../components/Buttons";
 import Login from "./Login";
 import Register from "./Register";
 

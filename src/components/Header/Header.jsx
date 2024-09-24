@@ -129,7 +129,7 @@ export default function Header({
             >
               Mes réservations
             </NavLink>
-            {user.role.power < 0 ? (
+            {user && user.role.power < 0 ? (
               <NavLink
                 className={`btn-nav-reverse-primary btn-nav`}
                 to={"/dashboard"}
@@ -213,13 +213,24 @@ export default function Header({
                 >
                   Contact
                 </NavLink>
+                {user && user.role.power < 0 ? (
+                  <NavLink
+                    className={`btn-nav-reverse-primary btn-nav `}
+                    to={"/dashboard"}
+                    onClick={() => {
+                      handleBurgerCheck();
+                    }}
+                  >
+                    Panel administratif
+                  </NavLink>
+                ) : null}
               </div>
-              <div className="mb-20">
+              <div className="mb-20 w-100">
                 {user ? (
                   <Link
                     to={"/profile"}
                     message="Mon Compte"
-                    className="btn-nav btn-primary"
+                    className="btn-nav btn-primary w-100 f-center"
                     onClick={handleBurgerCheck}
                   >
                     Mon compte

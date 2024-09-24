@@ -13,7 +13,9 @@
     "@hookform/resolvers": "^3.3.4",
     "@mui/x-charts": "^7.13.0",
     "@stripe/stripe-js": "^4.1.0",
+    "browser-image-compression": "^2.0.2",
     "date-fns": "^3.6.0",
+    "firebase": "^10.13.2",
     "react": "^18.2.0",
     "react-big-calendar": "^1.13.3",
     "react-calendar": "^5.0.0",
@@ -25,6 +27,7 @@
     "react-router-dom": "^6.23.0",
     "react-scroll-to-top": "^3.0.0",
     "swiper": "^11.1.14",
+    "webp-converter-browser": "^1.0.4",
     "yup": "^1.4.0"
   },
   "devDependencies": {
