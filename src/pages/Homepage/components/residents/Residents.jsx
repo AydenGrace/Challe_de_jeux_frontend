@@ -38,13 +38,16 @@ export default function Residents() {
           style={{ paddingTop: "10px", paddingBottom: "30px" }}
         >
           {allCats.map((cat, i) => (
-            <SwiperSlide style={{ maxWidth: "300px" }}>
+            <SwiperSlide key={`Cat_Slide_${i}`} style={{ maxWidth: "300px" }}>
               <Catcard key={`Cat_${i}`} cat={cat} hover={false} />
             </SwiperSlide>
           ))}
           {allCats.map((cat, i) => (
-            <SwiperSlide style={{ maxWidth: "300px" }}>
-              <Catcard key={`Cat__bis_${i}`} cat={cat} hover={false} />
+            <SwiperSlide
+              key={`Cat_Slide_bis_${i}`}
+              style={{ maxWidth: "300px" }}
+            >
+              <Catcard key={`Cat_bis_${i}`} cat={cat} hover={false} />
             </SwiperSlide>
           ))}
         </Swiper>
