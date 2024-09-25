@@ -53,7 +53,7 @@ export default function Residents() {
         </Swiper>
       </div>
       <Link to={"/cats"} className={`btn-nav btn-primary`}>
-        Rencontrez les !
+        Rencontrez-les !
       </Link>
     </section>
   );
