@@ -21,3 +21,23 @@ export async function getRoomTags() {
     console.log(e);
   }
 }
+
+export async function addRoom(values) {
+  try {
+    const response = await fetch(
+      `${import.meta.env.VITE_BACK_URL}/api/rooms/add`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      }
+    );
+
+      return await response.json();
+    
+  } catch (e) {
+    console.log(e);
+  }
+}

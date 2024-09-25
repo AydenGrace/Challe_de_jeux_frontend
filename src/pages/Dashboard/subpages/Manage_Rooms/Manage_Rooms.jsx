@@ -5,7 +5,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import Button from "../../../../components/Buttons";
 import toast from "react-hot-toast";
-import { getRoomTags } from "../../../../apis/rooms";
+import { addRoom, getRoomTags } from "../../../../apis/rooms";
 import Uploader from "../../../../components/Uploader/Uploader";
 
 export default function Manage_Rooms() {
@@ -37,11 +37,18 @@ export default function Manage_Rooms() {
       overview,
       duration,
       difficulty,
-      basePrice,
+      base_price: basePrice,
       tags,
-      img,
+      imgs: [img],
     };
     console.log(objectToSend);
+    const response = await addRoom(objectToSend);
+
+    if(response.hasOwnProperty('error')){
+      toast.error('Une erreur est survenue');
+    } else {
+      toast.success('Salle enregistrée');
+    }
   }
 
   const tagCheck = (e) => {
@@ -62,7 +69,7 @@ export default function Manage_Rooms() {
       <div className="d-flex w-100 flex-column p-10">
         <div className="d-flex w-100 flex-column p-10 card">
           <h2 className="text-align-left mb-10">Ajouter une salle</h2>
-          <form onSubmit={(e) => submit(e)}>
+          
             <div className="w-100 d-flex gap-10 flex-wrap justify-content-sb">
               <div className="w-100 d-flex flex-column w-100 maxw-400 gap-10">
                 <div className="d-flex align-items-center gap-10 ">
@@ -166,9 +173,9 @@ export default function Manage_Rooms() {
               </div>
             </div>
             <div className="f-center p-10">
-              <Button message="Valider" />
+              <button className="btn-nav btn-primary" onClick={submit}>Valider</button>
             </div>
-          </form>
+
         </div>
       </div>
     </section>

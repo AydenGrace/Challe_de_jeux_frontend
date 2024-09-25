@@ -26,7 +26,7 @@ export default function Manage_Sessions() {
         <div className="w-100 d-flex mb-10">
           <h2>Visualisation des sessions</h2>
         </div>
-        <div className="d-flex justify-content-center align-items-start gap-10 flex-wrap w-100 ">
+        <div className="d-flex justify-content-center align-items-center gap-10 flex-wrap w-100 ">
           <Calendar value={date} onChange={(e) => setDate(e)} />
           <Sessions_Calendar
             Columns={datas.length + 1}
