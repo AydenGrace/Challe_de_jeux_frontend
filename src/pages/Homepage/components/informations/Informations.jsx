@@ -36,7 +36,7 @@ export default function Informations() {
       <Section
         btn_text={"Rencontrez-les !"}
         text={
-          "Nous sommes fières de nos partenaires sans qui ce projet n’aurait pas pu voir le jour ! Tous nos résidents sont des chats recueillis dans un refuge pour diverses raisons. Nous souhaitons leurs offrir une seconde vie remplie de câlins et de grattouilles !"
+          "Nous sommes fièrs de nos partenaires sans qui ce projet n’aurait pas pu voir le jour ! Tous nos résidents sont des chats recueillis dans un refuge pour diverses raisons. Nous souhaitons leurs offrir une seconde vie remplie de câlins et de grattouilles !"
         }
         title={"Nos Partenaires"}
         img={
