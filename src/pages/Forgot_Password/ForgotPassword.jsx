@@ -4,12 +4,13 @@ import Button from "../../components/Buttons";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import { Link } from "react-router-dom";
+import { Link, useNavigation } from "react-router-dom";
 import Loading from "../../components/Loader/V2/Loading";
 import toast from "react-hot-toast";
 import useDocumentTitle from "../../components/UseDocumentTitle/UseDocumentTitle";
 
 export default function ForgotPassword() {
+  const { state } = useNavigation();
   const [feedback, setFeedback] = useState();
   useDocumentTitle("Mot de passe oublié");
 
